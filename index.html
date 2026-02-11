@@ -582,6 +582,69 @@
             transform: translateY(-3px);
         }
 
+        /* ----- INVESTOR SECTION ----- */
+        .invest-section {
+            padding: 80px 0 100px;
+            background: transparent;
+            text-align: center;
+        }
+
+        .invest-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+        }
+
+        .invest-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .invest-card h3 span {
+            color: var(--primary);
+        }
+
+        .invest-roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .invest-badge {
+            background: rgba(0,230,184,0.1);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .invest-badge i {
+            color: var(--primary);
+            margin-right: 6px;
+        }
+
+        .invest-btn {
+            background: linear-gradient(145deg, var(--primary), #00b89c);
+            color: #0a0a12;
+            padding: 16px 48px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+        .invest-btn:hover {
+            box-shadow: 0 10px 30px var(--primary-glow);
+            transform: translateY(-3px);
+        }
+
         /* ----- CONTACT SECTION WITH 4 TABS (HIRE, JOIN, SELL, INVEST) ----- */
         .contact-section {
             padding: 100px 0;
@@ -857,7 +920,7 @@
         </div>
     </section>
 
-    <!-- ===== OUR GAMES ===== -->
+    <!-- ===== OUR GAMES (LIVE STATS WITH FALLBACK TO YOUR REAL NUMBERS) ===== -->
     <section id="games" class="games-section">
         <div class="container">
             <h2 class="section-title">Our <span>games</span></h2>
@@ -867,7 +930,7 @@
         </div>
     </section>
 
-    <!-- ===== SELL YOUR GAME ===== -->
+    <!-- ===== SELL YOUR GAME / ACQUISITION (4 CARDS) ===== -->
     <section id="sell" class="sell-section">
         <div class="container">
             <h2 class="section-title">Sell your <span>game</span></h2>
@@ -902,7 +965,7 @@
         </div>
     </section>
 
-    <!-- ===== HIRE US – SERVICES ===== -->
+    <!-- ===== HIRE US – SERVICES (WITH VFX) ===== -->
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Hire <span>us</span></h2>
@@ -968,7 +1031,7 @@
         </div>
     </section>
 
-    <!-- ===== JOIN US ===== -->
+    <!-- ===== JOIN US SECTION (WITH CONTENT CREATORS) ===== -->
     <section id="join" class="join-section">
         <div class="container">
             <div class="join-card">
@@ -990,24 +1053,24 @@
     </section>
 
     <!-- ===== INVESTOR SECTION ===== -->
-    <section id="invest" class="join-section" style="background: transparent;">
+    <section id="invest" class="invest-section">
         <div class="container">
-            <div class="join-card">
-                <h3>Invest in <span style="color: var(--primary);">DoSucces</span></h3>
+            <div class="invest-card">
+                <h3>Invest in <span>DoSucces</span></h3>
                 <p>Partner with us to fuel the next generation of Roblox games. Choose where your investment goes.</p>
-                <div style="margin: 30px 0; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-                    <span class="role-badge"><i class="fas fa-building"></i> Company Growth</span>
-                    <span class="role-badge"><i class="fas fa-bullhorn"></i> Marketing</span>
-                    <span class="role-badge"><i class="fas fa-laptop-code"></i> Developers</span>
-                    <span class="role-badge"><i class="fas fa-camera"></i> Content Creators</span>
-                    <span class="role-badge"><i class="fas fa-plus-circle"></i> Other</span>
+                <div class="invest-roles">
+                    <span class="invest-badge"><i class="fas fa-building"></i> Company Growth</span>
+                    <span class="invest-badge"><i class="fas fa-bullhorn"></i> Marketing</span>
+                    <span class="invest-badge"><i class="fas fa-laptop-code"></i> Developers</span>
+                    <span class="invest-badge"><i class="fas fa-camera"></i> Content Creators</span>
+                    <span class="invest-badge"><i class="fas fa-plus-circle"></i> Other</span>
                 </div>
-                <a href="#contact" class="join-btn" onclick="setActiveTab('invest')"><i class="fas fa-chart-line"></i> Become an investor</a>
+                <a href="#contact" class="invest-btn" onclick="setActiveTab('invest')"><i class="fas fa-chart-line"></i> Become an investor</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT – 4 TABS ===== -->
+    <!-- ===== CONTACT / GET STARTED (4 TABS: HIRE, JOIN, SELL, INVEST) ===== -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="form-container">
@@ -1019,37 +1082,192 @@
                 </div>
 
                 <!-- Hire Us Form -->
-                <div class="form-panel active" id="formHire">[ ... forms unchanged ... ]</div>
-                <div class="form-panel" id="formJoin">[ ... forms unchanged ... ]</div>
-                <div class="form-panel" id="formSell">[ ... forms unchanged ... ]</div>
-                <div class="form-panel" id="formInvest">[ ... forms unchanged ... ]</div>
+                <div class="form-panel active" id="formHire">
+                    <h2 class="form-title">Let's work together</h2>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Send us your game link and project details.</p>
+                    <form id="hireForm">
+                        <div class="form-group">
+                            <label class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="hireName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="hireEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Game link (optional)</label>
+                            <input type="url" class="form-control" id="hireGameLink" placeholder="https://www.roblox.com/games/...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Project details</label>
+                            <textarea class="form-control" id="hireDetails" placeholder="Tell us about your project, budget, timeline..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send inquiry
+                        </button>
+                        <div class="privacy-note">
+                            By submitting you agree to our <a href="#">privacy policy</a>.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Join Us Form -->
+                <div class="form-panel" id="formJoin">
+                    <h2 class="form-title">Join the team</h2>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Tell us about yourself and your skills.</p>
+                    <form id="joinForm">
+                        <div class="form-group">
+                            <label class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="joinName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="joinEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Role you're applying for</label>
+                            <select class="form-control" id="joinRole" required>
+                                <option value="" disabled selected>Select a role</option>
+                                <option value="Developer">Developer</option>
+                                <option value="UI Designer">UI Designer</option>
+                                <option value="VFX Artist">VFX Artist</option>
+                                <option value="GFX Artist">GFX Artist</option>
+                                <option value="Modeler">Modeler</option>
+                                <option value="Animator">Animator</option>
+                                <option value="Marketer">Marketer</option>
+                                <option value="Content Creator">Content Creator</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Portfolio / experience</label>
+                            <textarea class="form-control" id="joinExperience" placeholder="Links to your work, past games, GitHub, etc." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Submit application
+                        </button>
+                        <div class="privacy-note">
+                            By submitting you agree to our <a href="#">privacy policy</a>.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sell Your Game Form -->
+                <div class="form-panel" id="formSell">
+                    <h2 class="form-title">Sell your game</h2>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Get a competitive offer – we acquire Roblox games.</p>
+                    <form id="sellForm">
+                        <div class="form-group">
+                            <label class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="sellName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="sellEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Game link</label>
+                            <input type="url" class="form-control" id="sellGameLink" placeholder="https://www.roblox.com/games/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Monthly visits / revenue (optional)</label>
+                            <input type="text" class="form-control" id="sellMetrics" placeholder="e.g. 50K visits, $200/mo">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Additional info</label>
+                            <textarea class="form-control" id="sellDetails" placeholder="Tell us about your game, development status, team size, etc."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-hand-holding-usd"></i> Request offer
+                        </button>
+                        <div class="privacy-note">
+                            By submitting you agree to our <a href="#">privacy policy</a>.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Invest Form -->
+                <div class="form-panel" id="formInvest">
+                    <h2 class="form-title">Invest in DoSucces</h2>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Choose where you want your investment to go.</p>
+                    <form id="investForm">
+                        <div class="form-group">
+                            <label class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="investName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="investEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Investment focus</label>
+                            <select class="form-control" id="investFocus" required>
+                                <option value="" disabled selected>Select an area</option>
+                                <option value="Company Growth">Company Growth</option>
+                                <option value="Marketing">Company Marketing</option>
+                                <option value="Developers">Developers</option>
+                                <option value="Content Creators">Content Creators</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">If Other, please specify</label>
+                            <input type="text" class="form-control" id="investOther" placeholder="e.g., Infrastructure, Events, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Proposed investment amount (optional)</label>
+                            <input type="text" class="form-control" id="investAmount" placeholder="e.g., $5,000 – $50,000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message / questions</label>
+                            <textarea class="form-control" id="investMessage" placeholder="Tell us about your investment interests, timeline, etc."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-chart-line"></i> Submit interest
+                        </button>
+                        <div class="privacy-note">
+                            By submitting you agree to our <a href="#">privacy policy</a>.
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">[ ... footer unchanged ... ]</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo">Do<span>Succes</span></a>
+                <div class="footer-social">
+                    <a href="https://x.com/Rlyoung0" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="[Discord server-link]" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>Built with precision · Programmed/Designed and Owned by Rlyoung0<br>Discord/Roblox: Rlyoung0</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         (function() {
             "use strict";
 
-            // ----- TWEENING ENGINE – SINGLE GLOBAL LOOP, ABSOLUTELY SMOOTH -----
+            // ===== SMOOTH TWEENING ENGINE – SINGLE GLOBAL LOOP, ABSOLUTELY SMOOTH =====
             const TWEEN_DURATION = 4000; // 4 seconds
             const EASE_OUT_CUBIC = t => 1 - Math.pow(1 - t, 3);
 
             class TweenManager {
                 constructor() {
-                    this.tweens = new Map(); // element -> { start, end, startTime, formatFn }
+                    this.tweens = new Map();
                     this.rafId = null;
                     this.update = this.update.bind(this);
                 }
 
                 add(element, endValue, formatFn = null) {
                     if (!element) return;
-                    // Start from current displayed number (or 0)
                     let start = parseFloat(element.textContent) || 0;
-                    // If already tweening, preserve start value but restart timer
                     this.tweens.set(element, {
                         start,
                         end: endValue,
@@ -1081,7 +1299,7 @@
                         if (progress < 1) {
                             active = true;
                         } else {
-                            el.textContent = tween.formatFn(tween.end); // ensure final value
+                            el.textContent = tween.formatFn(tween.end);
                             this.tweens.delete(el);
                         }
                     }
@@ -1103,7 +1321,7 @@
 
             const tweenManager = new TweenManager();
 
-            // ----- YOUR THREE GAMES -----
+            // ===== YOUR THREE ROBLOX GAMES =====
             const GAMES = [
                 {
                     placeId: 128641742072134,
@@ -1131,22 +1349,68 @@
                 }
             ];
 
-            // ----- API FETCHING (unchanged, with fallback) -----
+            // ===== ROBUST UNIVERSE ID FETCHER =====
             async function getUniverseId(placeId) {
-                if (placeId === 0) throw new Error('Placeholder');
-                // ... (same as before, omitted for brevity)
-                return placeId; // simplified for demo – full version has 3 attempts
+                if (placeId === 0) throw new Error('Placeholder ID – no API call');
+                // Attempt 1: multiget-place-details
+                try {
+                    const url = `https://games.roblox.com/v1/games/multiget-place-details?placeIds=${placeId}`;
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data[0] && data[0].universeId) return data[0].universeId;
+                    }
+                } catch (e) {}
+                // Attempt 2: universes API
+                try {
+                    const url = `https://apis.roblox.com/universes/v1/places/${placeId}/universe`;
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data.universeId) return data.universeId;
+                    }
+                } catch (e) {}
+                // Attempt 3: use placeId as universeId
+                try {
+                    const url = `https://games.roblox.com/v1/games?universeIds=${placeId}`;
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data.data && data.data[0]) return placeId;
+                    }
+                } catch (e) {}
+                throw new Error(`All universe ID lookups failed for place ${placeId}`);
             }
 
+            // ===== FETCH REAL STATS WITH FALLBACK =====
             async function fetchRobloxStatsWithFallback(game) {
                 if (game.placeId === 0) return game.fallbackStats;
-                // ... (full implementation from previous version)
-                return game.fallbackStats; // simplified
+                try {
+                    const universeId = await getUniverseId(game.placeId);
+                    const detailsUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
+                    const detailsRes = await fetch(detailsUrl);
+                    const detailsData = await detailsRes.json();
+                    let visits = 0, playing = 0, favorites = 0;
+                    if (detailsData.data && detailsData.data[0]) {
+                        const gameData = detailsData.data[0];
+                        visits = gameData.visits || 0;
+                        playing = gameData.playing || 0;
+                    }
+                    const favUrl = `https://games.roblox.com/v1/games/${universeId}/favorites/count`;
+                    const favRes = await fetch(favUrl);
+                    const favData = await favRes.json();
+                    favorites = favData.favoritesCount || 0;
+                    if (visits === 0 && playing === 0 && favorites === 0) {
+                        return game.fallbackStats;
+                    }
+                    return { visits, playing, favorites };
+                } catch (error) {
+                    return game.fallbackStats;
+                }
             }
 
-            // ----- LOAD STATS AND START SMOOTH TWEENS -----
+            // ===== LOAD ALL STATS AND START SMOOTH TWEENS =====
             async function loadAllStats() {
-                // Clear any existing tweens
                 tweenManager.clear();
 
                 // Reset hero stats to 0
@@ -1193,12 +1457,12 @@
 
                 // Wait one frame for DOM to update, then start ALL tweens simultaneously
                 requestAnimationFrame(() => {
-                    // Add hero stats tweens
+                    // Hero stats
                     tweenManager.add(document.getElementById('totalVisits'), totalVisits);
                     tweenManager.add(document.getElementById('activePlayers'), totalPlaying);
                     tweenManager.add(document.getElementById('totalFavorites'), totalFavorites);
 
-                    // Add game card tweens
+                    // Game card stats
                     for (const game of GAMES) {
                         const stats = game.fallbackStats; // we already have them from fetch
                         tweenManager.add(document.getElementById(`visits-${game.placeId}`), stats.visits);
@@ -1208,14 +1472,185 @@
                 });
             }
 
-            // ----- PAST WORK TABS, MOBILE MENU, FORM HANDLING (unchanged) -----
-            // ... (all the previous functionality remains exactly the same)
+            // ===== PAST WORK TABS =====
+            function initPastWorkTabs() {
+                const tabButtons = document.querySelectorAll('.pastwork-tab');
+                const contentDiv = document.getElementById('pastworkContent');
+                const categoryNames = {
+                    scripting: 'Luau Scripting',
+                    ui: 'UI/UX Design',
+                    vfx: 'Visual Effects',
+                    gfx: 'GFX & Thumbnails',
+                    modeling: '3D Modeling',
+                    animator: 'Animation'
+                };
+                function renderTabContent(category) {
+                    contentDiv.innerHTML = `
+                        <div class="pastwork-grid">
+                            <div class="pastwork-item">
+                                <div class="pastwork-icon"><i class="fas fa-clock"></i></div>
+                                <h3>Nothing here yet</h3>
+                                <p>Be the first to showcase your ${categoryNames[category]} work with DoSucces!</p>
+                                <a href="#contact" class="pastwork-cta" data-form="join">Apply to join</a>
+                            </div>
+                            <div class="pastwork-item">
+                                <div class="pastwork-icon"><i class="fas fa-briefcase"></i></div>
+                                <h3>Hire a ${categoryNames[category]}</h3>
+                                <p>Looking for talent? Post your project and hire our team.</p>
+                                <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                            </div>
+                        </div>
+                    `;
+                }
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        tabButtons.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        renderTabContent(this.getAttribute('data-tab'));
+                    });
+                });
+                renderTabContent('scripting');
+            }
 
-            // ----- INIT -----
+            // ===== MOBILE MENU =====
+            document.getElementById('menuToggle').addEventListener('click', function() {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+
+            // ===== FORM TAB SWITCHING (4 TABS) =====
+            const tabHire = document.getElementById('tabHire');
+            const tabJoin = document.getElementById('tabJoin');
+            const tabSell = document.getElementById('tabSell');
+            const tabInvest = document.getElementById('tabInvest');
+            const formHire = document.getElementById('formHire');
+            const formJoin = document.getElementById('formJoin');
+            const formSell = document.getElementById('formSell');
+            const formInvest = document.getElementById('formInvest');
+
+            window.setActiveTab = function(tabId) {
+                [tabHire, tabJoin, tabSell, tabInvest].forEach(t => t.classList.remove('active'));
+                [formHire, formJoin, formSell, formInvest].forEach(f => f.classList.remove('active'));
+                if (tabId === 'hire') {
+                    tabHire.classList.add('active');
+                    formHire.classList.add('active');
+                } else if (tabId === 'join') {
+                    tabJoin.classList.add('active');
+                    formJoin.classList.add('active');
+                } else if (tabId === 'sell') {
+                    tabSell.classList.add('active');
+                    formSell.classList.add('active');
+                } else if (tabId === 'invest') {
+                    tabInvest.classList.add('active');
+                    formInvest.classList.add('active');
+                }
+            };
+
+            tabHire.addEventListener('click', () => setActiveTab('hire'));
+            tabJoin.addEventListener('click', () => setActiveTab('join'));
+            tabSell.addEventListener('click', () => setActiveTab('sell'));
+            tabInvest.addEventListener('click', () => setActiveTab('invest'));
+
+            // ===== FORM SUBMISSIONS (ALL EMAILS TO northchicagorp0@gmail.com) =====
+            document.getElementById('hireForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('hireName').value;
+                const email = document.getElementById('hireEmail').value;
+                const gameLink = document.getElementById('hireGameLink').value;
+                const details = document.getElementById('hireDetails').value;
+                if (!name || !email || !details) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Hire inquiry: ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send the message.');
+            });
+
+            document.getElementById('joinForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('joinName').value;
+                const email = document.getElementById('joinEmail').value;
+                const role = document.getElementById('joinRole').value;
+                const experience = document.getElementById('joinExperience').value;
+                if (!name || !email || !role || !experience) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your application.');
+            });
+
+            document.getElementById('sellForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('sellName').value;
+                const email = document.getElementById('sellEmail').value;
+                const gameLink = document.getElementById('sellGameLink').value;
+                const metrics = document.getElementById('sellMetrics').value;
+                const details = document.getElementById('sellDetails').value;
+                if (!name || !email || !gameLink) {
+                    alert('Please fill in your name, email and game link.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\n\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your game sale inquiry.');
+            });
+
+            document.getElementById('investForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('investName').value;
+                const email = document.getElementById('investEmail').value;
+                const focus = document.getElementById('investFocus').value;
+                const other = document.getElementById('investOther').value;
+                const amount = document.getElementById('investAmount').value;
+                const message = document.getElementById('investMessage').value;
+                if (!name || !email || !focus) {
+                    alert('Please fill in your name, email and investment focus.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Investment inquiry: ${name}`);
+                const body = encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`
+                );
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your investment interest.');
+            });
+
+            // ===== SMOOTH SCROLL & TAB ACTIVATION =====
+            document.querySelectorAll('.nav-link, .nav-cta, .btn, .hire-btn, .join-btn, .invest-btn, .pastwork-cta').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                            if (this.classList.contains('hire-btn') || this.classList.contains('nav-cta') || (this.classList.contains('pastwork-cta') && this.getAttribute('data-form') === 'hire')) {
+                                setActiveTab('hire');
+                            }
+                            if (this.classList.contains('join-btn') || (this.classList.contains('pastwork-cta') && this.getAttribute('data-form') === 'join')) {
+                                setActiveTab('join');
+                            }
+                            if (this.closest('#sell') || (this.classList.contains('btn-primary') && this.innerText.includes('Sell'))) {
+                                setActiveTab('sell');
+                            }
+                            if (this.closest('#invest') || this.classList.contains('invest-btn')) {
+                                setActiveTab('invest');
+                            }
+                        }
+                        document.getElementById('navMenu').classList.remove('active');
+                    }
+                });
+            });
+
+            // ===== INITIALIZE EVERYTHING =====
             window.addEventListener('DOMContentLoaded', function() {
                 loadAllStats();
                 initPastWorkTabs();
-                // ... other initializations
             });
         })();
     </script>
