@@ -4,22 +4,22 @@
     <!-- ===== META & SEO ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DoSuccess – We buy, grow and scale Roblox games. Live statistics, game acquisition, professional UI/VFX/GFX/Builder/scripting services. Join the developers who trusted us.">
+    <meta name="description" content="GoSuccess – We buy, grow and scale Roblox games. Live statistics, game acquisition, professional UI/VFX/GFX/Builder/scripting services. Join the developers who trusted us.">
     <meta name="keywords" content="Roblox, game acquisition, sell Roblox game, Roblox studio, UI design, VFX, GFX, Builder, Luau scripting, game marketing">
     <meta name="author" content="Rlyoung0">
     <meta name="robots" content="index, follow">
 
     <!-- ===== OPEN GRAPH ===== -->
-    <meta property="og:title" content="DoSuccess · Achieve your Roblox dreams">
+    <meta property="og:title" content="GoSuccess · Achieve your Roblox dreams">
     <meta property="og:description" content="We buy, grow and scale Roblox games. Live statistics, game acquisition, professional services. Join the developers who trusted us.">
     <meta property="og:image" content="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
-    <meta property="og:url" content="https://dosuccess.netlify.app">
+    <meta property="og:url" content="https://gosuccess.netlify.app">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="DoSuccess">
+    <meta property="og:site_name" content="GoSuccess">
 
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DoSuccess · Achieve your Roblox dreams">
+    <meta name="twitter:title" content="GoSuccess · Achieve your Roblox dreams">
     <meta name="twitter:description" content="We buy, grow and scale Roblox games. Live statistics, game acquisition, professional services.">
     <meta name="twitter:image" content="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
     <meta name="twitter:site" content="@Rlyoung0">
@@ -29,7 +29,7 @@
     <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
     <link rel="apple-touch-icon" href="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
 
-    <title>DoSuccess · Achieve your Roblox dreams</title>
+    <title>GoSuccess · Achieve your Roblox dreams</title>
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,9 +48,9 @@
             --border: #2a2a3a;
             --text: #ffffff;
             --text-muted: #a0a0b5;
-            --primary: #00e6b8;
-            --primary-glow: rgba(0,230,184,0.3);
-            --accent: #8a5cf6;
+            --primary: #b300ff;
+            --primary-glow: rgba(179, 0, 255, 0.3);
+            --accent: #00e6b8;
             --radius-lg: 24px;
             --radius-md: 16px;
             --radius-sm: 12px;
@@ -62,10 +62,9 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            /* GRADIENT SOFTENED */
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(138,92,246,0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0,230,184,0.04) 0%, transparent 40%);
+                radial-gradient(circle at 20% 30%, rgba(179, 0, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(0, 230, 184, 0.04) 0%, transparent 40%);
         }
 
         h1, h2, h3, .logo {
@@ -116,11 +115,12 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s;
+            cursor: pointer;
         }
         .nav-link:hover { color: var(--primary); }
 
         .nav-cta {
-            background: linear-gradient(145deg, var(--primary), #00b89c);
+            background: linear-gradient(145deg, var(--primary), #7700cc);
             color: #0a0a12;
             padding: 10px 28px;
             border-radius: 60px;
@@ -142,7 +142,79 @@
             cursor: pointer;
         }
 
-        /* ----- HERO ----- */
+        /* ===== PAGE SYSTEM ===== */
+        .page {
+            display: none;
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .page.active {
+            display: block;
+        }
+
+        /* ===== PRIVACY PAGE ===== */
+        .privacy-page {
+            padding: 120px 0 80px;
+        }
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+        }
+        .privacy-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-align: center;
+        }
+        .privacy-date {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--text);
+        }
+        .privacy-section p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        .privacy-section ul {
+            color: var(--text-muted);
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .back-home:hover {
+            color: var(--text);
+        }
+
+        /* ----- HERO (Main Page) ----- */
         .hero {
             padding: 200px 0 120px;
             text-align: center;
@@ -152,19 +224,19 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,80,120,0.12);
-            border: 1px solid rgba(255,80,120,0.3);
+            background: rgba(179,0,255,0.12);
+            border: 1px solid rgba(179,0,255,0.3);
             padding: 6px 18px;
             border-radius: 60px;
             margin-bottom: 30px;
-            color: #ff5c8a;
+            color: #b300ff;
             font-weight: 600;
             font-size: 0.9rem;
         }
         .live-dot {
             width: 8px;
             height: 8px;
-            background: #ff5c8a;
+            background: #b300ff;
             border-radius: 50%;
             animation: pulse 1.5s infinite;
         }
@@ -244,7 +316,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(145deg, var(--primary), #00b89c);
+            background: linear-gradient(145deg, var(--primary), #7700cc);
             color: #0a0a12;
         }
         .btn-primary:hover {
@@ -291,8 +363,8 @@
         }
         .game-card:hover {
             transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 35px rgba(138,92,246,0.25);
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px var(--primary-glow);
         }
 
         .game-img {
@@ -387,7 +459,7 @@
         .sell-icon {
             width: 80px;
             height: 80px;
-            background: rgba(0,230,184,0.1);
+            background: rgba(179,0,255,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -435,7 +507,7 @@
         .service-icon {
             width: 80px;
             height: 80px;
-            background: rgba(0,230,184,0.1);
+            background: rgba(179,0,255,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -471,7 +543,7 @@
             color: #0a0a12;
         }
 
-        /* ----- PAST WORK TABS – WITH BUILDER (FIXED), UI, GFX, SCRIPTING GALLERIES ----- */
+        /* ----- PAST WORK TABS ----- */
         .pastwork-section {
             padding: 100px 0;
             background: rgba(20,20,31,0.5);
@@ -619,7 +691,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,230,184,0.2);
+            background: rgba(179,0,255,0.2);
             color: white;
             border: none;
             width: 50px;
@@ -675,7 +747,7 @@
 
         /* ----- MORE WORK SOON CARD ----- */
         .coming-soon {
-            background: rgba(0,230,184,0.05);
+            background: rgba(179,0,255,0.05);
             border: 2px dashed var(--primary);
             display: flex;
             flex-direction: column;
@@ -721,7 +793,7 @@
             margin: 30px 0;
         }
         .role-badge {
-            background: rgba(0,230,184,0.1);
+            background: rgba(179,0,255,0.1);
             border: 1px solid var(--border);
             padding: 8px 20px;
             border-radius: 60px;
@@ -733,7 +805,7 @@
             margin-right: 6px;
         }
         .join-btn {
-            background: linear-gradient(145deg, var(--primary), #00b89c);
+            background: linear-gradient(145deg, var(--primary), #7700cc);
             color: #0a0a12;
             padding: 16px 48px;
             border-radius: 60px;
@@ -778,7 +850,7 @@
             margin: 30px 0;
         }
         .invest-badge {
-            background: rgba(0,230,184,0.1);
+            background: rgba(179,0,255,0.1);
             border: 1px solid var(--border);
             padding: 8px 20px;
             border-radius: 60px;
@@ -790,7 +862,7 @@
             margin-right: 6px;
         }
         .invest-btn {
-            background: linear-gradient(145deg, var(--primary), #00b89c);
+            background: linear-gradient(145deg, var(--primary), #7700cc);
             color: #0a0a12;
             padding: 16px 48px;
             border-radius: 60px;
@@ -845,7 +917,7 @@
         }
         .form-tab:hover:not(.active) {
             color: var(--primary);
-            background: rgba(0,230,184,0.1);
+            background: rgba(179,0,255,0.1);
         }
         .form-panel {
             display: none;
@@ -885,7 +957,7 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2300e6b8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23b300ff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 16px center;
             background-size: 16px;
@@ -981,6 +1053,7 @@
             .hero-title { font-size: 3.6rem; }
             .games-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column; text-align: center; }
+            .privacy-container { padding: 30px; }
         }
         @media (max-width: 600px) {
             .hero-title { font-size: 2.8rem; }
@@ -990,6 +1063,7 @@
             .form-tab { width: 100%; text-align: center; }
             .pastwork-tabs { flex-direction: column; align-items: center; }
             .pastwork-tab { width: 100%; text-align: center; }
+            .privacy-title { font-size: 2.2rem; }
         }
         .error-message {
             color: #ff5c8a;
@@ -1003,16 +1077,17 @@
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Do<span>Success</span></a>
+            <a href="#" class="logo" onclick="showPage('main'); return false;">Go<span>Success</span></a>
             <div class="nav-menu" id="navMenu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#games" class="nav-link">Games</a>
-                <a href="#sell" class="nav-link">Sell</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#pastwork" class="nav-link">Past Work</a>
-                <a href="#join" class="nav-link">Join</a>
-                <a href="#invest" class="nav-link">Invest</a>
-                <a href="#contact" class="nav-cta">Hire us</a>
+                <a href="#" class="nav-link" onclick="showPage('main'); return false;">Main</a>
+                <a href="#" class="nav-link" onclick="showPage('privacy'); return false;">Privacy & Policy</a>
+                <a href="#games" class="nav-link" onclick="showPage('main'); smoothScroll('#games'); return false;">Games</a>
+                <a href="#sell" class="nav-link" onclick="showPage('main'); smoothScroll('#sell'); return false;">Sell</a>
+                <a href="#services" class="nav-link" onclick="showPage('main'); smoothScroll('#services'); return false;">Services</a>
+                <a href="#pastwork" class="nav-link" onclick="showPage('main'); smoothScroll('#pastwork'); return false;">Past Work</a>
+                <a href="#join" class="nav-link" onclick="showPage('main'); smoothScroll('#join'); return false;">Join</a>
+                <a href="#invest" class="nav-link" onclick="showPage('main'); smoothScroll('#invest'); return false;">Invest</a>
+                <a href="#contact" class="nav-cta" onclick="showPage('main'); smoothScroll('#contact'); return false;">Hire us</a>
             </div>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -1020,104 +1095,323 @@
         </div>
     </nav>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-        <div class="container">
-            <span class="live-badge">
-                <span class="live-dot"></span> Live statistics from Roblox.
-            </span>
-            <h1 class="hero-title">Achieve more with<br>Do<span>Success</span></h1>
-            <p class="hero-sub">We buy, grow and scale Roblox games. Join the developers who trusted us.</p>
-            
-            <div class="hero-stats" id="heroStats">
-                <div class="stat-card">
-                    <div class="stat-number" id="totalVisits">0</div>
-                    <div class="stat-label">Total Visits</div>
+    <!-- ===== MAIN PAGE ===== -->
+    <div id="main-page" class="page active">
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="container">
+                <span class="live-badge">
+                    <span class="live-dot"></span> Live statistics from Roblox.
+                </span>
+                <h1 class="hero-title">Achieve more with<br>Go<span>Success</span></h1>
+                <p class="hero-sub">We buy, grow and scale Roblox games. Join the developers who trusted us.</p>
+                
+                <div class="hero-stats" id="heroStats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalVisits">0</div>
+                        <div class="stat-label">Total Visits</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="activePlayers">0</div>
+                        <div class="stat-label">Active Now</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalFavorites">0</div>
+                        <div class="stat-label">Favorites</div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="activePlayers">0</div>
-                    <div class="stat-label">Active Now</div>
+                <div id="statsError" class="error-message" style="display: none;"></div>
+
+                <div class="hero-buttons">
+                    <a href="#games" class="btn btn-primary" onclick="smoothScroll('#games'); return false;"><i class="fas fa-gamepad"></i> Explore our games</a>
+                    <a href="#services" class="btn btn-outline" onclick="smoothScroll('#services'); return false;"><i class="fas fa-briefcase"></i> Hire us</a>
+                    <a href="#join" class="btn btn-outline" onclick="smoothScroll('#join'); return false;"><i class="fas fa-users"></i> Join us</a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="totalFavorites">0</div>
-                    <div class="stat-label">Favorites</div>
+
+                <div class="social-links">
+                    <a href="https://x.com/Rlyoung0" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.gg/DdMfTjUJnX" target="_blank" class="social-link"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
-            <div id="statsError" class="error-message" style="display: none;"></div>
+        </section>
 
-            <div class="hero-buttons">
-                <a href="#games" class="btn btn-primary"><i class="fas fa-gamepad"></i> Explore our games</a>
-                <a href="#services" class="btn btn-outline"><i class="fas fa-briefcase"></i> Hire us</a>
-                <a href="#join" class="btn btn-outline"><i class="fas fa-users"></i> Join us</a>
+        <!-- ===== OUR GAMES ===== -->
+        <section id="games" class="games-section">
+            <div class="container">
+                <h2 class="section-title">Our <span>games</span></h2>
+                <div class="games-grid" id="gamesContainer"></div>
             </div>
+        </section>
 
-            <div class="social-links">
-                <a href="https://x.com/Rlyoung0" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="https://discord.gg/DdMfTjUJnX" target="_blank" class="social-link"><i class="fab fa-discord"></i></a>
+        <!-- ===== SELL YOUR GAME ===== -->
+        <section id="sell" class="sell-section">
+            <div class="container">
+                <h2 class="section-title">Sell your <span>game</span></h2>
+                <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                    Ready to unlock the full potential of your Roblox creation? We offer a seamless exit strategy for game developers.
+                </p>
+                <div class="sell-grid">
+                    <div class="sell-card"><div class="sell-icon"><i class="fas fa-handshake"></i></div><h3>Full acquisition</h3><p>We purchase your game outright – competitive upfront payment.</p></div>
+                    <div class="sell-card"><div class="sell-icon"><i class="fas fa-chart-line"></i></div><h3>Expert marketing</h3><p>Our team takes over development & marketing to maximize potential.</p></div>
+                    <div class="sell-card"><div class="sell-icon"><i class="fas fa-percent"></i></div><h3>Revenue sharing</h3><p>Continue earning through a transparent revenue‑share model.</p></div>
+                    <div class="sell-card"><div class="sell-icon"><i class="fas fa-exchange-alt"></i></div><h3>Hassle‑free</h3><p>We handle everything – you focus on your next idea.</p></div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#contact" class="btn btn-primary" onclick="smoothScroll('#contact'); setActiveTab('sell'); return false;"><i class="fas fa-arrow-right"></i> Sell your game now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HIRE US – SERVICES ===== -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Hire <span>us</span></h2>
+                <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                    We offer professional Roblox services – from design to marketing.
+                </p>
+                <div class="services-grid">
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-paint-brush"></i></div><h3>UI/UX Design</h3><p>Clean, modern, and player‑friendly interfaces. Figma to Roblox.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire for UI</a></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-code"></i></div><h3>Luau Scripting</h3><p>Combat systems, simulators, mechanics – beginner to intermediate.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire for scripting</a></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-magic"></i></div><h3>VFX</h3><p>Visual effects – explosions, particles, spells, and atmosphere.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire for VFX</a></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-cube"></i></div><h3>GFX & thumbnails</h3><p>High‑quality game art, icons, and promotional graphics.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire for GFX</a></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-cubes"></i></div><h3>Builder</h3><p>Custom 3D models, environments, and structures.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire a Builder</a></div>
+                    <div class="service-card"><div class="service-icon"><i class="fas fa-gears"></i></div><h3>Full development</h3><p>From concept to front page – we build and scale your game.</p><a href="#contact" class="hire-btn" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire for dev</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAST WORK TABS ===== -->
+        <section id="pastwork" class="pastwork-section">
+            <div class="container">
+                <h2 class="section-title">Past <span>work</span></h2>
+                <div class="pastwork-tabs" id="pastworkTabs">
+                    <button class="pastwork-tab active" data-tab="scripting">Scripting</button>
+                    <button class="pastwork-tab" data-tab="ui">UI</button>
+                    <button class="pastwork-tab" data-tab="vfx">VFX</button>
+                    <button class="pastwork-tab" data-tab="gfx">GFX</button>
+                    <button class="pastwork-tab" data-tab="builder">Builder</button>
+                    <button class="pastwork-tab" data-tab="animator">Animator</button>
+                </div>
+                <div id="pastworkContent"></div>
+            </div>
+        </section>
+
+        <!-- ===== JOIN US ===== -->
+        <section id="join" class="join-section">
+            <div class="container">
+                <div class="join-card">
+                    <h3>Join <span>the team</span></h3>
+                    <p>We’re always looking for talented people. Be part of GoSuccess and help us shape the future of Roblox.</p>
+                    <div class="join-roles">
+                        <span class="role-badge"><i class="fas fa-code"></i> Developers</span>
+                        <span class="role-badge"><i class="fas fa-paint-brush"></i> Designers</span>
+                        <span class="role-badge"><i class="fas fa-magic"></i> VFX Artists</span>
+                        <span class="role-badge"><i class="fas fa-cube"></i> GFX Artists</span>
+                        <span class="role-badge"><i class="fas fa-cubes"></i> Builders</span>
+                        <span class="role-badge"><i class="fas fa-video"></i> Animators</span>
+                        <span class="role-badge"><i class="fas fa-chart-line"></i> Marketers</span>
+                        <span class="role-badge"><i class="fas fa-camera"></i> Content Creators</span>
+                    </div>
+                    <a href="#contact" class="join-btn" onclick="smoothScroll('#contact'); setActiveTab('join'); return false;"><i class="fas fa-paper-plane"></i> Apply now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INVESTOR SECTION ===== -->
+        <section id="invest" class="invest-section">
+            <div class="container">
+                <div class="invest-card">
+                    <h3>Invest in <span>GoSuccess</span></h3>
+                    <p>Partner with us to fuel the next generation of Roblox games. Choose where your investment goes.</p>
+                    <div class="invest-roles">
+                        <span class="invest-badge"><i class="fas fa-building"></i> Company Growth</span>
+                        <span class="invest-badge"><i class="fas fa-bullhorn"></i> Marketing</span>
+                        <span class="invest-badge"><i class="fas fa-laptop-code"></i> Developers</span>
+                        <span class="invest-badge"><i class="fas fa-cubes"></i> Builders</span>
+                        <span class="invest-badge"><i class="fas fa-camera"></i> Content Creators</span>
+                        <span class="invest-badge"><i class="fas fa-plus-circle"></i> Other</span>
+                    </div>
+                    <a href="#contact" class="invest-btn" onclick="smoothScroll('#contact'); setActiveTab('invest'); return false;"><i class="fas fa-chart-line"></i> Become an investor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT (4 TABS) ===== -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-tabs">
+                        <button class="form-tab active" id="tabHire" onclick="setActiveTab('hire')">Hire Us</button>
+                        <button class="form-tab" id="tabJoin" onclick="setActiveTab('join')">Join Us</button>
+                        <button class="form-tab" id="tabSell" onclick="setActiveTab('sell')">Sell Your Game</button>
+                        <button class="form-tab" id="tabInvest" onclick="setActiveTab('invest')">Invest</button>
+                    </div>
+
+                    <!-- Hire Us Form -->
+                    <div class="form-panel active" id="formHire">
+                        <h2 class="form-title">Let's work together</h2>
+                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Send us your game link and project details.</p>
+                        <form id="hireForm" onsubmit="submitHireForm(event)">
+                            <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="hireName" required></div>
+                            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="hireEmail" required></div>
+                            <div class="form-group"><label class="form-label">Game link (optional)</label><input type="url" class="form-control" id="hireGameLink" placeholder="https://www.roblox.com/games/..."></div>
+                            <div class="form-group"><label class="form-label">Project details</label><textarea class="form-control" id="hireDetails" placeholder="Tell us about your project, budget, timeline..." required></textarea></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send inquiry</button>
+                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                        </form>
+                    </div>
+
+                    <!-- Join Us Form -->
+                    <div class="form-panel" id="formJoin">
+                        <h2 class="form-title">Join the team</h2>
+                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Tell us about yourself and your skills.</p>
+                        <form id="joinForm" onsubmit="submitJoinForm(event)">
+                            <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="joinName" required></div>
+                            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="joinEmail" required></div>
+                            <div class="form-group"><label class="form-label">Role you're applying for</label>
+                                <select class="form-control" id="joinRole" required>
+                                    <option value="" disabled selected>Select a role</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="UI Designer">UI Designer</option>
+                                    <option value="VFX Artist">VFX Artist</option>
+                                    <option value="GFX Artist">GFX Artist</option>
+                                    <option value="Builder">Builder</option>
+                                    <option value="Animator">Animator</option>
+                                    <option value="Marketer">Marketer</option>
+                                    <option value="Content Creator">Content Creator</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group"><label class="form-label">Portfolio / experience</label><textarea class="form-control" id="joinExperience" placeholder="Links to your work, past games, GitHub, etc." required></textarea></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit application</button>
+                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                        </form>
+                    </div>
+
+                    <!-- Sell Your Game Form -->
+                    <div class="form-panel" id="formSell">
+                        <h2 class="form-title">Sell your game</h2>
+                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Get a competitive offer – we acquire Roblox games.</p>
+                        <form id="sellForm" onsubmit="submitSellForm(event)">
+                            <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="sellName" required></div>
+                            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="sellEmail" required></div>
+                            <div class="form-group"><label class="form-label">Game link</label><input type="url" class="form-control" id="sellGameLink" placeholder="https://www.roblox.com/games/..." required></div>
+                            <div class="form-group"><label class="form-label">Monthly visits / revenue (optional)</label><input type="text" class="form-control" id="sellMetrics" placeholder="e.g. 50K visits, $200/mo"></div>
+                            <div class="form-group"><label class="form-label">Additional info</label><textarea class="form-control" id="sellDetails" placeholder="Tell us about your game, development status, team size, etc."></textarea></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-hand-holding-usd"></i> Request offer</button>
+                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                        </form>
+                    </div>
+
+                    <!-- Invest Form -->
+                    <div class="form-panel" id="formInvest">
+                        <h2 class="form-title">Invest in GoSuccess</h2>
+                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Choose where you want your investment to go.</p>
+                        <form id="investForm" onsubmit="submitInvestForm(event)">
+                            <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="investName" required></div>
+                            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="investEmail" required></div>
+                            <div class="form-group"><label class="form-label">Investment focus</label>
+                                <select class="form-control" id="investFocus" required>
+                                    <option value="" disabled selected>Select an area</option>
+                                    <option value="Company Growth">Company Growth</option>
+                                    <option value="Marketing">Company Marketing</option>
+                                    <option value="Developers">Developers</option>
+                                    <option value="Builders">Builders</option>
+                                    <option value="Content Creators">Content Creators</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group"><label class="form-label">If Other, please specify</label><input type="text" class="form-control" id="investOther" placeholder="e.g., Infrastructure, Events, etc."></div>
+                            <div class="form-group"><label class="form-label">Proposed investment amount (optional)</label><input type="text" class="form-control" id="investAmount" placeholder="e.g., $5,000 – $50,000"></div>
+                            <div class="form-group"><label class="form-label">Message / questions</label><textarea class="form-control" id="investMessage" placeholder="Tell us about your investment interests, timeline, etc."></textarea></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-chart-line"></i> Submit interest</button>
+                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== PRIVACY & POLICY PAGE ===== -->
+    <div id="privacy-page" class="page">
+        <div class="privacy-page">
+            <div class="container">
+                <div class="privacy-container">
+                    <h1 class="privacy-title">Privacy & Policy</h1>
+                    <p class="privacy-date">Last Updated: February 2026</p>
+                    
+                    <div class="privacy-section">
+                        <h2>1. Introduction</h2>
+                        <p>Welcome to GoSuccess. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>2. Information We Collect</h2>
+                        <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our services, when you participate in activities on the website, or otherwise when you contact us.</p>
+                        <h3>2.1 Personal Information</h3>
+                        <p>The personal information we collect may include:</p>
+                        <ul>
+                            <li>Name and contact data (such as email address, Discord username, Roblox username)</li>
+                            <li>Project details, game links, and metrics you provide in forms</li>
+                            <li>Communication data (such as messages you send us)</li>
+                        </ul>
+                        <h3>2.2 Automatically Collected Information</h3>
+                        <p>We automatically collect certain information when you visit our website, such as your IP address, browser type, operating system, access times, and pages viewed. This information is used for website administration and to improve your experience.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>3. How We Use Your Information</h2>
+                        <p>We use personal information collected via our website for a variety of business purposes, including:</p>
+                        <ul>
+                            <li>To respond to your inquiries and provide customer support</li>
+                            <li>To evaluate game acquisition opportunities</li>
+                            <li>To process job applications and recruitment</li>
+                            <li>To send administrative information (such as updates to our terms and policies)</li>
+                            <li>To analyze website usage and improve our services</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>4. Sharing Your Information</h2>
+                        <p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p>
+                        <ul>
+                            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf (such as email services).</li>
+                            <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>5. Data Security</h2>
+                        <p>We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>6. Your Privacy Rights</h2>
+                        <p>Depending on your location, you may have certain rights regarding your personal information, such as the right to access, correct, or delete the data we have collected. To exercise these rights, please contact us at northchicagorp0@gmail.com.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>7. Children's Privacy</h2>
+                        <p>Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>8. Changes to This Policy</h2>
+                        <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2>9. Contact Us</h2>
+                        <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+                        <p>Email: northchicagorp0@gmail.com<br>Discord: rlyoung0<br>Roblox: rlyoung0</p>
+                    </div>
+
+                    <a href="#" class="back-home" onclick="showPage('main'); return false;">← Back to Main Page</a>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- ===== OUR GAMES – 4 GAMES (TRAIN VS VEHICLE MASTER FIXED) ===== -->
-    <section id="games" class="games-section">
-        <div class="container">
-            <h2 class="section-title">Our <span>games</span></h2>
-            <div class="games-grid" id="gamesContainer"></div>
-        </div>
-    </section>
-
-    <!-- ===== SELL YOUR GAME ===== -->
-    <section id="sell" class="sell-section">
-        <div class="container">
-            <h2 class="section-title">Sell your <span>game</span></h2>
-            <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Ready to unlock the full potential of your Roblox creation? We offer a seamless exit strategy for game developers.
-            </p>
-            <div class="sell-grid">
-                <div class="sell-card"><div class="sell-icon"><i class="fas fa-handshake"></i></div><h3>Full acquisition</h3><p>We purchase your game outright – competitive upfront payment.</p></div>
-                <div class="sell-card"><div class="sell-icon"><i class="fas fa-chart-line"></i></div><h3>Expert marketing</h3><p>Our team takes over development & marketing to maximize potential.</p></div>
-                <div class="sell-card"><div class="sell-icon"><i class="fas fa-percent"></i></div><h3>Revenue sharing</h3><p>Continue earning through a transparent revenue‑share model.</p></div>
-                <div class="sell-card"><div class="sell-icon"><i class="fas fa-exchange-alt"></i></div><h3>Hassle‑free</h3><p>We handle everything – you focus on your next idea.</p></div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#contact" class="btn btn-primary" onclick="setActiveTab('sell')"><i class="fas fa-arrow-right"></i> Sell your game now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== HIRE US – SERVICES ===== -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">Hire <span>us</span></h2>
-            <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                We offer professional Roblox services – from design to marketing.
-            </p>
-            <div class="services-grid">
-                <div class="service-card"><div class="service-icon"><i class="fas fa-paint-brush"></i></div><h3>UI/UX Design</h3><p>Clean, modern, and player‑friendly interfaces. Figma to Roblox.</p><a href="#contact" class="hire-btn" data-form="hire">Hire for UI</a></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-code"></i></div><h3>Luau Scripting</h3><p>Combat systems, simulators, mechanics – beginner to intermediate.</p><a href="#contact" class="hire-btn" data-form="hire">Hire for scripting</a></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-magic"></i></div><h3>VFX</h3><p>Visual effects – explosions, particles, spells, and atmosphere.</p><a href="#contact" class="hire-btn" data-form="hire">Hire for VFX</a></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-cube"></i></div><h3>GFX & thumbnails</h3><p>High‑quality game art, icons, and promotional graphics.</p><a href="#contact" class="hire-btn" data-form="hire">Hire for GFX</a></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-cubes"></i></div><h3>Builder</h3><p>Custom 3D models, environments, and structures.</p><a href="#contact" class="hire-btn" data-form="hire">Hire a Builder</a></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-gears"></i></div><h3>Full development</h3><p>From concept to front page – we build and scale your game.</p><a href="#contact" class="hire-btn" data-form="hire">Hire for dev</a></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PAST WORK TABS – WITH BUILDER (FIXED), UI, GFX, SCRIPTING ===== -->
-    <section id="pastwork" class="pastwork-section">
-        <div class="container">
-            <h2 class="section-title">Past <span>work</span></h2>
-            <div class="pastwork-tabs" id="pastworkTabs">
-                <button class="pastwork-tab active" data-tab="scripting">Scripting</button>
-                <button class="pastwork-tab" data-tab="ui">UI</button>
-                <button class="pastwork-tab" data-tab="vfx">VFX</button>
-                <button class="pastwork-tab" data-tab="gfx">GFX</button>
-                <button class="pastwork-tab" data-tab="builder">Builder</button>
-                <button class="pastwork-tab" data-tab="animator">Animator</button>
-            </div>
-            <div id="pastworkContent"></div>
-        </div>
-    </section>
+    </div>
 
     <!-- ===== LIGHTBOX ===== -->
     <div id="galleryLightbox" class="lightbox">
@@ -1128,150 +1422,18 @@
         <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
 
-    <!-- ===== JOIN US ===== -->
-    <section id="join" class="join-section">
-        <div class="container">
-            <div class="join-card">
-                <h3>Join <span>the team</span></h3>
-                <p>We’re always looking for talented people. Be part of DoSuccess and help us shape the future of Roblox.</p>
-                <div class="join-roles">
-                    <span class="role-badge"><i class="fas fa-code"></i> Developers</span>
-                    <span class="role-badge"><i class="fas fa-paint-brush"></i> Designers</span>
-                    <span class="role-badge"><i class="fas fa-magic"></i> VFX Artists</span>
-                    <span class="role-badge"><i class="fas fa-cube"></i> GFX Artists</span>
-                    <span class="role-badge"><i class="fas fa-cubes"></i> Builders</span>
-                    <span class="role-badge"><i class="fas fa-video"></i> Animators</span>
-                    <span class="role-badge"><i class="fas fa-chart-line"></i> Marketers</span>
-                    <span class="role-badge"><i class="fas fa-camera"></i> Content Creators</span>
-                </div>
-                <a href="#contact" class="join-btn" data-form="join"><i class="fas fa-paper-plane"></i> Apply now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== INVESTOR SECTION ===== -->
-    <section id="invest" class="invest-section">
-        <div class="container">
-            <div class="invest-card">
-                <h3>Invest in <span>DoSuccess</span></h3>
-                <p>Partner with us to fuel the next generation of Roblox games. Choose where your investment goes.</p>
-                <div class="invest-roles">
-                    <span class="invest-badge"><i class="fas fa-building"></i> Company Growth</span>
-                    <span class="invest-badge"><i class="fas fa-bullhorn"></i> Marketing</span>
-                    <span class="invest-badge"><i class="fas fa-laptop-code"></i> Developers</span>
-                    <span class="invest-badge"><i class="fas fa-cubes"></i> Builders</span>
-                    <span class="invest-badge"><i class="fas fa-camera"></i> Content Creators</span>
-                    <span class="invest-badge"><i class="fas fa-plus-circle"></i> Other</span>
-                </div>
-                <a href="#contact" class="invest-btn" onclick="setActiveTab('invest')"><i class="fas fa-chart-line"></i> Become an investor</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT (4 TABS) ===== -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="form-container">
-                <div class="form-tabs">
-                    <button class="form-tab active" id="tabHire">Hire Us</button>
-                    <button class="form-tab" id="tabJoin">Join Us</button>
-                    <button class="form-tab" id="tabSell">Sell Your Game</button>
-                    <button class="form-tab" id="tabInvest">Invest</button>
-                </div>
-                <!-- Hire Us Form -->
-                <div class="form-panel active" id="formHire">
-                    <h2 class="form-title">Let's work together</h2>
-                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Send us your game link and project details.</p>
-                    <form id="hireForm">
-                        <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="hireName" required></div>
-                        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="hireEmail" required></div>
-                        <div class="form-group"><label class="form-label">Game link (optional)</label><input type="url" class="form-control" id="hireGameLink" placeholder="https://www.roblox.com/games/..."></div>
-                        <div class="form-group"><label class="form-label">Project details</label><textarea class="form-control" id="hireDetails" placeholder="Tell us about your project, budget, timeline..." required></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send inquiry</button>
-                        <div class="privacy-note">By submitting you agree to our <a href="#">privacy policy</a>.</div>
-                    </form>
-                </div>
-                <!-- Join Us Form -->
-                <div class="form-panel" id="formJoin">
-                    <h2 class="form-title">Join the team</h2>
-                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Tell us about yourself and your skills.</p>
-                    <form id="joinForm">
-                        <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="joinName" required></div>
-                        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="joinEmail" required></div>
-                        <div class="form-group"><label class="form-label">Role you're applying for</label>
-                            <select class="form-control" id="joinRole" required>
-                                <option value="" disabled selected>Select a role</option>
-                                <option value="Developer">Developer</option>
-                                <option value="UI Designer">UI Designer</option>
-                                <option value="VFX Artist">VFX Artist</option>
-                                <option value="GFX Artist">GFX Artist</option>
-                                <option value="Builder">Builder</option>
-                                <option value="Animator">Animator</option>
-                                <option value="Marketer">Marketer</option>
-                                <option value="Content Creator">Content Creator</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group"><label class="form-label">Portfolio / experience</label><textarea class="form-control" id="joinExperience" placeholder="Links to your work, past games, GitHub, etc." required></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit application</button>
-                        <div class="privacy-note">By submitting you agree to our <a href="#">privacy policy</a>.</div>
-                    </form>
-                </div>
-                <!-- Sell Your Game Form -->
-                <div class="form-panel" id="formSell">
-                    <h2 class="form-title">Sell your game</h2>
-                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Get a competitive offer – we acquire Roblox games.</p>
-                    <form id="sellForm">
-                        <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="sellName" required></div>
-                        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="sellEmail" required></div>
-                        <div class="form-group"><label class="form-label">Game link</label><input type="url" class="form-control" id="sellGameLink" placeholder="https://www.roblox.com/games/..." required></div>
-                        <div class="form-group"><label class="form-label">Monthly visits / revenue (optional)</label><input type="text" class="form-control" id="sellMetrics" placeholder="e.g. 50K visits, $200/mo"></div>
-                        <div class="form-group"><label class="form-label">Additional info</label><textarea class="form-control" id="sellDetails" placeholder="Tell us about your game, development status, team size, etc."></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-hand-holding-usd"></i> Request offer</button>
-                        <div class="privacy-note">By submitting you agree to our <a href="#">privacy policy</a>.</div>
-                    </form>
-                </div>
-                <!-- Invest Form -->
-                <div class="form-panel" id="formInvest">
-                    <h2 class="form-title">Invest in DoSuccess</h2>
-                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Choose where you want your investment to go.</p>
-                    <form id="investForm">
-                        <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="investName" required></div>
-                        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="investEmail" required></div>
-                        <div class="form-group"><label class="form-label">Investment focus</label>
-                            <select class="form-control" id="investFocus" required>
-                                <option value="" disabled selected>Select an area</option>
-                                <option value="Company Growth">Company Growth</option>
-                                <option value="Marketing">Company Marketing</option>
-                                <option value="Developers">Developers</option>
-                                <option value="Builders">Builders</option>
-                                <option value="Content Creators">Content Creators</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group"><label class="form-label">If Other, please specify</label><input type="text" class="form-control" id="investOther" placeholder="e.g., Infrastructure, Events, etc."></div>
-                        <div class="form-group"><label class="form-label">Proposed investment amount (optional)</label><input type="text" class="form-control" id="investAmount" placeholder="e.g., $5,000 – $50,000"></div>
-                        <div class="form-group"><label class="form-label">Message / questions</label><textarea class="form-control" id="investMessage" placeholder="Tell us about your investment interests, timeline, etc."></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-chart-line"></i> Submit interest</button>
-                        <div class="privacy-note">By submitting you agree to our <a href="#">privacy policy</a>.</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-logo">Do<span>Success</span></a>
+                <a href="#" class="footer-logo" onclick="showPage('main'); return false;">Go<span>Success</span></a>
                 <div class="footer-social">
                     <a href="https://x.com/Rlyoung0" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://discord.gg/DdMfTjUJnX" target="_blank"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>Built with precision · Programmed/Designed and Owned by Rlyoung0<br>Discord/Roblox: Rlyoung0</p>
+                <p>Built with precision · Programmed/Designed and Owned by Rlyoung0<br>Discord/Roblox: rlyoung0</p>
             </div>
         </div>
     </footer>
@@ -1280,7 +1442,29 @@
         (function() {
             "use strict";
 
-            // ===== ULTRA-SMOOTH TWEENING ENGINE – SINGLE RAF LOOP, ZERO STUTTER =====
+            // ===== PAGE SYSTEM =====
+            window.showPage = function(pageId) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(pageId + '-page').classList.add('active');
+                if (pageId === 'main') {
+                    window.scrollTo(0, 0);
+                    loadAllStats(); // reload stats when returning to main
+                }
+            };
+
+            window.smoothScroll = function(targetSelector) {
+                const target = document.querySelector(targetSelector);
+                if (target) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            };
+
+            // ===== ULTRA-SMOOTH TWEENING ENGINE =====
             const TWEEN_DURATION = 4000;
             const EASE_OUT_CUBIC = t => 1 - Math.pow(1 - t, 3);
 
@@ -1293,7 +1477,6 @@
 
                 add(element, endValue, formatFn = null) {
                     if (!element) return;
-                    // Remove any existing tween for this element
                     this.tweens = this.tweens.filter(t => t.element !== element);
                     
                     const start = parseFloat(element.textContent) || 0;
@@ -1356,7 +1539,7 @@
 
             const tweenManager = new TweenManager();
 
-            // ===== YOUR FOUR ROBLOX GAMES (TRAIN VS VEHICLE MASTER FIXED) =====
+            // ===== YOUR FIVE ROBLOX GAMES =====
             const GAMES = [
                 {
                     placeId: 128641742072134,
@@ -1375,7 +1558,7 @@
                     fallbackStats: { visits: 3155, playing: 2, favorites: 4 }
                 },
                 {
-                    placeId: 8287908355, // FIXED: Correct Train VS Vehicle Master ID
+                    placeId: 8287908355,
                     name: "Train VS Vehicle Master!",
                     url: "https://www.roblox.com/games/8287908355/Train-VS-Vehicle-Master",
                     thumbnail: "https://tr.rbxcdn.com/180DAY-f9c6b43e81a5df5c4837af925208e5a3/768/432/Image/Webp/noFilter",
@@ -1389,6 +1572,14 @@
                     thumbnail: "https://tr.rbxcdn.com/180DAY-4628d8153026cbce570c02fcac54456a/768/432/Image/Webp/noFilter",
                     description: "Donation game inspired by Pls Donate – made for the Balkan community! 🇧🇦🇷🇸🇭🇷 Daily streaks & rewards.",
                     fallbackStats: { visits: 1800000, playing: 47, favorites: 5599 }
+                },
+                {
+                    placeId: 128174745676266,
+                    name: "Shred A Car!",
+                    url: "https://www.roblox.com/games/128174745676266/Shred-A-Car",
+                    thumbnail: "https://tr.rbxcdn.com/180DAY-7d4309fb31214bc1cd5a4f4f12210d68/768/432/Image/Webp/noFilter",
+                    description: "Pick up cars, shred them for cash, and climb the leaderboard! 80K+ visits.",
+                    fallbackStats: { visits: 80000, playing: 40, favorites: 103 }
                 }
             ];
 
@@ -1445,8 +1636,10 @@
                 }
             }
 
-            // ===== LOAD STATS AND TWEEN (SMOOTH) =====
+            // ===== LOAD STATS AND TWEEN =====
             async function loadAllStats() {
+                if (!document.getElementById('main-page').classList.contains('active')) return;
+                
                 tweenManager.clear();
                 
                 document.getElementById('totalVisits').textContent = '0';
@@ -1481,7 +1674,6 @@
                     gamesContainer.appendChild(card);
                 }
 
-                // Wait for DOM to update, then start ALL tweens at once
                 requestAnimationFrame(() => {
                     tweenManager.add(document.getElementById('totalVisits'), totalVisits);
                     tweenManager.add(document.getElementById('activePlayers'), totalPlaying);
@@ -1495,7 +1687,102 @@
                 });
             }
 
-            // ===== GALLERIES =====
+            // ===== FORM SUBMISSIONS (ALL EMAILS TO northchicagorp0@gmail.com) =====
+            window.submitHireForm = function(e) {
+                e.preventDefault();
+                const name = document.getElementById('hireName').value;
+                const email = document.getElementById('hireEmail').value;
+                const gameLink = document.getElementById('hireGameLink').value;
+                const details = document.getElementById('hireDetails').value;
+                if (!name || !email || !details) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Hire inquiry: ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send the message.');
+            };
+
+            window.submitJoinForm = function(e) {
+                e.preventDefault();
+                const name = document.getElementById('joinName').value;
+                const email = document.getElementById('joinEmail').value;
+                const role = document.getElementById('joinRole').value;
+                const experience = document.getElementById('joinExperience').value;
+                if (!name || !email || !role || !experience) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your application.');
+            };
+
+            window.submitSellForm = function(e) {
+                e.preventDefault();
+                const name = document.getElementById('sellName').value;
+                const email = document.getElementById('sellEmail').value;
+                const gameLink = document.getElementById('sellGameLink').value;
+                const metrics = document.getElementById('sellMetrics').value;
+                const details = document.getElementById('sellDetails').value;
+                if (!name || !email || !gameLink) {
+                    alert('Please fill in your name, email and game link.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\n\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your game sale inquiry.');
+            };
+
+            window.submitInvestForm = function(e) {
+                e.preventDefault();
+                const name = document.getElementById('investName').value;
+                const email = document.getElementById('investEmail').value;
+                const focus = document.getElementById('investFocus').value;
+                const other = document.getElementById('investOther').value;
+                const amount = document.getElementById('investAmount').value;
+                const message = document.getElementById('investMessage').value;
+                if (!name || !email || !focus) {
+                    alert('Please fill in your name, email and investment focus.');
+                    return;
+                }
+                const subject = encodeURIComponent(`Investment inquiry: ${name}`);
+                const body = encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`
+                );
+                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+                alert('Your email client will open – please send your investment interest.');
+            };
+
+            // ===== FORM TAB SWITCHING =====
+            window.setActiveTab = function(tabId) {
+                const tabHire = document.getElementById('tabHire');
+                const tabJoin = document.getElementById('tabJoin');
+                const tabSell = document.getElementById('tabSell');
+                const tabInvest = document.getElementById('tabInvest');
+                const formHire = document.getElementById('formHire');
+                const formJoin = document.getElementById('formJoin');
+                const formSell = document.getElementById('formSell');
+                const formInvest = document.getElementById('formInvest');
+
+                [tabHire, tabJoin, tabSell, tabInvest].forEach(t => t.classList.remove('active'));
+                [formHire, formJoin, formSell, formInvest].forEach(f => f.classList.remove('active'));
+
+                if (tabId === 'hire') { tabHire.classList.add('active'); formHire.classList.add('active'); }
+                else if (tabId === 'join') { tabJoin.classList.add('active'); formJoin.classList.add('active'); }
+                else if (tabId === 'sell') { tabSell.classList.add('active'); formSell.classList.add('active'); }
+                else if (tabId === 'invest') { tabInvest.classList.add('active'); formInvest.classList.add('active'); }
+            };
+
+            // ===== MOBILE MENU =====
+            document.getElementById('menuToggle').addEventListener('click', function() {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+
+            // ===== GALLERIES AND LIGHTBOX (unchanged) =====
             const gfxImages = [
                 "https://pbs.twimg.com/media/G_xvgRgWQAA3XHp?format=jpg&name=large",
                 "https://pbs.twimg.com/media/G-HD0SSXEAAhzYU?format=jpg&name=large",
@@ -1519,7 +1806,6 @@
                 "https://pbs.twimg.com/media/HA-CVYZX0AAHmP2?format=jpg&name=large"
             ];
 
-            // ===== LIGHTBOX =====
             function initLightbox() {
                 const lightbox = document.getElementById('galleryLightbox');
                 const closeBtn = lightbox.querySelector('.lightbox-close');
@@ -1569,7 +1855,6 @@
                 });
             }
 
-            // ===== PAST WORK TABS =====
             function initPastWorkTabs() {
                 const tabButtons = document.querySelectorAll('.pastwork-tab');
                 const contentDiv = document.getElementById('pastworkContent');
@@ -1601,7 +1886,7 @@
                                     <div class="pastwork-icon"><i class="fas fa-briefcase"></i></div>
                                     <h3>Hire a GFX Artist</h3>
                                     <p>Need custom thumbnails, logos, or promotional art?</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
                                 </div>
                             </div>
                         `;
@@ -1623,7 +1908,7 @@
                                     <div class="pastwork-icon"><i class="fas fa-paint-brush"></i></div>
                                     <h3>Hire a UI Designer</h3>
                                     <p>Need clean, modern interfaces?</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
                                 </div>
                             </div>
                         `;
@@ -1645,7 +1930,7 @@
                                     <div class="pastwork-icon"><i class="fas fa-cubes"></i></div>
                                     <h3>Hire a Builder</h3>
                                     <p>Need custom props, vehicles, or environments?</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
                                 </div>
                             </div>
                         `;
@@ -1675,7 +1960,7 @@
                                     <div class="pastwork-icon"><i class="fas fa-code"></i></div>
                                     <h3>Hire a scripter</h3>
                                     <p>Need custom mechanics or systems?</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
                                 </div>
                             </div>
                         `;
@@ -1685,8 +1970,8 @@
                                 <div class="pastwork-item">
                                     <div class="pastwork-icon"><i class="fas fa-clock"></i></div>
                                     <h3>Nothing here yet</h3>
-                                    <p>Be the first to showcase your ${categoryNames[category]} work with DoSuccess!</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="join">Apply to join</a>
+                                    <p>Be the first to showcase your ${categoryNames[category]} work with GoSuccess!</p>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('join'); return false;">Apply to join</a>
                                 </div>
                                 <div class="pastwork-item coming-soon">
                                     <i class="fas fa-hourglass-half"></i>
@@ -1697,7 +1982,7 @@
                                     <div class="pastwork-icon"><i class="fas fa-briefcase"></i></div>
                                     <h3>Hire a ${categoryNames[category]}</h3>
                                     <p>Looking for talent? Post your project and hire our team.</p>
-                                    <a href="#contact" class="pastwork-cta" data-form="hire">Hire now</a>
+                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
                                 </div>
                             </div>
                         `;
@@ -1714,110 +1999,6 @@
                 renderTabContent('scripting');
             }
 
-            // ===== MOBILE MENU =====
-            document.getElementById('menuToggle').addEventListener('click', function() {
-                document.getElementById('navMenu').classList.toggle('active');
-            });
-
-            // ===== FORM TAB SWITCHING =====
-            const tabHire = document.getElementById('tabHire');
-            const tabJoin = document.getElementById('tabJoin');
-            const tabSell = document.getElementById('tabSell');
-            const tabInvest = document.getElementById('tabInvest');
-            const formHire = document.getElementById('formHire');
-            const formJoin = document.getElementById('formJoin');
-            const formSell = document.getElementById('formSell');
-            const formInvest = document.getElementById('formInvest');
-
-            window.setActiveTab = function(tabId) {
-                [tabHire, tabJoin, tabSell, tabInvest].forEach(t => t.classList.remove('active'));
-                [formHire, formJoin, formSell, formInvest].forEach(f => f.classList.remove('active'));
-                if (tabId === 'hire') { tabHire.classList.add('active'); formHire.classList.add('active'); }
-                else if (tabId === 'join') { tabJoin.classList.add('active'); formJoin.classList.add('active'); }
-                else if (tabId === 'sell') { tabSell.classList.add('active'); formSell.classList.add('active'); }
-                else if (tabId === 'invest') { tabInvest.classList.add('active'); formInvest.classList.add('active'); }
-            };
-
-            tabHire.addEventListener('click', () => setActiveTab('hire'));
-            tabJoin.addEventListener('click', () => setActiveTab('join'));
-            tabSell.addEventListener('click', () => setActiveTab('sell'));
-            tabInvest.addEventListener('click', () => setActiveTab('invest'));
-
-            // ===== FORM SUBMISSIONS =====
-            document.getElementById('hireForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('hireName').value;
-                const email = document.getElementById('hireEmail').value;
-                const gameLink = document.getElementById('hireGameLink').value;
-                const details = document.getElementById('hireDetails').value;
-                if (!name || !email || !details) return alert('Please fill in all required fields.');
-                const subject = encodeURIComponent(`Hire inquiry: ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send the message.');
-            });
-
-            document.getElementById('joinForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('joinName').value;
-                const email = document.getElementById('joinEmail').value;
-                const role = document.getElementById('joinRole').value;
-                const experience = document.getElementById('joinExperience').value;
-                if (!name || !email || !role || !experience) return alert('Please fill in all fields.');
-                const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your application.');
-            });
-
-            document.getElementById('sellForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('sellName').value;
-                const email = document.getElementById('sellEmail').value;
-                const gameLink = document.getElementById('sellGameLink').value;
-                const metrics = document.getElementById('sellMetrics').value;
-                const details = document.getElementById('sellDetails').value;
-                if (!name || !email || !gameLink) return alert('Please fill in your name, email and game link.');
-                const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\n\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your game sale inquiry.');
-            });
-
-            document.getElementById('investForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('investName').value;
-                const email = document.getElementById('investEmail').value;
-                const focus = document.getElementById('investFocus').value;
-                const other = document.getElementById('investOther').value;
-                const amount = document.getElementById('investAmount').value;
-                const message = document.getElementById('investMessage').value;
-                if (!name || !email || !focus) return alert('Please fill in your name, email and investment focus.');
-                const subject = encodeURIComponent(`Investment inquiry: ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your investment interest.');
-            });
-
-            // ===== SMOOTH SCROLL =====
-            document.querySelectorAll('.nav-link, .nav-cta, .btn, .hire-btn, .join-btn, .invest-btn, .pastwork-cta').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href && href.startsWith('#')) {
-                        e.preventDefault();
-                        const target = document.querySelector(href);
-                        if (target) {
-                            window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-                            if (this.classList.contains('hire-btn') || this.classList.contains('nav-cta') || (this.classList.contains('pastwork-cta') && this.getAttribute('data-form') === 'hire')) setActiveTab('hire');
-                            if (this.classList.contains('join-btn') || (this.classList.contains('pastwork-cta') && this.getAttribute('data-form') === 'join')) setActiveTab('join');
-                            if (this.closest('#sell') || (this.classList.contains('btn-primary') && this.innerText.includes('Sell'))) setActiveTab('sell');
-                            if (this.closest('#invest') || this.classList.contains('invest-btn')) setActiveTab('invest');
-                        }
-                        document.getElementById('navMenu').classList.remove('active');
-                    }
-                });
-            });
-
             // ===== EXPOSE GLOBAL VARIABLES =====
             window.gfxImages = gfxImages;
             window.uiImages = uiImages;
@@ -1825,9 +2006,9 @@
 
             // ===== INIT =====
             window.addEventListener('DOMContentLoaded', function() {
-                loadAllStats();
                 initPastWorkTabs();
                 initLightbox();
+                loadAllStats();
             });
         })();
     </script>
