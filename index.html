@@ -12,7 +12,7 @@
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="GoSuccess · Achieve your Roblox dreams">
     <meta property="og:description" content="We buy, grow and scale Roblox games. Live statistics, game acquisition, professional services. Join the developers who trusted us.">
-    <meta property="og:image" content="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
+    <meta property="og:image" content="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
     <meta property="og:url" content="https://gosuccess.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GoSuccess">
@@ -21,13 +21,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GoSuccess · Achieve your Roblox dreams">
     <meta name="twitter:description" content="We buy, grow and scale Roblox games. Live statistics, game acquisition, professional services.">
-    <meta name="twitter:image" content="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
+    <meta name="twitter:image" content="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
     <meta name="twitter:site" content="@Rlyoung0">
     <meta name="twitter:creator" content="@Rlyoung0">
 
     <!-- ===== FAVICON ===== -->
-    <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
-    <link rel="apple-touch-icon" href="https://pbs.twimg.com/media/HA56bbTWcAAEh2l?format=jpg&name=medium">
+    <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
+    <link rel="apple-touch-icon" href="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
 
     <title>GoSuccess · Achieve your Roblox dreams</title>
 
@@ -87,7 +87,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 100;
-            padding: 18px 0;
+            padding: 12px 0;
         }
 
         .nav-container {
@@ -97,12 +97,20 @@
         }
 
         .logo {
-            font-size: 2rem;
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            color: var(--text);
-            letter-spacing: -0.02em;
         }
-        .logo span { color: var(--primary); }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
 
         .nav-menu {
             display: flex;
@@ -145,7 +153,7 @@
         /* ===== PAGE SYSTEM ===== */
         .page {
             display: none;
-            padding-top: 100px;
+            padding-top: 80px;
             min-height: 100vh;
         }
         .page.active {
@@ -216,7 +224,7 @@
 
         /* ----- HERO (Main Page) ----- */
         .hero {
-            padding: 200px 0 120px;
+            padding: 180px 0 120px;
             text-align: center;
         }
 
@@ -1012,12 +1020,11 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        .footer-logo {
-            font-size: 1.8rem;
-            text-decoration: none;
-            color: white;
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 6px;
         }
-        .footer-logo span { color: var(--primary); }
         .footer-social {
             display: flex;
             gap: 20px;
@@ -1077,7 +1084,9 @@
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo" onclick="showPage('main'); return false;">Go<span>Success</span></a>
+            <a href="#" class="logo" onclick="showPage('main'); return false;">
+                <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" class="logo-img">
+            </a>
             <div class="nav-menu" id="navMenu">
                 <a href="#" class="nav-link" onclick="showPage('main'); return false;">Main</a>
                 <a href="#" class="nav-link" onclick="showPage('privacy'); return false;">Privacy & Policy</a>
@@ -1426,7 +1435,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-logo" onclick="showPage('main'); return false;">Go<span>Success</span></a>
+                <a href="#" class="footer-logo" onclick="showPage('main'); return false;">
+                    <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" class="footer-logo-img">
+                </a>
                 <div class="footer-social">
                     <a href="https://x.com/Rlyoung0" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://discord.gg/DdMfTjUJnX" target="_blank"><i class="fab fa-discord"></i></a>
@@ -1448,7 +1459,7 @@
                 document.getElementById(pageId + '-page').classList.add('active');
                 if (pageId === 'main') {
                     window.scrollTo(0, 0);
-                    loadAllStats(); // reload stats when returning to main
+                    loadAllStats();
                 }
             };
 
@@ -1562,8 +1573,8 @@
                     name: "Train VS Vehicle Master!",
                     url: "https://www.roblox.com/games/8287908355/Train-VS-Vehicle-Master",
                     thumbnail: "https://tr.rbxcdn.com/180DAY-f9c6b43e81a5df5c4837af925208e5a3/768/432/Image/Webp/noFilter",
-                    description: "Massive battles between trains and vehicles! 10.3M+ visits.",
-                    fallbackStats: { visits: 10300000, playing: 25, favorites: 4581 }
+                    description: "Massive battles between trains and vehicles! 10.4M+ visits.",
+                    fallbackStats: { visits: 10400000, playing: 25, favorites: 4581 }
                 },
                 {
                     placeId: 17247995332,
@@ -1782,7 +1793,7 @@
                 document.getElementById('navMenu').classList.toggle('active');
             });
 
-            // ===== GALLERIES AND LIGHTBOX (unchanged) =====
+            // ===== GALLERIES AND LIGHTBOX =====
             const gfxImages = [
                 "https://pbs.twimg.com/media/G_xvgRgWQAA3XHp?format=jpg&name=large",
                 "https://pbs.twimg.com/media/G-HD0SSXEAAhzYU?format=jpg&name=large",
