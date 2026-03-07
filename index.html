@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GoSuccess – We buy, grow and scale Roblox games. Live statistics, game acquisition, professional development for Your Games. Join the developers who trusted us.">
-    <meta name="keywords" content="gosuces, Gosuces, Gosucess, gosucces, gosucess, GoSuccess, gosuccess, gosucces, gosuccess roblox, gosuccess studio, gosuccess studios, Gosuccess, gosuccess roblox, Roblox, game acquisition, sell Roblox game, Roblox studio, UI design, VFX, GFX, Builder, Luau scripting, game marketing">
+    <meta name="keywords" content="gosuces, gosucces, gosucess, GoSuccess, gosuccess, gosucces, gosuccess roblox, gosuccess studio, gosuccess studios, Gosuccess, gosuccess roblox, Roblox, game acquisition, sell Roblox game, Roblox studio, UI design, VFX, GFX, Builder, Luau scripting, game marketing">
     <meta name="author" content="Rlyoung0">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#b300ff">
+    <link rel="canonical" href="https://gosuccess.netlify.app">
 
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="GoSuccess · Achieve your Roblox dreams">
@@ -16,6 +18,7 @@
     <meta property="og:url" content="https://gosuccess.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GoSuccess">
+    <meta property="og:locale" content="en_US">
 
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
@@ -25,6 +28,11 @@
     <meta name="twitter:site" content="@Rlyoung0">
     <meta name="twitter:creator" content="@Rlyoung0">
 
+    <!-- ===== STRUCTURED DATA (NEW - SEO boost) ===== -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"GoSuccess","url":"https://gosuccess.netlify.app","logo":"https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium","description":"We buy, grow and scale Roblox games.","sameAs":["https://x.com/Rlyoung0","https://discord.gg/DdMfTjUJnX"],"contactPoint":{"@type":"ContactPoint","email":"northchicagorp0@gmail.com","contactType":"customer service"}}
+    </script>
+
     <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
     <link rel="apple-touch-icon" href="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
@@ -32,15 +40,14 @@
     <title>GoSuccess · Achieve your Roblox dreams</title>
 
     <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         /* ----- RESET & VARIABLES ----- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --bg: #0a0a12;
@@ -62,21 +69,14 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 30%, rgba(179, 0, 255, 0.08) 0%, transparent 40%),
                 radial-gradient(circle at 80% 70%, rgba(0, 230, 184, 0.04) 0%, transparent 40%);
         }
 
-        h1, h2, h3, .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-        }
+        h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
         /* ----- NAVIGATION ----- */
         .navbar {
@@ -90,33 +90,13 @@
             padding: 12px 0;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-        
-        .logo-img {
-            height: 50px;
-            width: auto;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 50px; width: auto; border-radius: 8px; transition: transform 0.2s; }
+        .logo-img:hover { transform: scale(1.05); }
 
-        .nav-menu {
-            display: flex;
-            gap: 48px;
-            align-items: center;
-        }
+        .nav-menu { display: flex; gap: 48px; align-items: center; }
 
         .nav-link {
             color: var(--text-muted);
@@ -135,224 +115,77 @@
             font-weight: 600;
             text-decoration: none;
             transition: 0.2s;
-        }
-        .nav-cta:hover {
-            box-shadow: 0 0 20px var(--primary-glow);
-            transform: translateY(-2px);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.8rem;
             cursor: pointer;
         }
+        .nav-cta:hover { box-shadow: 0 0 20px var(--primary-glow); transform: translateY(-2px); }
+
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
 
         /* ===== PAGE SYSTEM ===== */
-        .page {
-            display: none;
-            padding-top: 80px;
-            min-height: 100vh;
-        }
-        .page.active {
-            display: block;
-        }
+        .page { display: none; padding-top: 80px; min-height: 100vh; }
+        .page.active { display: block; }
 
         /* ===== PRIVACY PAGE ===== */
-        .privacy-page {
-            padding: 120px 0 80px;
-        }
-        .privacy-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 60px;
-        }
-        .privacy-title {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-            text-align: center;
-        }
-        .privacy-date {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 50px;
-            font-style: italic;
-        }
-        .privacy-section {
-            margin-bottom: 40px;
-        }
-        .privacy-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        .privacy-section h3 {
-            font-size: 1.3rem;
-            margin: 25px 0 15px;
-            color: var(--text);
-        }
-        .privacy-section p {
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        .privacy-section ul {
-            color: var(--text-muted);
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        .privacy-section li {
-            margin-bottom: 8px;
-        }
-        .back-home {
-            display: inline-block;
-            margin-top: 40px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-        .back-home:hover {
-            color: var(--text);
-        }
+        .privacy-page { padding: 120px 0 80px; }
+        .privacy-container { max-width: 900px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 60px; }
+        .privacy-title { font-size: 3rem; margin-bottom: 20px; color: var(--primary); text-align: center; }
+        .privacy-date { text-align: center; color: var(--text-muted); margin-bottom: 50px; font-style: italic; }
+        .privacy-section { margin-bottom: 40px; }
+        .privacy-section h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+        .privacy-section h3 { font-size: 1.3rem; margin: 25px 0 15px; color: var(--text); }
+        .privacy-section p { color: var(--text-muted); margin-bottom: 15px; line-height: 1.8; }
+        .privacy-section ul { color: var(--text-muted); margin-left: 25px; margin-bottom: 20px; }
+        .privacy-section li { margin-bottom: 8px; }
+        .back-home { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: none; font-weight: 600; transition: 0.2s; cursor: pointer; }
+        .back-home:hover { color: var(--text); }
 
-        /* ----- HERO (Main Page) ----- */
-        .hero {
-            padding: 180px 0 120px;
-            text-align: center;
-        }
+        /* ----- HERO ----- */
+        .hero { padding: 180px 0 120px; text-align: center; }
 
         .live-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(179,0,255,0.12);
-            border: 1px solid rgba(179,0,255,0.3);
-            padding: 6px 18px;
-            border-radius: 60px;
-            margin-bottom: 30px;
-            color: #b300ff;
-            font-weight: 600;
-            font-size: 0.9rem;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(179,0,255,0.12); border: 1px solid rgba(179,0,255,0.3);
+            padding: 6px 18px; border-radius: 60px; margin-bottom: 30px;
+            color: #b300ff; font-weight: 600; font-size: 0.9rem;
         }
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background: #b300ff;
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
+        .live-dot { width: 8px; height: 8px; background: #b300ff; border-radius: 50%; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } }
 
         .hero-title {
-            font-size: 4.8rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: 4.8rem; line-height: 1.1; margin-bottom: 20px;
             background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .hero-sub {
-            font-size: 1.4rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
+        .hero-sub { font-size: 1.4rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
+        .hero-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
 
         .stat-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 28px 36px;
-            min-width: 200px;
-            transition: 0.2s;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-md); padding: 28px 36px; min-width: 200px; transition: 0.2s;
         }
-        .stat-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 0 25px var(--primary-glow);
-        }
+        .stat-card:hover { border-color: var(--primary); box-shadow: 0 0 25px var(--primary-glow); }
 
-        .stat-number {
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
+        .stat-number { font-size: 3.2rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 6px; }
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
 
-        .stat-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 40px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
+            display: inline-flex; align-items: center; gap: 12px;
+            padding: 16px 40px; border-radius: 60px; font-weight: 600; font-size: 1.1rem;
+            text-decoration: none; transition: 0.2s; border: none; cursor: pointer;
         }
-
-        .btn-primary {
-            background: linear-gradient(145deg, var(--primary), #7700cc);
-            color: #0a0a12;
-        }
-        .btn-primary:hover {
-            box-shadow: 0 10px 30px var(--primary-glow);
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--border);
-            color: white;
-        }
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
+        .btn-primary { background: linear-gradient(145deg, var(--primary), #7700cc); color: #0a0a12; }
+        .btn-primary:hover { box-shadow: 0 10px 30px var(--primary-glow); transform: translateY(-3px); }
+        .btn-outline { background: transparent; border: 2px solid var(--border); color: white; }
+        .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
 
         /* ----- GAMES SECTION ----- */
-        .games-section {
-            padding: 80px 0 100px;
-            background: rgba(20,20,31,0.5);
-        }
+        .games-section { padding: 80px 0 100px; background: rgba(20,20,31,0.5); }
 
-        .section-title {
-            font-size: 3.2rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+        .section-title { font-size: 3.2rem; text-align: center; margin-bottom: 20px; }
         .section-title span { color: var(--primary); }
 
         .games-grid {
@@ -363,698 +196,187 @@
         }
 
         .game-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: 0.25s;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); overflow: hidden; transition: 0.25s;
         }
-        .game-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px var(--primary-glow);
-        }
+        .game-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 15px 35px var(--primary-glow); }
 
-        .game-img {
-            height: 260px;
-            background-size: cover;
-            background-position: center;
-        }
+        .game-img { height: 260px; background-size: cover; background-position: center; background-color: #1a1a2e; }
 
-        .game-content {
-            padding: 30px;
-        }
-
-        .game-title {
-            font-size: 1.9rem;
-            margin-bottom: 12px;
-        }
-
-        .game-desc {
-            color: var(--text-muted);
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
+        .game-content { padding: 30px; }
+        .game-title { font-size: 1.9rem; margin-bottom: 12px; }
+        .game-desc { color: var(--text-muted); margin-bottom: 25px; line-height: 1.7; }
 
         .game-metrics {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 15px;
-            background: rgba(0,0,0,0.2);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin-bottom: 25px;
+            display: grid; grid-template-columns: repeat(3,1fr); gap: 15px;
+            background: rgba(0,0,0,0.2); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 25px;
         }
-
-        .metric {
-            text-align: center;
-        }
-        .metric-value {
-            font-size: 1.7rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: block;
-        }
-        .metric-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
+        .metric { text-align: center; }
+        .metric-value { font-size: 1.7rem; font-weight: 700; color: var(--primary); display: block; }
+        .metric-label { font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; }
 
         .game-link {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 12px 30px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+            display: inline-block; background: transparent; border: 2px solid var(--primary);
+            color: var(--primary); padding: 12px 30px; border-radius: 60px;
+            text-decoration: none; font-weight: 600; transition: 0.2s;
         }
-        .game-link:hover {
-            background: var(--primary);
-            color: #0a0a12;
-        }
+        .game-link:hover { background: var(--primary); color: #0a0a12; }
 
         /* ----- SELL YOUR GAME ----- */
-        .sell-section {
-            padding: 100px 0;
-        }
+        .sell-section { padding: 100px 0; }
 
-        .sell-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
+        .sell-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 30px; margin-top: 60px; }
 
         .sell-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 40px 25px;
-            text-align: center;
-            transition: 0.2s;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 40px 25px; text-align: center; transition: 0.2s;
         }
-        .sell-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--primary-glow);
-        }
+        .sell-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px var(--primary-glow); }
 
-        .sell-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(179,0,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2.2rem;
-            color: var(--primary);
-        }
-
-        .sell-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-
-        .sell-card p {
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
+        .sell-icon { width: 80px; height: 80px; background: rgba(179,0,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.2rem; color: var(--primary); }
+        .sell-card h3 { font-size: 1.6rem; margin-bottom: 15px; }
+        .sell-card p { color: var(--text-muted); line-height: 1.6; }
 
         /* ----- SERVICES / HIRE US ----- */
-        .services-section {
-            padding: 100px 0;
-        }
+        .services-section { padding: 100px 0; }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 30px; margin-top: 60px; }
 
         .service-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 40px 25px;
-            text-align: center;
-            transition: 0.2s;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 40px 25px; text-align: center; transition: 0.2s;
         }
-        .service-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
+        .service-card:hover { border-color: var(--primary); transform: translateY(-5px); }
 
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(179,0,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2.2rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
+        .service-icon { width: 80px; height: 80px; background: rgba(179,0,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.2rem; color: var(--primary); }
+        .service-card h3 { font-size: 1.6rem; margin-bottom: 15px; }
+        .service-card p { color: var(--text-muted); margin-bottom: 20px; }
 
         .hire-btn {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 10px 30px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+            display: inline-block; background: transparent; border: 2px solid var(--primary);
+            color: var(--primary); padding: 10px 30px; border-radius: 60px;
+            text-decoration: none; font-weight: 600; transition: 0.2s; cursor: pointer;
         }
-        .hire-btn:hover {
-            background: var(--primary);
-            color: #0a0a12;
-        }
+        .hire-btn:hover { background: var(--primary); color: #0a0a12; }
 
         /* ----- PAST WORK TABS ----- */
-        .pastwork-section {
-            padding: 100px 0;
-            background: rgba(20,20,31,0.5);
-        }
+        .pastwork-section { padding: 100px 0; background: rgba(20,20,31,0.5); }
 
-        .pastwork-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
+        .pastwork-tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
 
         .pastwork-tab {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 12px 24px;
-            border-radius: 60px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
+            background: transparent; border: 1px solid var(--border); color: var(--text-muted);
+            padding: 12px 24px; border-radius: 60px; font-weight: 600; cursor: pointer; transition: 0.2s;
         }
-        .pastwork-tab:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        .pastwork-tab.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #0a0a12;
-        }
+        .pastwork-tab:hover { border-color: var(--primary); color: var(--primary); }
+        .pastwork-tab.active { background: var(--primary); border-color: var(--primary); color: #0a0a12; }
 
-        .pastwork-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
+        .pastwork-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px,1fr)); gap: 30px; margin-top: 30px; }
 
         .pastwork-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            text-align: center;
-            transition: 0.2s;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 30px; text-align: center; transition: 0.2s;
         }
-
-        .pastwork-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .pastwork-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .pastwork-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-
-        .pastwork-item p {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
+        .pastwork-item:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .pastwork-icon { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+        .pastwork-item h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--text); }
+        .pastwork-item p { color: var(--text-muted); margin-bottom: 20px; }
 
         .pastwork-cta {
-            display: inline-block;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 8px 24px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+            display: inline-block; border: 2px solid var(--primary); color: var(--primary);
+            padding: 8px 24px; border-radius: 60px; text-decoration: none; font-weight: 600; transition: 0.2s; cursor: pointer;
         }
-        .pastwork-cta:hover {
-            background: var(--primary);
-            color: #0a0a12;
-        }
+        .pastwork-cta:hover { background: var(--primary); color: #0a0a12; }
 
         /* ----- GALLERY GRID ----- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; margin-bottom: 30px; }
 
         .gallery-thumb {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-            border-radius: var(--radius-sm);
-            border: 2px solid var(--border);
-            cursor: pointer;
-            transition: 0.2s;
+            width: 100%; aspect-ratio: 16/9; object-fit: cover;
+            border-radius: var(--radius-sm); border: 2px solid var(--border); cursor: pointer; transition: 0.2s;
         }
-        .gallery-thumb:hover {
-            border-color: var(--primary);
-            transform: scale(1.02);
-        }
+        .gallery-thumb:hover { border-color: var(--primary); transform: scale(1.02); }
 
         /* ----- LIGHTBOX ----- */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .lightbox.active {
-            display: flex;
-        }
-        .lightbox-img {
-            max-width: 90%;
-            max-height: 80vh;
-            border-radius: var(--radius-md);
-            border: 2px solid var(--primary);
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 3rem;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .lightbox-close:hover {
-            color: var(--primary);
-        }
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(179,0,255,0.2);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .lightbox-nav:hover {
-            background: var(--primary);
-            color: #0a0a12;
-        }
-        .lightbox-prev {
-            left: 20px;
-        }
-        .lightbox-next {
-            right: 20px;
-        }
-        .lightbox-counter {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            background: rgba(0,0,0,0.7);
-            padding: 8px 20px;
-            border-radius: 60px;
-            border: 1px solid var(--primary);
-        }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; justify-content: center; align-items: center; flex-direction: column; }
+        .lightbox.active { display: flex; }
+        .lightbox-img { max-width: 90%; max-height: 80vh; border-radius: var(--radius-md); border: 2px solid var(--primary); }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 3rem; cursor: pointer; transition: 0.2s; background: none; border: none; }
+        .lightbox-close:hover { color: var(--primary); }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(179,0,255,0.2); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; }
+        .lightbox-nav:hover { background: var(--primary); color: #0a0a12; }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        .lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; background: rgba(0,0,0,0.7); padding: 8px 20px; border-radius: 60px; border: 1px solid var(--primary); }
 
         /* ----- VIDEO EMBEDS ----- */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: var(--radius-md);
-            margin-bottom: 15px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: var(--radius-md);
-        }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 15px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: var(--radius-md); }
 
         /* ----- MORE WORK SOON CARD ----- */
-        .coming-soon {
-            background: rgba(179,0,255,0.05);
-            border: 2px dashed var(--primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-        }
-        .coming-soon i {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .coming-soon h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
+        .coming-soon { background: rgba(179,0,255,0.05); border: 2px dashed var(--primary); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; }
+        .coming-soon i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+        .coming-soon h4 { font-size: 1.3rem; margin-bottom: 10px; }
 
         /* ----- JOIN US ----- */
-        .join-section {
-            padding: 80px 0 100px;
-            text-align: center;
-        }
-        .join-card {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 50px;
-        }
-        .join-card h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .join-card h3 span {
-            color: var(--primary);
-        }
-        .join-roles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .role-badge {
-            background: rgba(179,0,255,0.1);
-            border: 1px solid var(--border);
-            padding: 8px 20px;
-            border-radius: 60px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        .role-badge i {
-            color: var(--primary);
-            margin-right: 6px;
-        }
-        .join-btn {
-            background: linear-gradient(145deg, var(--primary), #7700cc);
-            color: #0a0a12;
-            padding: 16px 48px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.2s;
-            margin-top: 20px;
-        }
-        .join-btn:hover {
-            box-shadow: 0 10px 30px var(--primary-glow);
-            transform: translateY(-3px);
-        }
+        .join-section { padding: 80px 0 100px; text-align: center; }
+        .join-card { max-width: 700px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 50px; }
+        .join-card h3 { font-size: 2rem; margin-bottom: 20px; }
+        .join-card h3 span { color: var(--primary); }
+        .join-roles { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 30px 0; }
+        .role-badge { background: rgba(179,0,255,0.1); border: 1px solid var(--border); padding: 8px 20px; border-radius: 60px; color: var(--text-muted); font-size: 0.9rem; }
+        .role-badge i { color: var(--primary); margin-right: 6px; }
+        .join-btn { background: linear-gradient(145deg, var(--primary), #7700cc); color: #0a0a12; padding: 16px 48px; border-radius: 60px; font-weight: 600; font-size: 1.2rem; text-decoration: none; display: inline-block; transition: 0.2s; margin-top: 20px; cursor: pointer; }
+        .join-btn:hover { box-shadow: 0 10px 30px var(--primary-glow); transform: translateY(-3px); }
 
         /* ----- INVESTOR SECTION ----- */
-        .invest-section {
-            padding: 80px 0 100px;
-            background: transparent;
-            text-align: center;
-        }
-        .invest-card {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 50px;
-        }
-        .invest-card h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .invest-card h3 span {
-            color: var(--primary);
-        }
-        .invest-roles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .invest-badge {
-            background: rgba(179,0,255,0.1);
-            border: 1px solid var(--border);
-            padding: 8px 20px;
-            border-radius: 60px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        .invest-badge i {
-            color: var(--primary);
-            margin-right: 6px;
-        }
-        .invest-btn {
-            background: linear-gradient(145deg, var(--primary), #7700cc);
-            color: #0a0a12;
-            padding: 16px 48px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.2s;
-            margin-top: 20px;
-        }
-        .invest-btn:hover {
-            box-shadow: 0 10px 30px var(--primary-glow);
-            transform: translateY(-3px);
-        }
+        .invest-section { padding: 80px 0 100px; text-align: center; }
+        .invest-card { max-width: 700px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 50px; }
+        .invest-card h3 { font-size: 2rem; margin-bottom: 20px; }
+        .invest-card h3 span { color: var(--primary); }
+        .invest-roles { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 30px 0; }
+        .invest-badge { background: rgba(179,0,255,0.1); border: 1px solid var(--border); padding: 8px 20px; border-radius: 60px; color: var(--text-muted); font-size: 0.9rem; }
+        .invest-badge i { color: var(--primary); margin-right: 6px; }
+        .invest-btn { background: linear-gradient(145deg, var(--primary), #7700cc); color: #0a0a12; padding: 16px 48px; border-radius: 60px; font-weight: 600; font-size: 1.2rem; text-decoration: none; display: inline-block; transition: 0.2s; margin-top: 20px; cursor: pointer; }
+        .invest-btn:hover { box-shadow: 0 10px 30px var(--primary-glow); transform: translateY(-3px); }
 
-        /* ----- CONTACT SECTION (4 TABS) ----- */
-        .contact-section {
-            padding: 100px 0;
-            background: rgba(20,20,31,0.5);
-        }
-        .form-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 50px;
-        }
-        .form-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .form-tab {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding: 10px 24px;
-            border-radius: 60px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .form-tab.active {
-            background: var(--primary);
-            color: #0a0a12;
-        }
-        .form-tab:hover:not(.active) {
-            color: var(--primary);
-            background: rgba(179,0,255,0.1);
-        }
-        .form-panel {
-            display: none;
-        }
-        .form-panel.active {
-            display: block;
-        }
-        .form-title {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        .form-control {
-            width: 100%;
-            padding: 16px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            color: white;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
-        }
-        select.form-control {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23b300ff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            background-size: 16px;
-            padding-right: 48px;
-        }
-        select.form-control option {
-            background-color: var(--surface);
-            color: var(--text);
-            padding: 12px;
-        }
-        textarea.form-control {
-            min-height: 140px;
-            resize: vertical;
-        }
-        .privacy-note {
-            text-align: center;
-            margin-top: 30px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        .privacy-note a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+        /* ----- CONTACT SECTION ----- */
+        .contact-section { padding: 100px 0; background: rgba(20,20,31,0.5); }
+        .form-container { max-width: 700px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 50px; }
+        .form-tabs { display: flex; gap: 10px; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; justify-content: center; flex-wrap: wrap; }
+        .form-tab { background: transparent; border: none; color: var(--text-muted); font-size: 1.1rem; font-weight: 600; padding: 10px 24px; border-radius: 60px; cursor: pointer; transition: 0.2s; }
+        .form-tab.active { background: var(--primary); color: #0a0a12; }
+        .form-tab:hover:not(.active) { color: var(--primary); background: rgba(179,0,255,0.1); }
+        .form-panel { display: none; }
+        .form-panel.active { display: block; }
+        .form-title { font-size: 2rem; text-align: center; margin-bottom: 30px; }
+        .form-group { margin-bottom: 25px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-control { width: 100%; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-sm); color: white; font-size: 1rem; transition: 0.2s; }
+        .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
+        select.form-control { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23b300ff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; padding-right: 48px; }
+        select.form-control option { background-color: var(--surface); color: var(--text); padding: 12px; }
+        textarea.form-control { min-height: 140px; resize: vertical; }
+        .privacy-note { text-align: center; margin-top: 30px; color: var(--text-muted); font-size: 0.9rem; }
+        .privacy-note a { color: var(--primary); text-decoration: none; cursor: pointer; }
 
         /* ----- SOCIAL LINKS & FOOTER ----- */
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-link {
-            color: var(--text-muted);
-            font-size: 1.5rem;
-            transition: 0.2s;
-        }
-        .social-link:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-        .footer {
-            background: #07070c;
-            padding: 50px 0 30px;
-            border-top: 1px solid var(--border);
-        }
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .footer-logo-img {
-            height: 40px;
-            width: auto;
-            border-radius: 6px;
-        }
-        .footer-social {
-            display: flex;
-            gap: 20px;
-        }
-        .footer-social a {
-            color: var(--text-muted);
-            font-size: 1.3rem;
-            transition: 0.2s;
-        }
-        .footer-social a:hover {
-            color: var(--primary);
-        }
-        .footer-copyright {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .social-links { display: flex; gap: 20px; justify-content: center; margin-top: 20px; }
+        .social-link { color: var(--text-muted); font-size: 1.5rem; transition: 0.2s; text-decoration: none; }
+        .social-link:hover { color: var(--primary); transform: translateY(-3px); }
+
+        .footer { background: #07070c; padding: 50px 0 30px; border-top: 1px solid var(--border); }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+        .footer-logo-img { height: 40px; width: auto; border-radius: 6px; }
+        .footer-social { display: flex; gap: 20px; }
+        .footer-social a { color: var(--text-muted); font-size: 1.3rem; transition: 0.2s; text-decoration: none; }
+        .footer-social a:hover { color: var(--primary); }
+        .footer-copyright { text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+
+        .error-message { color: #ff5c8a; text-align: center; margin-top: 20px; font-weight: 500; }
 
         @media (max-width: 900px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--bg);
-                flex-direction: column;
-                padding: 30px;
-                border-bottom: 1px solid var(--border);
-            }
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg); flex-direction: column; padding: 30px; border-bottom: 1px solid var(--border); }
             .nav-menu.active { display: flex; }
             .menu-toggle { display: block; }
             .hero-title { font-size: 3.6rem; }
@@ -1072,15 +394,10 @@
             .pastwork-tab { width: 100%; text-align: center; }
             .privacy-title { font-size: 2.2rem; }
         }
-        .error-message {
-            color: #ff5c8a;
-            text-align: center;
-            margin-top: 20px;
-            font-weight: 500;
-        }
     </style>
 </head>
 <body>
+
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -1098,38 +415,37 @@
                 <a href="#invest" class="nav-link" onclick="showPage('main'); smoothScroll('#invest'); return false;">Invest</a>
                 <a href="#contact" class="nav-cta" onclick="showPage('main'); smoothScroll('#contact'); return false;">Hire us</a>
             </div>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
     <!-- ===== MAIN PAGE ===== -->
     <div id="main-page" class="page active">
-        <!-- ===== HERO ===== -->
+
+        <!-- HERO -->
         <section class="hero">
             <div class="container">
                 <span class="live-badge">
                     <span class="live-dot"></span> Live statistics from Roblox.
                 </span>
-                <h1 class="hero-title">Achieve more with<br>Go<span>Success</span></h1>
+                <h1 class="hero-title">Achieve more with<br>Go<span style="color:var(--primary);-webkit-text-fill-color:var(--primary)">Success</span></h1>
                 <p class="hero-sub">We buy, grow and scale Roblox games. Join the developers who trusted us.</p>
-                
+
                 <div class="hero-stats" id="heroStats">
                     <div class="stat-card">
-                        <div class="stat-number" id="totalVisits">0</div>
+                        <div class="stat-number" id="totalVisits">—</div>
                         <div class="stat-label">Total Visits</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" id="activePlayers">0</div>
+                        <div class="stat-number" id="activePlayers">—</div>
                         <div class="stat-label">Active Now</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" id="totalFavorites">0</div>
+                        <div class="stat-number" id="totalFavorites">—</div>
                         <div class="stat-label">Favorites</div>
                     </div>
                 </div>
-                <div id="statsError" class="error-message" style="display: none;"></div>
+                <div id="statsError" class="error-message" style="display:none;"></div>
 
                 <div class="hero-buttons">
                     <a href="#games" class="btn btn-primary" onclick="smoothScroll('#games'); return false;"><i class="fas fa-gamepad"></i> Explore our games</a>
@@ -1138,13 +454,13 @@
                 </div>
 
                 <div class="social-links">
-                    <a href="https://x.com/Rlyoung0" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="https://discord.gg/DdMfTjUJnX" target="_blank" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== OUR GAMES ===== -->
+        <!-- OUR GAMES -->
         <section id="games" class="games-section">
             <div class="container">
                 <h2 class="section-title">Our <span>games</span></h2>
@@ -1152,11 +468,11 @@
             </div>
         </section>
 
-        <!-- ===== SELL YOUR GAME ===== -->
+        <!-- SELL YOUR GAME -->
         <section id="sell" class="sell-section">
             <div class="container">
                 <h2 class="section-title">Sell your <span>game</span></h2>
-                <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                <p style="text-align:center;color:var(--text-muted);font-size:1.2rem;max-width:700px;margin:0 auto;">
                     Ready to unlock the full potential of your Roblox creation? We offer a seamless exit strategy for game developers.
                 </p>
                 <div class="sell-grid">
@@ -1165,17 +481,17 @@
                     <div class="sell-card"><div class="sell-icon"><i class="fas fa-percent"></i></div><h3>Revenue sharing</h3><p>Continue earning through a transparent revenue‑share model.</p></div>
                     <div class="sell-card"><div class="sell-icon"><i class="fas fa-exchange-alt"></i></div><h3>Hassle‑free</h3><p>We handle everything – you focus on your next idea.</p></div>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
+                <div style="text-align:center;margin-top:40px;">
                     <a href="#contact" class="btn btn-primary" onclick="smoothScroll('#contact'); setActiveTab('sell'); return false;"><i class="fas fa-arrow-right"></i> Sell your game now</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== HIRE US – SERVICES ===== -->
+        <!-- HIRE US – SERVICES -->
         <section id="services" class="services-section">
             <div class="container">
                 <h2 class="section-title">Hire <span>us</span></h2>
-                <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                <p style="text-align:center;color:var(--text-muted);font-size:1.2rem;max-width:700px;margin:0 auto;">
                     We offer professional Roblox services – from design to marketing.
                 </p>
                 <div class="services-grid">
@@ -1189,7 +505,7 @@
             </div>
         </section>
 
-        <!-- ===== PAST WORK TABS ===== -->
+        <!-- PAST WORK TABS -->
         <section id="pastwork" class="pastwork-section">
             <div class="container">
                 <h2 class="section-title">Past <span>work</span></h2>
@@ -1205,12 +521,12 @@
             </div>
         </section>
 
-        <!-- ===== JOIN US ===== -->
+        <!-- JOIN US -->
         <section id="join" class="join-section">
             <div class="container">
                 <div class="join-card">
                     <h3>Join <span>the team</span></h3>
-                    <p>We’re always looking for talented people. Be part of GoSuccess and help us shape the future of Roblox.</p>
+                    <p>We're always looking for talented people. Be part of GoSuccess and help us shape the future of Roblox.</p>
                     <div class="join-roles">
                         <span class="role-badge"><i class="fas fa-code"></i> Developers</span>
                         <span class="role-badge"><i class="fas fa-paint-brush"></i> Designers</span>
@@ -1226,7 +542,7 @@
             </div>
         </section>
 
-        <!-- ===== INVESTOR SECTION ===== -->
+        <!-- INVESTOR SECTION -->
         <section id="invest" class="invest-section">
             <div class="container">
                 <div class="invest-card">
@@ -1245,7 +561,7 @@
             </div>
         </section>
 
-        <!-- ===== CONTACT (4 TABS) ===== -->
+        <!-- CONTACT (4 TABS) -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="form-container">
@@ -1259,82 +575,72 @@
                     <!-- Hire Us Form -->
                     <div class="form-panel active" id="formHire">
                         <h2 class="form-title">Let's work together</h2>
-                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Send us your game link and project details.</p>
+                        <p style="text-align:center;color:var(--text-muted);margin-bottom:40px;">Send us your game link and project details.</p>
                         <form id="hireForm" onsubmit="submitHireForm(event)">
                             <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="hireName" required></div>
                             <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="hireEmail" required></div>
                             <div class="form-group"><label class="form-label">Game link (optional)</label><input type="url" class="form-control" id="hireGameLink" placeholder="https://www.roblox.com/games/..."></div>
                             <div class="form-group"><label class="form-label">Project details</label><textarea class="form-control" id="hireDetails" placeholder="Tell us about your project, budget, timeline..." required></textarea></div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send inquiry</button>
-                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Send inquiry</button>
+                            <div class="privacy-note">By submitting you agree to our <a onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
                         </form>
                     </div>
 
                     <!-- Join Us Form -->
                     <div class="form-panel" id="formJoin">
                         <h2 class="form-title">Join the team</h2>
-                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Tell us about yourself and your skills.</p>
+                        <p style="text-align:center;color:var(--text-muted);margin-bottom:40px;">Tell us about yourself and your skills.</p>
                         <form id="joinForm" onsubmit="submitJoinForm(event)">
                             <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="joinName" required></div>
                             <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="joinEmail" required></div>
                             <div class="form-group"><label class="form-label">Role you're applying for</label>
                                 <select class="form-control" id="joinRole" required>
                                     <option value="" disabled selected>Select a role</option>
-                                    <option value="Developer">Developer</option>
-                                    <option value="UI Designer">UI Designer</option>
-                                    <option value="VFX Artist">VFX Artist</option>
-                                    <option value="GFX Artist">GFX Artist</option>
-                                    <option value="Builder">Builder</option>
-                                    <option value="Animator">Animator</option>
-                                    <option value="Marketer">Marketer</option>
-                                    <option value="Content Creator">Content Creator</option>
-                                    <option value="Other">Other</option>
+                                    <option>Developer</option><option>UI Designer</option><option>VFX Artist</option>
+                                    <option>GFX Artist</option><option>Builder</option><option>Animator</option>
+                                    <option>Marketer</option><option>Content Creator</option><option>Other</option>
                                 </select>
                             </div>
                             <div class="form-group"><label class="form-label">Portfolio / experience</label><textarea class="form-control" id="joinExperience" placeholder="Links to your work, past games, GitHub, etc." required></textarea></div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit application</button>
-                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Submit application</button>
+                            <div class="privacy-note">By submitting you agree to our <a onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
                         </form>
                     </div>
 
                     <!-- Sell Your Game Form -->
                     <div class="form-panel" id="formSell">
                         <h2 class="form-title">Sell your game</h2>
-                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Get a competitive offer – we acquire Roblox games.</p>
+                        <p style="text-align:center;color:var(--text-muted);margin-bottom:40px;">Get a competitive offer – we acquire Roblox games.</p>
                         <form id="sellForm" onsubmit="submitSellForm(event)">
                             <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="sellName" required></div>
                             <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="sellEmail" required></div>
                             <div class="form-group"><label class="form-label">Game link</label><input type="url" class="form-control" id="sellGameLink" placeholder="https://www.roblox.com/games/..." required></div>
                             <div class="form-group"><label class="form-label">Monthly visits / revenue (optional)</label><input type="text" class="form-control" id="sellMetrics" placeholder="e.g. 50K visits, $200/mo"></div>
                             <div class="form-group"><label class="form-label">Additional info</label><textarea class="form-control" id="sellDetails" placeholder="Tell us about your game, development status, team size, etc."></textarea></div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-hand-holding-usd"></i> Request offer</button>
-                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-hand-holding-usd"></i> Request offer</button>
+                            <div class="privacy-note">By submitting you agree to our <a onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
                         </form>
                     </div>
 
                     <!-- Invest Form -->
                     <div class="form-panel" id="formInvest">
                         <h2 class="form-title">Invest in GoSuccess</h2>
-                        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Choose where you want your investment to go.</p>
+                        <p style="text-align:center;color:var(--text-muted);margin-bottom:40px;">Choose where you want your investment to go.</p>
                         <form id="investForm" onsubmit="submitInvestForm(event)">
                             <div class="form-group"><label class="form-label">Your name</label><input type="text" class="form-control" id="investName" required></div>
                             <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="investEmail" required></div>
                             <div class="form-group"><label class="form-label">Investment focus</label>
                                 <select class="form-control" id="investFocus" required>
                                     <option value="" disabled selected>Select an area</option>
-                                    <option value="Company Growth">Company Growth</option>
-                                    <option value="Marketing">Company Marketing</option>
-                                    <option value="Developers">Developers</option>
-                                    <option value="Builders">Builders</option>
-                                    <option value="Content Creators">Content Creators</option>
-                                    <option value="Other">Other</option>
+                                    <option>Company Growth</option><option>Marketing</option><option>Developers</option>
+                                    <option>Builders</option><option>Content Creators</option><option>Other</option>
                                 </select>
                             </div>
                             <div class="form-group"><label class="form-label">If Other, please specify</label><input type="text" class="form-control" id="investOther" placeholder="e.g., Infrastructure, Events, etc."></div>
                             <div class="form-group"><label class="form-label">Proposed investment amount (optional)</label><input type="text" class="form-control" id="investAmount" placeholder="e.g., $5,000 – $50,000"></div>
                             <div class="form-group"><label class="form-label">Message / questions</label><textarea class="form-control" id="investMessage" placeholder="Tell us about your investment interests, timeline, etc."></textarea></div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-chart-line"></i> Submit interest</button>
-                            <div class="privacy-note">By submitting you agree to our <a href="#" onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
+                            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-chart-line"></i> Submit interest</button>
+                            <div class="privacy-note">By submitting you agree to our <a onclick="showPage('privacy'); return false;">privacy policy</a>.</div>
                         </form>
                     </div>
                 </div>
@@ -1342,105 +648,47 @@
         </section>
     </div>
 
-    <!-- ===== PRIVACY & POLICY PAGE ===== -->
+    <!-- ===== PRIVACY PAGE ===== -->
     <div id="privacy-page" class="page">
         <div class="privacy-page">
             <div class="container">
                 <div class="privacy-container">
                     <h1 class="privacy-title">Privacy & Policy</h1>
                     <p class="privacy-date">Last Updated: February 2026</p>
-                    
-                    <div class="privacy-section">
-                        <h2>1. Introduction</h2>
-                        <p>Welcome to GoSuccess. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>2. Information We Collect</h2>
-                        <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our services, when you participate in activities on the website, or otherwise when you contact us.</p>
-                        <h3>2.1 Personal Information</h3>
-                        <p>The personal information we collect may include:</p>
-                        <ul>
-                            <li>Name and contact data (such as email address, Discord username, Roblox username)</li>
-                            <li>Project details, game links, and metrics you provide in forms</li>
-                            <li>Communication data (such as messages you send us)</li>
-                        </ul>
-                        <h3>2.2 Automatically Collected Information</h3>
-                        <p>We automatically collect certain information when you visit our website, such as your IP address, browser type, operating system, access times, and pages viewed. This information is used for website administration and to improve your experience.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>3. How We Use Your Information</h2>
-                        <p>We use personal information collected via our website for a variety of business purposes, including:</p>
-                        <ul>
-                            <li>To respond to your inquiries and provide customer support</li>
-                            <li>To evaluate game acquisition opportunities</li>
-                            <li>To process job applications and recruitment</li>
-                            <li>To send administrative information (such as updates to our terms and policies)</li>
-                            <li>To analyze website usage and improve our services</li>
-                        </ul>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>4. Sharing Your Information</h2>
-                        <p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p>
-                        <ul>
-                            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf (such as email services).</li>
-                            <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
-                        </ul>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>5. Data Security</h2>
-                        <p>We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>6. Your Privacy Rights</h2>
-                        <p>Depending on your location, you may have certain rights regarding your personal information, such as the right to access, correct, or delete the data we have collected. To exercise these rights, please contact us at northchicagorp0@gmail.com.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>7. Children's Privacy</h2>
-                        <p>Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>8. Changes to This Policy</h2>
-                        <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
-                    </div>
-
-                    <div class="privacy-section">
-                        <h2>9. Contact Us</h2>
-                        <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
-                        <p>Email: northchicagorp0@gmail.com<br>Discord: rlyoung0<br>Roblox: rlyoung0</p>
-                    </div>
-
-                    <a href="#" class="back-home" onclick="showPage('main'); return false;">← Back to Main Page</a>
+                    <div class="privacy-section"><h2>1. Introduction</h2><p>Welcome to GoSuccess. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p></div>
+                    <div class="privacy-section"><h2>2. Information We Collect</h2><p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our services, when you participate in activities on the website, or otherwise when you contact us.</p><h3>2.1 Personal Information</h3><p>The personal information we collect may include:</p><ul><li>Name and contact data (such as email address, Discord username, Roblox username)</li><li>Project details, game links, and metrics you provide in forms</li><li>Communication data (such as messages you send us)</li></ul><h3>2.2 Automatically Collected Information</h3><p>We automatically collect certain information when you visit our website, such as your IP address, browser type, operating system, access times, and pages viewed.</p></div>
+                    <div class="privacy-section"><h2>3. How We Use Your Information</h2><p>We use personal information collected via our website for a variety of business purposes, including:</p><ul><li>To respond to your inquiries and provide customer support</li><li>To evaluate game acquisition opportunities</li><li>To process job applications and recruitment</li><li>To send administrative information</li><li>To analyze website usage and improve our services</li></ul></div>
+                    <div class="privacy-section"><h2>4. Sharing Your Information</h2><p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p><ul><li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf.</li><li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law.</li></ul></div>
+                    <div class="privacy-section"><h2>5. Data Security</h2><p>We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, no method of transmission over the Internet is 100% secure.</p></div>
+                    <div class="privacy-section"><h2>6. Your Privacy Rights</h2><p>Depending on your location, you may have certain rights regarding your personal information. To exercise these rights, please contact us at northchicagorp0@gmail.com.</p></div>
+                    <div class="privacy-section"><h2>7. Children's Privacy</h2><p>Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13.</p></div>
+                    <div class="privacy-section"><h2>8. Changes to This Policy</h2><p>We may update this Privacy Policy from time to time. The updated version will be effective as soon as it is accessible.</p></div>
+                    <div class="privacy-section"><h2>9. Contact Us</h2><p>If you have questions or comments about this Privacy Policy, please contact us at:<br>Email: northchicagorp0@gmail.com<br>Discord: rlyoung0<br>Roblox: rlyoung0</p></div>
+                    <a class="back-home" onclick="showPage('main'); return false;">← Back to Main Page</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== LIGHTBOX ===== -->
+    <!-- LIGHTBOX -->
     <div id="galleryLightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <button class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox-close" id="lbClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
         <img class="lightbox-img" id="lightboxImage" src="" alt="">
         <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-logo" onclick="showPage('main'); return false;">
+                <a href="#" onclick="showPage('main'); return false;">
                     <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" class="footer-logo-img">
                 </a>
                 <div class="footer-social">
-                    <a href="https://x.com/Rlyoung0" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://discord.gg/DdMfTjUJnX" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
             <div class="footer-copyright">
@@ -1450,572 +698,382 @@
     </footer>
 
     <script>
-        (function() {
-            "use strict";
+    (function () {
+        "use strict";
 
-            // ===== PAGE SYSTEM =====
-            window.showPage = function(pageId) {
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                document.getElementById(pageId + '-page').classList.add('active');
-                if (pageId === 'main') {
-                    window.scrollTo(0, 0);
-                    loadAllStats();
-                }
-            };
-
-            window.smoothScroll = function(targetSelector) {
-                const target = document.querySelector(targetSelector);
-                if (target) {
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }, 100);
-                }
-            };
-
-            // ===== ULTRA-SMOOTH TWEENING ENGINE =====
-            const TWEEN_DURATION = 4000;
-            const EASE_OUT_CUBIC = t => 1 - Math.pow(1 - t, 3);
-
-            class TweenManager {
-                constructor() {
-                    this.tweens = [];
-                    this.rafId = null;
-                    this.update = this.update.bind(this);
-                }
-
-                add(element, endValue, formatFn = null) {
-                    if (!element) return;
-                    this.tweens = this.tweens.filter(t => t.element !== element);
-                    
-                    const start = parseFloat(element.textContent) || 0;
-                    this.tweens.push({
-                        element,
-                        start,
-                        end: endValue,
-                        startTime: performance.now(),
-                        formatFn: formatFn || this.defaultFormat
-                    });
-                    this.startLoop();
-                }
-
-                defaultFormat(num) {
-                    if (num >= 1_000_000) return (num / 1_000_000).toFixed(1) + 'M';
-                    if (num >= 1_000) return (num / 1_000).toFixed(1) + 'K';
-                    return Math.round(num).toString();
-                }
-
-                startLoop() {
-                    if (this.rafId) return;
-                    this.rafId = requestAnimationFrame(this.update);
-                }
-
-                update(now) {
-                    let active = false;
-                    
-                    for (let i = this.tweens.length - 1; i >= 0; i--) {
-                        const t = this.tweens[i];
-                        const elapsed = now - t.startTime;
-                        const progress = Math.min(elapsed / TWEEN_DURATION, 1);
-                        const eased = EASE_OUT_CUBIC(progress);
-                        const current = t.start + (t.end - t.start) * eased;
-                        
-                        t.element.textContent = t.formatFn(current);
-                        
-                        if (progress < 1) {
-                            active = true;
-                        } else {
-                            t.element.textContent = t.formatFn(t.end);
-                            this.tweens.splice(i, 1);
-                        }
-                    }
-
-                    if (active) {
-                        this.rafId = requestAnimationFrame(this.update);
-                    } else {
-                        this.rafId = null;
-                    }
-                }
-
-                clear() {
-                    this.tweens = [];
-                    if (this.rafId) {
-                        cancelAnimationFrame(this.rafId);
-                        this.rafId = null;
-                    }
-                }
-            }
-
-            const tweenManager = new TweenManager();
-
-            // ===== YOUR ROBLOX GAMES =====
-            const GAMES = [
-                {
-                   placeId: 8287908355,
-                    name: "Train VS Vehicle Master!",
-                    url: "https://www.roblox.com/games/8287908355/Train-VS-Vehicle-Master",
-                    thumbnail: "https://tr.rbxcdn.com/180DAY-f9c6b43e81a5df5c4837af925208e5a3/768/432/Image/Webp/noFilter",
-                    description: "Massive battles between trains and vehicles! 10.4M+ visits.",
-                    fallbackStats: { visits: 10400000, playing: 25, favorites: 4581 }
-                },
-                {
-                  placeId: 17247995332,
-                    name: "Balkan Donate",
-                    url: "https://www.roblox.com/games/17247995332/Balkan-Donate",
-                    thumbnail: "https://tr.rbxcdn.com/180DAY-4628d8153026cbce570c02fcac54456a/768/432/Image/Webp/noFilter",
-                    description: "Donation game inspired by Pls Donate – made for the Balkan community! 🇧🇦🇷🇸🇭🇷 Daily streaks & rewards.",
-                    fallbackStats: { visits: 1800000, playing: 47, favorites: 5599 }
-            
-                },
-                {
-                     placeId: 128641742072134,
-                    name: "Money Grind Simulator",
-                    url: "https://www.roblox.com/games/128641742072134/Money-Grind-Simulator",
-                    thumbnail: "https://tr.rbxcdn.com/180DAY-cf0423d75b22cea2534c3b19cb85d517/768/432/Image/Webp/noFilter",
-                    description: "Grind, upgrade, and build your fortune. The ultimate simulator experience.",
-                    fallbackStats: { visits: 230, playing: 0, favorites: 190 }
-                },
-                {
-                    placeId: 117685246722846,
-                    name: "Escape Tsunami for Glitchy Noobs",
-                    url: "https://www.roblox.com/games/117685246722846/Escape-Tsunami-for-Glitchy-Noobs",
-                    thumbnail: "https://tr.rbxcdn.com/180DAY-b015ade2b0ac444306a1bcd3441f26c1/768/432/Image/Webp/noFilter",
-                    description: "Survive the tsunami while dodging glitches – fast‑paced chaos with friends!",
-                    fallbackStats: { visits: 3155, playing: 2, favorites: 4 }
-                },
-            
-            ];
-
-            // ===== UNIVERSE ID FETCHER =====
-            async function getUniverseId(placeId) {
-                try {
-                    const url = `https://games.roblox.com/v1/games/multiget-place-details?placeIds=${placeId}`;
-                    const res = await fetch(url);
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data && data[0] && data[0].universeId) return data[0].universeId;
-                    }
-                } catch (e) {}
-                try {
-                    const url = `https://apis.roblox.com/universes/v1/places/${placeId}/universe`;
-                    const res = await fetch(url);
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data.universeId) return data.universeId;
-                    }
-                } catch (e) {}
-                try {
-                    const url = `https://games.roblox.com/v1/games?universeIds=${placeId}`;
-                    const res = await fetch(url);
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data.data && data.data[0]) return placeId;
-                    }
-                } catch (e) {}
-                throw new Error(`Failed for place ${placeId}`);
-            }
-
-            // ===== FETCH STATS WITH FALLBACK =====
-            async function fetchRobloxStatsWithFallback(game) {
-                try {
-                    const universeId = await getUniverseId(game.placeId);
-                    const detailsUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
-                    const detailsRes = await fetch(detailsUrl);
-                    const detailsData = await detailsRes.json();
-                    let visits = 0, playing = 0, favorites = 0;
-                    if (detailsData.data && detailsData.data[0]) {
-                        const gameData = detailsData.data[0];
-                        visits = gameData.visits || 0;
-                        playing = gameData.playing || 0;
-                    }
-                    const favUrl = `https://games.roblox.com/v1/games/${universeId}/favorites/count`;
-                    const favRes = await fetch(favUrl);
-                    const favData = await favRes.json();
-                    favorites = favData.favoritesCount || 0;
-                    if (visits === 0 && playing === 0 && favorites === 0) return game.fallbackStats;
-                    return { visits, playing, favorites };
-                } catch (error) {
-                    return game.fallbackStats;
-                }
-            }
-
-            // ===== LOAD STATS AND TWEEN =====
-            async function loadAllStats() {
-                if (!document.getElementById('main-page').classList.contains('active')) return;
-                
-                tweenManager.clear();
-                
-                document.getElementById('totalVisits').textContent = '0';
-                document.getElementById('activePlayers').textContent = '0';
-                document.getElementById('totalFavorites').textContent = '0';
-
-                let totalVisits = 0, totalPlaying = 0, totalFavorites = 0;
-                const gamesContainer = document.getElementById('gamesContainer');
-                gamesContainer.innerHTML = '';
-
-                for (const game of GAMES) {
-                    const stats = await fetchRobloxStatsWithFallback(game);
-                    totalVisits += stats.visits;
-                    totalPlaying += stats.playing;
-                    totalFavorites += stats.favorites;
-
-                    const card = document.createElement('div');
-                    card.className = 'game-card';
-                    card.innerHTML = `
-                        <div class="game-img" style="background-image: url('${game.thumbnail}')"></div>
-                        <div class="game-content">
-                            <h3 class="game-title">${game.name}</h3>
-                            <p class="game-desc">${game.description}</p>
-                            <div class="game-metrics">
-                                <div class="metric"><span class="metric-value" id="visits-${game.placeId}">0</span><span class="metric-label">Visits</span></div>
-                                <div class="metric"><span class="metric-value" id="playing-${game.placeId}">0</span><span class="metric-label">Active</span></div>
-                                <div class="metric"><span class="metric-value" id="favs-${game.placeId}">0</span><span class="metric-label">Fav</span></div>
-                            </div>
-                            <a href="${game.url}" target="_blank" class="game-link"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
-                        </div>
-                    `;
-                    gamesContainer.appendChild(card);
-                }
-
-                requestAnimationFrame(() => {
-                    tweenManager.add(document.getElementById('totalVisits'), totalVisits);
-                    tweenManager.add(document.getElementById('activePlayers'), totalPlaying);
-                    tweenManager.add(document.getElementById('totalFavorites'), totalFavorites);
-
-                    for (const game of GAMES) {
-                        tweenManager.add(document.getElementById(`visits-${game.placeId}`), game.fallbackStats.visits);
-                        tweenManager.add(document.getElementById(`playing-${game.placeId}`), game.fallbackStats.playing);
-                        tweenManager.add(document.getElementById(`favs-${game.placeId}`), game.fallbackStats.favorites);
-                    }
-                });
-            }
-
-            // ===== FORM SUBMISSIONS (ALL EMAILS TO northchicagorp0@gmail.com) =====
-            window.submitHireForm = function(e) {
-                e.preventDefault();
-                const name = document.getElementById('hireName').value;
-                const email = document.getElementById('hireEmail').value;
-                const gameLink = document.getElementById('hireGameLink').value;
-                const details = document.getElementById('hireDetails').value;
-                if (!name || !email || !details) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-                const subject = encodeURIComponent(`Hire inquiry: ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send the message.');
-            };
-
-            window.submitJoinForm = function(e) {
-                e.preventDefault();
-                const name = document.getElementById('joinName').value;
-                const email = document.getElementById('joinEmail').value;
-                const role = document.getElementById('joinRole').value;
-                const experience = document.getElementById('joinExperience').value;
-                if (!name || !email || !role || !experience) {
-                    alert('Please fill in all fields.');
-                    return;
-                }
-                const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your application.');
-            };
-
-            window.submitSellForm = function(e) {
-                e.preventDefault();
-                const name = document.getElementById('sellName').value;
-                const email = document.getElementById('sellEmail').value;
-                const gameLink = document.getElementById('sellGameLink').value;
-                const metrics = document.getElementById('sellMetrics').value;
-                const details = document.getElementById('sellDetails').value;
-                if (!name || !email || !gameLink) {
-                    alert('Please fill in your name, email and game link.');
-                    return;
-                }
-                const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\n\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your game sale inquiry.');
-            };
-
-            window.submitInvestForm = function(e) {
-                e.preventDefault();
-                const name = document.getElementById('investName').value;
-                const email = document.getElementById('investEmail').value;
-                const focus = document.getElementById('investFocus').value;
-                const other = document.getElementById('investOther').value;
-                const amount = document.getElementById('investAmount').value;
-                const message = document.getElementById('investMessage').value;
-                if (!name || !email || !focus) {
-                    alert('Please fill in your name, email and investment focus.');
-                    return;
-                }
-                const subject = encodeURIComponent(`Investment inquiry: ${name}`);
-                const body = encodeURIComponent(
-                    `Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`
-                );
-                window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
-                alert('Your email client will open – please send your investment interest.');
-            };
-
-            // ===== FORM TAB SWITCHING =====
-            window.setActiveTab = function(tabId) {
-                const tabHire = document.getElementById('tabHire');
-                const tabJoin = document.getElementById('tabJoin');
-                const tabSell = document.getElementById('tabSell');
-                const tabInvest = document.getElementById('tabInvest');
-                const formHire = document.getElementById('formHire');
-                const formJoin = document.getElementById('formJoin');
-                const formSell = document.getElementById('formSell');
-                const formInvest = document.getElementById('formInvest');
-
-                [tabHire, tabJoin, tabSell, tabInvest].forEach(t => t.classList.remove('active'));
-                [formHire, formJoin, formSell, formInvest].forEach(f => f.classList.remove('active'));
-
-                if (tabId === 'hire') { tabHire.classList.add('active'); formHire.classList.add('active'); }
-                else if (tabId === 'join') { tabJoin.classList.add('active'); formJoin.classList.add('active'); }
-                else if (tabId === 'sell') { tabSell.classList.add('active'); formSell.classList.add('active'); }
-                else if (tabId === 'invest') { tabInvest.classList.add('active'); formInvest.classList.add('active'); }
-            };
-
-            // ===== MOBILE MENU =====
-            document.getElementById('menuToggle').addEventListener('click', function() {
-                document.getElementById('navMenu').classList.toggle('active');
-            });
-
-            // ===== GALLERIES AND LIGHTBOX =====
-            const gfxImages = [
-                "https://pbs.twimg.com/media/G_xvgRgWQAA3XHp?format=jpg&name=large",
-                "https://pbs.twimg.com/media/G-HD0SSXEAAhzYU?format=jpg&name=large",
-                "https://pbs.twimg.com/media/G9dZq4oX0AEINQo?format=jpg&name=large",
-                "https://pbs.twimg.com/media/G9LfncXWIAAUrfh?format=jpg&name=large",
-                "https://pbs.twimg.com/media/G9LVdM_XkAE9IAN?format=jpg&name=large",
-                "https://pbs.twimg.com/media/G9GbwuvWwAAFHW9?format=jpg&name=medium"
-            ];
-
-            const uiImages = [
-                "https://pbs.twimg.com/media/HA-C-1absAEGME1?format=jpg&name=900x900",
-                "https://pbs.twimg.com/media/HA-DX4ta4AAYBZs?format=jpg&name=small",
-                "https://pbs.twimg.com/media/HA-DX4FXsAABSxx?format=png&name=900x900",
-                "https://pbs.twimg.com/media/HA-DX4pbsAgFPDy?format=png&name=small"
-            ];
-
-            const builderImages = [
-                "https://pbs.twimg.com/media/HA-CTQta0AA7TUd?format=jpg&name=large",
-                "https://pbs.twimg.com/media/HA-CTQ7aYAAzOIh?format=jpg&name=large",
-                "https://pbs.twimg.com/media/HA-CTQYXkAAuWF1?format=jpg&name=large",
-                "https://pbs.twimg.com/media/HA-CVYZX0AAHmP2?format=jpg&name=large"
-            ];
-
-            function initLightbox() {
-                const lightbox = document.getElementById('galleryLightbox');
-                const closeBtn = lightbox.querySelector('.lightbox-close');
-                const prevBtn = lightbox.querySelector('.lightbox-prev');
-                const nextBtn = lightbox.querySelector('.lightbox-next');
-                const imgEl = document.getElementById('lightboxImage');
-                const counterEl = document.getElementById('lightboxCounter');
-                
-                let currentImages = [];
-                let currentIndex = 0;
-
-                window.openLightbox = function(images, index) {
-                    currentImages = images;
-                    currentIndex = index;
-                    updateLightbox();
-                    lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                };
-
-                function closeLightbox() {
-                    lightbox.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-
-                function updateLightbox() {
-                    imgEl.src = currentImages[currentIndex];
-                    counterEl.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-                }
-
-                closeBtn.addEventListener('click', closeLightbox);
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-                    updateLightbox();
-                });
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % currentImages.length;
-                    updateLightbox();
-                });
-                lightbox.addEventListener('click', (e) => {
-                    if (e.target === lightbox) closeLightbox();
-                });
-                document.addEventListener('keydown', (e) => {
-                    if (!lightbox.classList.contains('active')) return;
-                    if (e.key === 'Escape') closeLightbox();
-                    if (e.key === 'ArrowLeft') prevBtn.click();
-                    if (e.key === 'ArrowRight') nextBtn.click();
-                });
-            }
-
-            function initPastWorkTabs() {
-                const tabButtons = document.querySelectorAll('.pastwork-tab');
-                const contentDiv = document.getElementById('pastworkContent');
-                const categoryNames = {
-                    scripting: 'Luau Scripting',
-                    ui: 'UI/UX Design',
-                    vfx: 'Visual Effects',
-                    gfx: 'GFX & Thumbnails',
-                    builder: 'Builder',
-                    animator: 'Animation'
-                };
-
-                function renderTabContent(category) {
-                    if (category === 'gfx') {
-                        let galleryHTML = '<div class="gallery-grid">';
-                        gfxImages.forEach((src, index) => {
-                            galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(gfxImages, ${index})" alt="GFX work ${index + 1}">`;
-                        });
-                        galleryHTML += '</div>';
-                        contentDiv.innerHTML = `
-                            ${galleryHTML}
-                            <div class="pastwork-grid">
-                                <div class="pastwork-item coming-soon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                    <h4>More work coming soon</h4>
-                                    <p>Check back later for new GFX projects</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-briefcase"></i></div>
-                                    <h3>Hire a GFX Artist</h3>
-                                    <p>Need custom thumbnails, logos, or promotional art?</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
-                                </div>
-                            </div>
-                        `;
-                    } else if (category === 'ui') {
-                        let galleryHTML = '<div class="gallery-grid">';
-                        uiImages.forEach((src, index) => {
-                            galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(uiImages, ${index})" alt="UI work ${index + 1}">`;
-                        });
-                        galleryHTML += '</div>';
-                        contentDiv.innerHTML = `
-                            ${galleryHTML}
-                            <div class="pastwork-grid">
-                                <div class="pastwork-item coming-soon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                    <h4>More UI work coming soon</h4>
-                                    <p>Check back later for new UI designs</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-paint-brush"></i></div>
-                                    <h3>Hire a UI Designer</h3>
-                                    <p>Need clean, modern interfaces?</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
-                                </div>
-                            </div>
-                        `;
-                    } else if (category === 'builder') {
-                        let galleryHTML = '<div class="gallery-grid">';
-                        builderImages.forEach((src, index) => {
-                            galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(builderImages, ${index})" alt="Builder work ${index + 1}">`;
-                        });
-                        galleryHTML += '</div>';
-                        contentDiv.innerHTML = `
-                            ${galleryHTML}
-                            <div class="pastwork-grid">
-                                <div class="pastwork-item coming-soon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                    <h4>More builds coming soon</h4>
-                                    <p>Check back later for new 3D models and environments</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-cubes"></i></div>
-                                    <h3>Hire a Builder</h3>
-                                    <p>Need custom props, vehicles, or environments?</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
-                                </div>
-                            </div>
-                        `;
-                    } else if (category === 'scripting') {
-                        contentDiv.innerHTML = `
-                            <div class="pastwork-grid">
-                                <div class="pastwork-item">
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/y4RqsNAM9Ew" title="Simple Teleporter Tool" allowfullscreen></iframe>
-                                    </div>
-                                    <h3>Teleporter System</h3>
-                                    <p>Simple teleporter tool – place two portals, active for 10 seconds.</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/NCkYRHlH_FQ" title="Advanced Dialogue System" allowfullscreen></iframe>
-                                    </div>
-                                    <h3>Dialogue System</h3>
-                                    <p>Advanced dialogue for Driftweavers: RNG crystal game.</p>
-                                </div>
-                                <div class="pastwork-item coming-soon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                    <h4>More scripts coming soon</h4>
-                                    <p>Combat systems, simulators, and more</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-code"></i></div>
-                                    <h3>Hire a scripter</h3>
-                                    <p>Need custom mechanics or systems?</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        contentDiv.innerHTML = `
-                            <div class="pastwork-grid">
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-clock"></i></div>
-                                    <h3>Nothing here yet</h3>
-                                    <p>Be the first to showcase your ${categoryNames[category]} work with GoSuccess!</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('join'); return false;">Apply to join</a>
-                                </div>
-                                <div class="pastwork-item coming-soon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                    <h4>More work coming soon</h4>
-                                    <p>Check back later for new projects</p>
-                                </div>
-                                <div class="pastwork-item">
-                                    <div class="pastwork-icon"><i class="fas fa-briefcase"></i></div>
-                                    <h3>Hire a ${categoryNames[category]}</h3>
-                                    <p>Looking for talent? Post your project and hire our team.</p>
-                                    <a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a>
-                                </div>
-                            </div>
-                        `;
-                    }
-                }
-
-                tabButtons.forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        tabButtons.forEach(b => b.classList.remove('active'));
-                        this.classList.add('active');
-                        renderTabContent(this.getAttribute('data-tab'));
-                    });
-                });
-                renderTabContent('scripting');
-            }
-
-            // ===== EXPOSE GLOBAL VARIABLES =====
-            window.gfxImages = gfxImages;
-            window.uiImages = uiImages;
-            window.builderImages = builderImages;
-
-            // ===== INIT =====
-            window.addEventListener('DOMContentLoaded', function() {
-                initPastWorkTabs();
-                initLightbox();
+        // ===== PAGE SYSTEM =====
+        window.showPage = function (pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
+            if (pageId === 'main') {
+                window.scrollTo(0, 0);
                 loadAllStats();
+            }
+        };
+
+        window.smoothScroll = function (targetSelector) {
+            const target = document.querySelector(targetSelector);
+            if (target) {
+                setTimeout(() => {
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                }, 100);
+            }
+        };
+
+        // ===== TWEEN ENGINE =====
+        const TWEEN_DURATION = 4000;
+        const EASE_OUT_CUBIC = t => 1 - Math.pow(1 - t, 3);
+
+        class TweenManager {
+            constructor() { this.tweens = []; this.rafId = null; this.update = this.update.bind(this); }
+            add(element, endValue, formatFn) {
+                if (!element) return;
+                this.tweens = this.tweens.filter(t => t.element !== element);
+                const start = parseFloat(element.textContent) || 0;
+                this.tweens.push({ element, start, end: endValue, startTime: performance.now(), formatFn: formatFn || this.defaultFormat });
+                this.startLoop();
+            }
+            defaultFormat(num) {
+                if (num >= 1_000_000) return (num / 1_000_000).toFixed(1) + 'M';
+                if (num >= 1_000) return (num / 1_000).toFixed(1) + 'K';
+                return Math.round(num).toString();
+            }
+            startLoop() { if (this.rafId) return; this.rafId = requestAnimationFrame(this.update); }
+            update(now) {
+                let active = false;
+                for (let i = this.tweens.length - 1; i >= 0; i--) {
+                    const t = this.tweens[i];
+                    const elapsed = now - t.startTime;
+                    const progress = Math.min(elapsed / TWEEN_DURATION, 1);
+                    const eased = EASE_OUT_CUBIC(progress);
+                    const current = t.start + (t.end - t.start) * eased;
+                    t.element.textContent = t.formatFn(current);
+                    if (progress < 1) { active = true; } else { t.element.textContent = t.formatFn(t.end); this.tweens.splice(i, 1); }
+                }
+                if (active) { this.rafId = requestAnimationFrame(this.update); } else { this.rafId = null; }
+            }
+            clear() { this.tweens = []; if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; } }
+        }
+
+        const tweenManager = new TweenManager();
+
+        // ===== GAMES — sorted best to least by fallback visits =====
+        const GAMES = [
+            {
+                placeId: 8287908355,
+                name: "Train VS Vehicle Master!",
+                url: "https://www.roblox.com/games/8287908355/Train-VS-Vehicle-Master",
+                thumbnail: "https://tr.rbxcdn.com/180DAY-f9c6b43e81a5df5c4837af925208e5a3/768/432/Image/Webp/noFilter",
+                description: "Massive battles between trains and vehicles! 10.4M+ visits.",
+                fallbackStats: { visits: 10400000, playing: 25, favorites: 4581 }
+            },
+            {
+                placeId: 17247995332,
+                name: "Balkan Donate",
+                url: "https://www.roblox.com/games/17247995332/Balkan-Donate",
+                thumbnail: "https://tr.rbxcdn.com/180DAY-4628d8153026cbce570c02fcac54456a/768/432/Image/Webp/noFilter",
+                description: "Donation game inspired by Pls Donate – made for the Balkan community! 🇧🇦🇷🇸🇭🇷 Daily streaks & rewards.",
+                fallbackStats: { visits: 1800000, playing: 47, favorites: 5599 }
+            },
+            {
+                placeId: 117685246722846,
+                name: "Escape Tsunami for Glitchy Noobs",
+                url: "https://www.roblox.com/games/117685246722846/Escape-Tsunami-for-Glitchy-Noobs",
+                thumbnail: "https://tr.rbxcdn.com/180DAY-b015ade2b0ac444306a1bcd3441f26c1/768/432/Image/Webp/noFilter",
+                description: "Survive the tsunami while dodging glitches – fast‑paced chaos with friends!",
+                fallbackStats: { visits: 3155, playing: 2, favorites: 4 }
+            },
+            {
+                placeId: 128641742072134,
+                name: "Money Grind Simulator",
+                url: "https://www.roblox.com/games/128641742072134/Money-Grind-Simulator",
+                thumbnail: "https://tr.rbxcdn.com/180DAY-cf0423d75b22cea2534c3b19cb85d517/768/432/Image/Webp/noFilter",
+                description: "Grind, upgrade, and build your fortune. The ultimate simulator experience.",
+                fallbackStats: { visits: 230, playing: 0, favorites: 190 }
+            }
+        ];
+
+        // ===== UNIVERSE ID FETCHER =====
+        async function getUniverseId(placeId) {
+            try {
+                const res = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${placeId}`);
+                if (res.ok) { const d = await res.json(); if (d && d[0] && d[0].universeId) return d[0].universeId; }
+            } catch (e) {}
+            try {
+                const res = await fetch(`https://apis.roblox.com/universes/v1/places/${placeId}/universe`);
+                if (res.ok) { const d = await res.json(); if (d.universeId) return d.universeId; }
+            } catch (e) {}
+            throw new Error(`Failed for place ${placeId}`);
+        }
+
+        // ===== FETCH STATS WITH FALLBACK =====
+        async function fetchRobloxStatsWithFallback(game) {
+            try {
+                const universeId = await getUniverseId(game.placeId);
+                const detailsRes = await fetch(`https://games.roblox.com/v1/games?universeIds=${universeId}`);
+                const detailsData = await detailsRes.json();
+                let visits = 0, playing = 0, favorites = 0;
+                if (detailsData.data && detailsData.data[0]) {
+                    visits = detailsData.data[0].visits || 0;
+                    playing = detailsData.data[0].playing || 0;
+                }
+                const favRes = await fetch(`https://games.roblox.com/v1/games/${universeId}/favorites/count`);
+                const favData = await favRes.json();
+                favorites = favData.favoritesCount || 0;
+                if (visits === 0 && playing === 0 && favorites === 0) return game.fallbackStats;
+                return { visits, playing, favorites };
+            } catch (error) {
+                return game.fallbackStats;
+            }
+        }
+
+        // ===== LOAD ALL STATS =====
+        async function loadAllStats() {
+            if (!document.getElementById('main-page').classList.contains('active')) return;
+            tweenManager.clear();
+
+            // Reset hero stats to dashes while loading
+            document.getElementById('totalVisits').textContent = '—';
+            document.getElementById('activePlayers').textContent = '—';
+            document.getElementById('totalFavorites').textContent = '—';
+
+            let totalVisits = 0, totalPlaying = 0, totalFavorites = 0;
+            const gamesContainer = document.getElementById('gamesContainer');
+            gamesContainer.innerHTML = '';
+
+            // Build cards immediately with fallback stats, then update with live data
+            for (const game of GAMES) {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="game-img" style="background-image: url('${game.thumbnail}'); background-color:#1a1a2e;"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">${game.name}</h3>
+                        <p class="game-desc">${game.description}</p>
+                        <div class="game-metrics">
+                            <div class="metric"><span class="metric-value" id="visits-${game.placeId}">—</span><span class="metric-label">Visits</span></div>
+                            <div class="metric"><span class="metric-value" id="playing-${game.placeId}">—</span><span class="metric-label">Active</span></div>
+                            <div class="metric"><span class="metric-value" id="favs-${game.placeId}">—</span><span class="metric-label">Fav</span></div>
+                        </div>
+                        <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="game-link"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
+                    </div>`;
+                gamesContainer.appendChild(card);
+            }
+
+            // Fetch live stats for each game in order
+            const allStats = await Promise.all(GAMES.map(g => fetchRobloxStatsWithFallback(g)));
+
+            // Re-sort by actual live visits (highest first)
+            const sorted = GAMES.map((g, i) => ({ game: g, stats: allStats[i] }))
+                .sort((a, b) => b.stats.visits - a.stats.visits);
+
+            // Rebuild cards in sorted order
+            gamesContainer.innerHTML = '';
+            for (const { game, stats } of sorted) {
+                totalVisits += stats.visits;
+                totalPlaying += stats.playing;
+                totalFavorites += stats.favorites;
+
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="game-img" style="background-image: url('${game.thumbnail}'); background-color:#1a1a2e;"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">${game.name}</h3>
+                        <p class="game-desc">${game.description}</p>
+                        <div class="game-metrics">
+                            <div class="metric"><span class="metric-value" id="visits-${game.placeId}">0</span><span class="metric-label">Visits</span></div>
+                            <div class="metric"><span class="metric-value" id="playing-${game.placeId}">0</span><span class="metric-label">Active</span></div>
+                            <div class="metric"><span class="metric-value" id="favs-${game.placeId}">0</span><span class="metric-label">Fav</span></div>
+                        </div>
+                        <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="game-link"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
+                    </div>`;
+                gamesContainer.appendChild(card);
+            }
+
+            // Animate all numbers
+            requestAnimationFrame(() => {
+                tweenManager.add(document.getElementById('totalVisits'), totalVisits);
+                tweenManager.add(document.getElementById('activePlayers'), totalPlaying);
+                tweenManager.add(document.getElementById('totalFavorites'), totalFavorites);
+                for (const { game, stats } of sorted) {
+                    tweenManager.add(document.getElementById(`visits-${game.placeId}`), stats.visits);
+                    tweenManager.add(document.getElementById(`playing-${game.placeId}`), stats.playing);
+                    tweenManager.add(document.getElementById(`favs-${game.placeId}`), stats.favorites);
+                }
             });
-        })();
+        }
+
+        // ===== FORM SUBMISSIONS =====
+        window.submitHireForm = function (e) {
+            e.preventDefault();
+            const name = document.getElementById('hireName').value;
+            const email = document.getElementById('hireEmail').value;
+            const gameLink = document.getElementById('hireGameLink').value;
+            const details = document.getElementById('hireDetails').value;
+            const subject = encodeURIComponent(`Hire inquiry: ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
+            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+        };
+
+        window.submitJoinForm = function (e) {
+            e.preventDefault();
+            const name = document.getElementById('joinName').value;
+            const email = document.getElementById('joinEmail').value;
+            const role = document.getElementById('joinRole').value;
+            const experience = document.getElementById('joinExperience').value;
+            const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
+            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+        };
+
+        window.submitSellForm = function (e) {
+            e.preventDefault();
+            const name = document.getElementById('sellName').value;
+            const email = document.getElementById('sellEmail').value;
+            const gameLink = document.getElementById('sellGameLink').value;
+            const metrics = document.getElementById('sellMetrics').value;
+            const details = document.getElementById('sellDetails').value;
+            const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
+            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+        };
+
+        window.submitInvestForm = function (e) {
+            e.preventDefault();
+            const name = document.getElementById('investName').value;
+            const email = document.getElementById('investEmail').value;
+            const focus = document.getElementById('investFocus').value;
+            const other = document.getElementById('investOther').value;
+            const amount = document.getElementById('investAmount').value;
+            const message = document.getElementById('investMessage').value;
+            const subject = encodeURIComponent(`Investment inquiry: ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`);
+            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+        };
+
+        // ===== FORM TAB SWITCHING =====
+        window.setActiveTab = function (tabId) {
+            ['Hire','Join','Sell','Invest'].forEach(t => {
+                document.getElementById('tab' + t)?.classList.remove('active');
+                document.getElementById('form' + t)?.classList.remove('active');
+            });
+            const map = { hire: 'Hire', join: 'Join', sell: 'Sell', invest: 'Invest' };
+            const key = map[tabId];
+            if (key) {
+                document.getElementById('tab' + key)?.classList.add('active');
+                document.getElementById('form' + key)?.classList.add('active');
+            }
+        };
+
+        // ===== MOBILE MENU =====
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // ===== GALLERY IMAGES =====
+        const gfxImages = [
+            "https://pbs.twimg.com/media/G_xvgRgWQAA3XHp?format=jpg&name=large",
+            "https://pbs.twimg.com/media/G-HD0SSXEAAhzYU?format=jpg&name=large",
+            "https://pbs.twimg.com/media/G9dZq4oX0AEINQo?format=jpg&name=large",
+            "https://pbs.twimg.com/media/G9LfncXWIAAUrfh?format=jpg&name=large",
+            "https://pbs.twimg.com/media/G9LVdM_XkAE9IAN?format=jpg&name=large",
+            "https://pbs.twimg.com/media/G9GbwuvWwAAFHW9?format=jpg&name=medium"
+        ];
+        const uiImages = [
+            "https://pbs.twimg.com/media/HA-C-1absAEGME1?format=jpg&name=900x900",
+            "https://pbs.twimg.com/media/HA-DX4ta4AAYBZs?format=jpg&name=small",
+            "https://pbs.twimg.com/media/HA-DX4FXsAABSxx?format=png&name=900x900",
+            "https://pbs.twimg.com/media/HA-DX4pbsAgFPDy?format=png&name=small"
+        ];
+        const builderImages = [
+            "https://pbs.twimg.com/media/HA-CTQta0AA7TUd?format=jpg&name=large",
+            "https://pbs.twimg.com/media/HA-CTQ7aYAAzOIh?format=jpg&name=large",
+            "https://pbs.twimg.com/media/HA-CTQYXkAAuWF1?format=jpg&name=large",
+            "https://pbs.twimg.com/media/HA-CVYZX0AAHmP2?format=jpg&name=large"
+        ];
+        window.gfxImages = gfxImages;
+        window.uiImages = uiImages;
+        window.builderImages = builderImages;
+
+        // ===== LIGHTBOX =====
+        function initLightbox() {
+            const lightbox = document.getElementById('galleryLightbox');
+            const closeBtn = document.getElementById('lbClose');
+            const prevBtn = document.getElementById('lbPrev');
+            const nextBtn = document.getElementById('lbNext');
+            const imgEl = document.getElementById('lightboxImage');
+            const counterEl = document.getElementById('lightboxCounter');
+            let currentImages = [], currentIndex = 0;
+
+            window.openLightbox = function (images, index) {
+                currentImages = images; currentIndex = index;
+                updateLightbox();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            function closeLightbox() { lightbox.classList.remove('active'); document.body.style.overflow = ''; }
+            function updateLightbox() { imgEl.src = currentImages[currentIndex]; counterEl.textContent = `${currentIndex + 1} / ${currentImages.length}`; }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); });
+            nextBtn.addEventListener('click', () => { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); });
+            lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', e => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            });
+        }
+
+        // ===== PAST WORK TABS =====
+        function initPastWorkTabs() {
+            const tabButtons = document.querySelectorAll('.pastwork-tab');
+            const contentDiv = document.getElementById('pastworkContent');
+            const categoryNames = { scripting:'Luau Scripting', ui:'UI/UX Design', vfx:'Visual Effects', gfx:'GFX & Thumbnails', builder:'Builder', animator:'Animation' };
+
+            function renderTabContent(category) {
+                if (category === 'gfx') {
+                    let galleryHTML = '<div class="gallery-grid">';
+                    gfxImages.forEach((src, index) => { galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(gfxImages, ${index})" alt="GFX work ${index + 1}" loading="lazy">`; });
+                    galleryHTML += '</div>';
+                    contentDiv.innerHTML = galleryHTML + `<div class="pastwork-grid"><div class="pastwork-item coming-soon"><i class="fas fa-hourglass-half"></i><h4>More work coming soon</h4><p>Check back later for new GFX projects</p></div><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-briefcase"></i></div><h3>Hire a GFX Artist</h3><p>Need custom thumbnails, logos, or promotional art?</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a></div></div>`;
+                } else if (category === 'ui') {
+                    let galleryHTML = '<div class="gallery-grid">';
+                    uiImages.forEach((src, index) => { galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(uiImages, ${index})" alt="UI work ${index + 1}" loading="lazy">`; });
+                    galleryHTML += '</div>';
+                    contentDiv.innerHTML = galleryHTML + `<div class="pastwork-grid"><div class="pastwork-item coming-soon"><i class="fas fa-hourglass-half"></i><h4>More UI work coming soon</h4><p>Check back later for new UI designs</p></div><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-paint-brush"></i></div><h3>Hire a UI Designer</h3><p>Need clean, modern interfaces?</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a></div></div>`;
+                } else if (category === 'builder') {
+                    let galleryHTML = '<div class="gallery-grid">';
+                    builderImages.forEach((src, index) => { galleryHTML += `<img src="${src}" class="gallery-thumb" onclick="openLightbox(builderImages, ${index})" alt="Builder work ${index + 1}" loading="lazy">`; });
+                    galleryHTML += '</div>';
+                    contentDiv.innerHTML = galleryHTML + `<div class="pastwork-grid"><div class="pastwork-item coming-soon"><i class="fas fa-hourglass-half"></i><h4>More builds coming soon</h4><p>Check back later for new 3D models and environments</p></div><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-cubes"></i></div><h3>Hire a Builder</h3><p>Need custom props, vehicles, or environments?</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a></div></div>`;
+                } else if (category === 'scripting') {
+                    contentDiv.innerHTML = `<div class="pastwork-grid"><div class="pastwork-item"><div class="video-container"><iframe src="https://www.youtube.com/embed/y4RqsNAM9Ew" title="Simple Teleporter Tool" allowfullscreen loading="lazy"></iframe></div><h3>Teleporter System</h3><p>Simple teleporter tool – place two portals, active for 10 seconds.</p></div><div class="pastwork-item"><div class="video-container"><iframe src="https://www.youtube.com/embed/NCkYRHlH_FQ" title="Advanced Dialogue System" allowfullscreen loading="lazy"></iframe></div><h3>Dialogue System</h3><p>Advanced dialogue for Driftweavers: RNG crystal game.</p></div><div class="pastwork-item coming-soon"><i class="fas fa-hourglass-half"></i><h4>More scripts coming soon</h4><p>Combat systems, simulators, and more</p></div><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-code"></i></div><h3>Hire a scripter</h3><p>Need custom mechanics or systems?</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a></div></div>`;
+                } else {
+                    contentDiv.innerHTML = `<div class="pastwork-grid"><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-clock"></i></div><h3>Nothing here yet</h3><p>Be the first to showcase your ${categoryNames[category]} work with GoSuccess!</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('join'); return false;">Apply to join</a></div><div class="pastwork-item coming-soon"><i class="fas fa-hourglass-half"></i><h4>More work coming soon</h4><p>Check back later for new projects</p></div><div class="pastwork-item"><div class="pastwork-icon"><i class="fas fa-briefcase"></i></div><h3>Hire a ${categoryNames[category]}</h3><p>Looking for talent? Post your project and hire our team.</p><a href="#contact" class="pastwork-cta" onclick="smoothScroll('#contact'); setActiveTab('hire'); return false;">Hire now</a></div></div>`;
+                }
+            }
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    renderTabContent(this.getAttribute('data-tab'));
+                });
+            });
+            renderTabContent('scripting');
+        }
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function () {
+            initPastWorkTabs();
+            initLightbox();
+            loadAllStats();
+        });
+
+    })();
     </script>
 </body>
 </html>
