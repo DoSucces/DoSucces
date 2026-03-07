@@ -913,7 +913,7 @@
             const details = document.getElementById('hireDetails').value;
             const subject = encodeURIComponent(`Hire inquiry: ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink || 'Not provided'}\n\nProject details:\n${details}`);
-            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:go.success.studios@gmail.com?subject=${subject}&body=${body}`;
         };
 
         window.submitJoinForm = function (e) {
@@ -924,7 +924,7 @@
             const experience = document.getElementById('joinExperience').value;
             const subject = encodeURIComponent(`Job application: ${role} - ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nPortfolio/Experience:\n${experience}`);
-            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:go.success.studios@gmail.com?subject=${subject}&body=${body}`;
         };
 
         window.submitSellForm = function (e) {
@@ -936,7 +936,7 @@
             const details = document.getElementById('sellDetails').value;
             const subject = encodeURIComponent(`Game sale inquiry: ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGame: ${gameLink}\nMonthly metrics: ${metrics || 'Not provided'}\n\nAdditional info:\n${details || 'None'}`);
-            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:go.success.studios@gmail.com?subject=${subject}&body=${body}`;
         };
 
         window.submitInvestForm = function (e) {
@@ -949,7 +949,7 @@
             const message = document.getElementById('investMessage').value;
             const subject = encodeURIComponent(`Investment inquiry: ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nFocus: ${focus}${focus === 'Other' ? ` - ${other}` : ''}\nAmount: ${amount || 'Not specified'}\n\nMessage:\n${message || 'None'}`);
-            window.location.href = `mailto:northchicagorp0@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:go.success.studios@gmail.com?subject=${subject}&body=${body}`;
         };
 
         // ===== FORM TAB SWITCHING =====
