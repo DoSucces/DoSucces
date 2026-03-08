@@ -1,10 +1,24 @@
-<!DOCTYPE html> <html lang="en"> <head> <!-- ===== META & SEO ===== --> 
+<!DOCTYPE html> <html lang="en"> <head> 
+
+    
+
+    <!-- ===== META & SEO ===== --> 
+
     <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="GoSuccess – We buy, grow and scale Roblox games. Live statistics, game acquisition, professional development for Your Games. Join the developers who trusted us.">
+
     <meta name="keywords" content="gosucces, gosuccess roblox, gosuccess studio, gosuccess studios, Gosuccess, gosuccess roblox, Roblox, game acquisition, Roblox studio"> 
+
     <meta name="author" content="Rlyoung0"> <meta name="robots" content="index, follow">
+
     <meta name="theme-color" content="#b300ff"> 
+
     <link rel="canonical" href="https://gosuccess.net">
+    <meta property="og:title" content="GoSuccess · Achieve your Roblox dreams">
+    <meta property="og:description" content="We buy, grow and scale Roblox games. Live statistics, game acquisition, professional services.">
+    <meta property="og:image" content="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium">
+    <meta property="og:url" content="https://gosuccess.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GoSuccess">
     <meta name="twitter:card" content="summary_large_image">
@@ -60,16 +74,40 @@
     .reveal.visible { opacity:1; transform:translate(0,0); }
 
     /* MARQUEE */
-    .marquee-wrap { overflow:hidden; padding:28px 0; background:rgba(14,14,24,.65); border-top:1px solid var(--border); border-bottom:1px solid var(--border); mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%); }
-    .marquee-row { display:flex; }
-    .marquee-row+.marquee-row { margin-top:12px; }
-    .mtrack { display:flex; gap:12px; animation:mscroll-l 45s linear infinite; will-change:transform; }
-    .mtrack.rev { animation:mscroll-r 50s linear infinite; }
-    .mtrack img { height:190px; min-width:270px; width:auto; flex-shrink:0; object-fit:cover; border-radius:14px; border:1px solid var(--border); transition:.2s; cursor:pointer; }
-    .mtrack img:hover { border-color:var(--primary); transform:scale(1.04); box-shadow:0 6px 24px var(--glow); }
-    @keyframes mscroll-l { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    @keyframes mscroll-r { 0%{transform:translateX(-50%)} 100%{transform:translateX(0)} }
-    .marquee-wrap:hover .mtrack { animation-play-state:paused; }
+    /* ── MARQUEE BACKGROUND (inside hero only) ── */
+    .marquee-bg {
+        position:absolute; inset:0; z-index:0;
+        overflow:hidden; pointer-events:none;
+        display:flex; flex-direction:column; justify-content:center; gap:14px;
+    }
+    /* dark overlay so text stays readable */
+    .marquee-bg::after {
+        content:''; position:absolute; inset:0;
+        background: linear-gradient(to bottom,
+            var(--bg) 0%,
+            rgba(10,10,18,.55) 30%,
+            rgba(10,10,18,.55) 70%,
+            var(--bg) 100%);
+        z-index:1;
+    }
+    .marquee-row { display:flex; overflow:hidden;
+        mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);
+    }
+    .mtrack {
+        display:flex; gap:14px; flex-shrink:0;
+        animation:mscroll-l 90s linear infinite;   /* SLOW */
+        will-change:transform;
+    }
+    .mtrack.rev { animation:mscroll-r 100s linear infinite; } /* even slower going right */
+    .mtrack img {
+        height:160px; min-width:260px; width:260px;
+        flex-shrink:0; object-fit:cover;
+        border-radius:10px;
+        opacity:.35;          /* dim — it's a background */
+        border:1px solid rgba(179,0,255,.15);
+    }
+    @keyframes mscroll-l  { 0%{transform:translateX(0)}    100%{transform:translateX(-50%)} }
+    @keyframes mscroll-r  { 0%{transform:translateX(-50%)} 100%{transform:translateX(0)} }
 
     /* HERO */
     .hero { padding:90px 0 72px; text-align:center; position:relative; overflow:hidden; }
@@ -286,6 +324,12 @@
 
     <section class="hero">
         <div class="hero-glow"></div>
+        <!-- Scrolling image background -->
+        <div class="marquee-bg" aria-hidden="true">
+            <div class="marquee-row"><div class="mtrack" id="m1"></div></div>
+            <div class="marquee-row"><div class="mtrack rev" id="m2"></div></div>
+            <div class="marquee-row"><div class="mtrack" id="m3"></div></div>
+        </div>
         <div class="container">
             <div class="live-badge reveal"><span class="live-dot"></span>&nbsp;Live statistics from Roblox</div>
             <h1 class="hero-title reveal">Achieve more with<br>Go<span style="-webkit-text-fill-color:var(--primary)">Success</span></h1>
@@ -306,12 +350,6 @@
             </div>
         </div>
     </section>
-
-    <!-- SCROLLING MARQUEE STRIP -->
-    <div class="marquee-wrap">
-        <div class="marquee-row"><div class="mtrack" id="m1"></div></div>
-        <div class="marquee-row"><div class="mtrack rev" id="m2"></div></div>
-    </div>
 
     <section id="games" class="games-section sec-alt">
         <div class="container">
@@ -633,17 +671,29 @@ const GAME_THUMBS=[
 ];
 window.GFX=GFX; window.UI_IMGS=UI_IMGS; window.BUILDER_IMGS=BUILDER_IMGS;
 
-const ALL_IMGS=[...GFX,...UI_IMGS,...BUILDER_IMGS,...GAME_THUMBS];
+// Marquee uses ONLY our GFX thumbnails + game thumbnails — no UI/builder/scripting
+const MARQUEE_IMGS = [...GFX, ...GAME_THUMBS];
 
 function buildMarquee(){
-    const r2=[...ALL_IMGS].sort(()=>Math.random()-.5);
-    function fill(id,imgs){
-        const t=document.getElementById(id); if(!t)return;
-        const rep=[...imgs,...imgs,...imgs];
-        rep.forEach(src=>{const i=document.createElement('img');i.src=src;i.alt='GoSuccess work';i.loading='lazy';i.onerror=function(){this.style.display='none';};t.appendChild(i);});
+    // Shuffle variants for each row so they look different
+    const row1 = [...MARQUEE_IMGS, ...MARQUEE_IMGS];
+    const row2 = [...MARQUEE_IMGS, ...MARQUEE_IMGS].sort(()=>Math.random()-.5);
+    const row3 = [...MARQUEE_IMGS, ...MARQUEE_IMGS].sort(()=>Math.random()-.5);
+
+    function fill(id, imgs){
+        const t = document.getElementById(id); if(!t) return;
+        // Triple for seamless infinite scroll
+        const rep = [...imgs, ...imgs, ...imgs];
+        rep.forEach(src=>{
+            const i = document.createElement('img');
+            i.src = src; i.alt = ''; i.loading = 'lazy';
+            i.onerror = function(){ this.style.display='none'; };
+            t.appendChild(i);
+        });
     }
-    fill('m1',ALL_IMGS);
-    fill('m2',r2);
+    fill('m1', row1);
+    fill('m2', row2);
+    fill('m3', row3);
 }
 
 const GAMES=[
@@ -661,42 +711,54 @@ _f(now){let a=false;for(let i=this.t.length-1;i>=0;i--){const x=this.t[i],p=Math
 clear(){this.t=[];if(this.r){cancelAnimationFrame(this.r);this.r=null;}}}
 const tw=new Tw();
 
-// Roblox blocks direct browser fetches (CORS). We use a lightweight public CORS proxy.
-// corsproxy.io wraps the request server-side and returns the JSON cleanly.
-const PROXY = 'https://corsproxy.io/?url=';
-
-async function getUid(pid){
-    const urls = [
-        `https://games.roblox.com/v1/games/multiget-place-details?placeIds=${pid}`,
-        `https://apis.roblox.com/universes/v1/places/${pid}/universe`
+// Roblox blocks direct browser fetches (CORS policy).
+// We route through allorigins.win which fetches server-side and returns JSON.
+async function robloxFetch(url){
+    // Try allorigins first, fall back to corsproxy
+    const proxies = [
+        `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
+        `https://corsproxy.io/?url=${encodeURIComponent(url)}`
     ];
-    for(const u of urls){
+    for(const proxy of proxies){
         try{
-            const r = await fetch(PROXY + encodeURIComponent(u), {headers:{'x-requested-with':'GoSuccess'}});
+            const r = await fetch(proxy);
             if(!r.ok) continue;
             const d = await r.json();
-            const id = d?.[0]?.universeId || d?.universeId;
-            if(id) return id;
+            // allorigins wraps in {contents: "..."}
+            const raw = d.contents !== undefined ? d.contents : d;
+            return typeof raw === 'string' ? JSON.parse(raw) : raw;
         }catch(_){}
     }
+    throw new Error('all proxies failed for '+url);
+}
+
+async function getUid(pid){
+    try{
+        const d = await robloxFetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${pid}`);
+        const id = Array.isArray(d) ? d[0]?.universeId : d?.universeId;
+        if(id) return id;
+    }catch(_){}
+    try{
+        const d = await robloxFetch(`https://apis.roblox.com/universes/v1/places/${pid}/universe`);
+        if(d?.universeId) return d.universeId;
+    }catch(_){}
     throw new Error('no uid for '+pid);
 }
 
 async function fetchStats(g){
     try{
         const uid = await getUid(g.placeId);
-        const detURL = `https://games.roblox.com/v1/games?universeIds=${uid}`;
-        const favURL = `https://games.roblox.com/v1/games/${uid}/favorites/count`;
         const [det, fav] = await Promise.all([
-            fetch(PROXY + encodeURIComponent(detURL), {headers:{'x-requested-with':'GoSuccess'}}).then(r=>r.json()),
-            fetch(PROXY + encodeURIComponent(favURL), {headers:{'x-requested-with':'GoSuccess'}}).then(r=>r.json())
+            robloxFetch(`https://games.roblox.com/v1/games?universeIds=${uid}`),
+            robloxFetch(`https://games.roblox.com/v1/games/${uid}/favorites/count`)
         ]);
         const gd = det?.data?.[0];
         if(!gd) return g.fb;
-        const visits    = gd.visits    > 0 ? gd.visits    : g.fb.visits;
-        const playing   = gd.playing   >= 0 ? gd.playing  : g.fb.playing;
-        const favorites = fav?.favoritesCount > 0 ? fav.favoritesCount : g.fb.favorites;
-        return { visits, playing, favorites };
+        return {
+            visits:    gd.visits    > 0  ? gd.visits             : g.fb.visits,
+            playing:   gd.playing   >= 0 ? gd.playing            : g.fb.playing,
+            favorites: fav?.favoritesCount > 0 ? fav.favoritesCount : g.fb.favorites
+        };
     }catch(_){
         return g.fb;
     }
