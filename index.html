@@ -801,46 +801,34 @@ function buildGameCards(){
 }
 
 // ── LOAD ALL STATS ──
-// 1. Builds cards instantly (numbers at 0)
-// 2. Tweens hero stats from 0 → fallback immediately (looks great)
-// 3. Fetches live data in parallel per game, updates as each one comes in
+// Fetch live data FIRST (silently, in background).
+// Wait minimum 1.5s so the page settles visually before counting starts.
+// Then do exactly ONE tween from 0 → final number. Clean, no up-then-down.
+// Falls back to hardcoded numbers if proxies fail within 6s.
 async function loadAllStats(){
     if(!document.getElementById('main-page').classList.contains('active')) return;
 
     buildGameCards();
 
-    // Tween hero from 0 → fallback right away so something always animates
-    const fbTotals = GAMES.reduce((a,g)=>({
-        visits:    a.visits    + g.fb.visits,
-        playing:   a.playing   + g.fb.playing,
-        favorites: a.favorites + g.fb.favorites
-    }), {visits:0, playing:0, favorites:0});
+    // Fetch all games + enforce minimum 1.5s wait in parallel
+    const results = await Promise.all(GAMES.map(g =>
+        Promise.all([
+            fetchGameStats(g).catch(() => g.fb),          // live or fallback
+            new Promise(r => setTimeout(r, 1500))          // 1.5s minimum wait
+        ]).then(([stats]) => ({ g, stats }))
+    ));
 
-    tw.add(document.getElementById('totalVisits'),    fbTotals.visits);
-    tw.add(document.getElementById('activePlayers'),  fbTotals.playing);
-    tw.add(document.getElementById('totalFavorites'), fbTotals.favorites);
-
-    // Also tween each game card from 0 → fallback immediately
-    GAMES.forEach(g=>{
-        tw.add(document.getElementById('gv'+g.placeId), g.fb.visits);
-        tw.add(document.getElementById('gp'+g.placeId), g.fb.playing);
-        tw.add(document.getElementById('gf'+g.placeId), g.fb.favorites);
-    });
-
-    // Now fetch live data per-game in parallel — update each as it arrives
-    let liveV=0, liveP=0, liveF=0;
-    await Promise.allSettled(GAMES.map(async g => {
-        const stats = await fetchGameStats(g);
+    // ONE single tween from 0 → final for everything together
+    let tV=0, tP=0, tF=0;
+    results.forEach(({ g, stats }) => {
+        tV += stats.visits; tP += stats.playing; tF += stats.favorites;
         tw.add(document.getElementById('gv'+g.placeId), stats.visits);
         tw.add(document.getElementById('gp'+g.placeId), stats.playing);
         tw.add(document.getElementById('gf'+g.placeId), stats.favorites);
-        liveV += stats.visits; liveP += stats.playing; liveF += stats.favorites;
-    }));
-
-    // Update hero totals with real live numbers
-    tw.add(document.getElementById('totalVisits'),    liveV);
-    tw.add(document.getElementById('activePlayers'),  liveP);
-    tw.add(document.getElementById('totalFavorites'), liveF);
+    });
+    tw.add(document.getElementById('totalVisits'),    tV);
+    tw.add(document.getElementById('activePlayers'),  tP);
+    tw.add(document.getElementById('totalFavorites'), tF);
 }
 
 // ── PAST WORK ──
