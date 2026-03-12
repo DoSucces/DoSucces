@@ -7,7 +7,7 @@
 <meta name="keywords" content="gosuccess, gosuccess roblox, gosuccess studio, Roblox, game acquisition, sell roblox game, roblox partner">
 <meta name="author" content="Rlyoung0">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#b300ff">
+<meta name="theme-color" content="#9b00e8">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <link rel="canonical" href="https://gosuccess.net">
@@ -25,328 +25,313 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#08080f;--surface:#111118;--surface2:#18181f;--border:#22222e;--border2:#2e2e3d;
-  --text:#f0f0f8;--muted:#8888a0;--muted2:#333344;
-  --primary:#b300ff;--pd:#8800cc;--pl:#cc33ff;
-  --glow:rgba(179,0,255,.28);--glow2:rgba(179,0,255,.12);
-  --rlg:20px;--rmd:14px;--rsm:10px;--nh:68px;
+  --bg:#060608;--s1:#0e0e12;--s2:#141418;--s3:#1a1a20;
+  --b1:#1f1f27;--b2:#2a2a36;--b3:#363645;
+  --t1:#f2f2f8;--t2:#9898b0;--t3:#4a4a62;
+  --p:#9b00e8;--pl:#bf33ff;--pd:#6600aa;--pm:#7700bb;
+  --glow:rgba(155,0,232,.4);--glowsm:rgba(155,0,232,.15);
+  --nh:64px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(179,0,255,.07) 0%,transparent 60%);pointer-events:none;z-index:0}
-h1,h2,h3,h4,h5{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--t1);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── NOISE + GLOW ORBS ── */
+body::before{content:'';position:fixed;inset:0;background:
+  radial-gradient(ellipse 60% 40% at 20% 10%,rgba(155,0,232,.06) 0%,transparent 60%),
+  radial-gradient(ellipse 50% 35% at 80% 90%,rgba(155,0,232,.04) 0%,transparent 55%);
+  pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;opacity:.025;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px}
+
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.mono{font-family:'DM Mono',monospace}
 
 /* ── NAV ── */
-.nav{position:fixed;top:0;width:100%;height:var(--nh);z-index:300;transition:.3s}
-.nav.scrolled{background:rgba(8,8,15,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav{position:fixed;top:0;width:100%;height:var(--nh);z-index:300;transition:.35s ease}
+.nav.solid{background:rgba(6,6,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1)}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;height:var(--nh)}
-.nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
-.nav-brand img{height:36px;border-radius:8px}
-.nav-brand-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
-.nav-brand-name span{color:var(--primary)}
-.nav-links{display:flex;gap:6px;align-items:center}
-.nl{color:var(--muted);font-weight:500;font-size:.87rem;cursor:pointer;padding:6px 12px;border-radius:8px;transition:.15s}
-.nl:hover{color:var(--text);background:rgba(255,255,255,.05)}
-.nav-pill{background:linear-gradient(135deg,var(--primary),var(--pd));color:#fff;padding:8px 20px;border-radius:60px;font-weight:600;font-size:.85rem;cursor:pointer;transition:.2s;letter-spacing:.01em}
-.nav-pill:hover{box-shadow:0 0 20px var(--glow);transform:translateY(-1px)}
-.burger{display:none;background:none;border:1px solid var(--border2);color:var(--text);width:36px;height:36px;border-radius:9px;cursor:pointer;font-size:.9rem;align-items:center;justify-content:center;transition:.15s}
-.burger:hover{border-color:var(--primary);color:var(--primary)}
+.nav-brand{display:flex;align-items:center;gap:9px;cursor:pointer;text-decoration:none}
+.nav-brand img{height:32px;border-radius:6px}
+.nav-brand-name{font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:var(--t1)}
+.nav-brand-name em{font-style:normal;color:var(--pl)}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nl{color:var(--t3);font-weight:500;font-size:.82rem;cursor:pointer;padding:6px 11px;border-radius:6px;transition:.15s;letter-spacing:.01em}
+.nl:hover{color:var(--t1);background:rgba(255,255,255,.04)}
+.nav-cta{background:var(--p);color:#fff;padding:7px 18px;border-radius:6px;font-weight:700;font-size:.82rem;cursor:pointer;transition:.2s;letter-spacing:.02em;border:1px solid var(--pl)}
+.nav-cta:hover{background:var(--pl);box-shadow:0 0 20px var(--glow)}
+.burger{display:none;background:none;border:1px solid var(--b2);color:var(--t2);width:34px;height:34px;border-radius:6px;cursor:pointer;font-size:.85rem;align-items:center;justify-content:center;transition:.15s}
+.burger:hover{border-color:var(--p);color:var(--pl)}
 
-/* ── PAGE SYSTEM ── */
+/* ── PAGES ── */
 .page{display:none;padding-top:var(--nh)}
 .page.active{display:block}
 
 /* ── SCROLL REVEAL ── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
-.rv.fl{transform:translateX(-28px)}.rv.fr{transform:translateX(28px)}
-.rv.on{opacity:1!important;transform:none!important}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s cubic-bezier(.22,.68,0,1.2),transform .55s cubic-bezier(.22,.68,0,1.2)}
+.rv.on{opacity:1;transform:none}
+.rv.dl1{transition-delay:.08s}.rv.dl2{transition-delay:.16s}.rv.dl3{transition-delay:.24s}.rv.dl4{transition-delay:.32s}
 
-/* ── HERO ── */
-.hero{min-height:calc(100vh - var(--nh));display:flex;align-items:center;padding:60px 0 80px;position:relative;overflow:hidden}
-.mbg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;display:flex;flex-direction:column;justify-content:center;gap:12px}
-.mbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,var(--bg) 0%,rgba(8,8,15,.65) 25%,rgba(8,8,15,.65) 75%,var(--bg) 100%);z-index:1}
-.mrow{display:flex;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,#000 6%,#000 94%,transparent 100%)}
-.mt{display:flex;gap:12px;flex-shrink:0;will-change:transform;animation:ml 95s linear infinite}
-.mt.r{animation:mr 108s linear infinite}
-.mt img{height:150px;width:240px;flex-shrink:0;object-fit:cover;border-radius:10px;opacity:.22;border:1px solid rgba(179,0,255,.1)}
+/* ── MARQUEE ── */
+.mbg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:1}
+.mbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,var(--bg) 0%,rgba(6,6,8,.55) 30%,rgba(6,6,8,.55) 70%,var(--bg) 100%);z-index:1}
+.mrow{display:flex;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);margin-bottom:8px}
+.mt{display:flex;gap:8px;flex-shrink:0;will-change:transform;animation:ml 90s linear infinite}
+.mt.r{animation:mr 110s linear infinite}
+.mt img{height:130px;width:210px;flex-shrink:0;object-fit:cover;border-radius:8px;opacity:.18;border:1px solid rgba(155,0,232,.08)}
 @keyframes ml{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @keyframes mr{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero{min-height:calc(100vh - var(--nh));display:flex;align-items:center;padding:60px 0 72px;position:relative;overflow:hidden}
 .hero-inner{position:relative;z-index:2;text-align:center;width:100%}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(179,0,255,.1);border:1px solid rgba(179,0,255,.25);padding:5px 16px;border-radius:60px;margin-bottom:28px;color:var(--primary);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
-.ldot{width:7px;height:7px;background:var(--primary);border-radius:50%;box-shadow:0 0 8px var(--primary);animation:lp 1.5s ease-in-out infinite;flex-shrink:0}
-@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.2;transform:scale(.7)}}
-.hero-h1{font-size:clamp(2.4rem,5.5vw,5rem);font-weight:800;margin-bottom:20px;letter-spacing:-.03em}
-.hero-h1 .line2{display:block;background:linear-gradient(135deg,var(--pl) 0%,var(--primary) 50%,var(--pd) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--muted);max-width:520px;margin:0 auto 44px;line-height:1.7}
-.stats-row{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap}
-.sc{background:rgba(17,17,24,.8);border:1px solid var(--border2);border-radius:var(--rmd);padding:18px 24px;min-width:150px;transition:.2s;backdrop-filter:blur(8px)}
-.sc:hover{border-color:var(--primary);box-shadow:0 0 24px var(--glow2)}
-.sn{font-size:2.2rem;font-weight:800;color:var(--primary);line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums;font-family:'Space Grotesk',sans-serif}
-.sl{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:500}
-.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:60px;font-weight:600;font-size:.9rem;transition:.2s;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.01em}
-.btn-p{background:linear-gradient(135deg,var(--primary),var(--pd));color:#fff;box-shadow:0 4px 20px rgba(179,0,255,.3)}
-.btn-p:hover{box-shadow:0 8px 32px rgba(179,0,255,.5);transform:translateY(-2px)}
-.btn-g{background:rgba(255,255,255,.06);border:1px solid var(--border2);color:var(--text)}
-.btn-g:hover{background:rgba(255,255,255,.1);border-color:var(--primary);color:var(--primary)}
-.hero-soc{display:flex;gap:14px;justify-content:center}
-.hero-soc a{width:40px;height:40px;border:1px solid var(--border2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1rem;transition:.2s}
-.hero-soc a:hover{border-color:var(--primary);color:var(--primary);background:rgba(179,0,255,.08)}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(155,0,232,.1);border:1px solid rgba(155,0,232,.22);padding:4px 12px;border-radius:4px;margin-bottom:22px;color:var(--pl);font-weight:600;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;font-family:'DM Mono',monospace}
+.ldot{width:6px;height:6px;background:var(--pl);border-radius:50%;box-shadow:0 0 6px var(--pl);animation:lp 1.6s ease-in-out infinite}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.15;transform:scale(.6)}}
+.hero-h1{font-size:clamp(2.6rem,5vw,4.8rem);font-weight:900;line-height:1.02;letter-spacing:-.04em;margin-bottom:18px}
+.hero-h1 .g{background:linear-gradient(135deg,var(--pl) 0%,var(--p) 60%,var(--pd) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
+.hero-p{font-size:1.05rem;color:var(--t2);max-width:500px;line-height:1.7;margin:0 auto 36px;font-weight:400}
+.stats-row{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.sc{background:rgba(14,14,18,.85);border:1px solid var(--b1);border-radius:8px;padding:16px 22px;min-width:140px;transition:.2s;backdrop-filter:blur(10px)}
+.sc:hover{border-color:var(--p);box-shadow:0 0 20px var(--glowsm)}
+.sn{font-size:2rem;font-weight:900;color:var(--pl);line-height:1;margin-bottom:3px;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.sl{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);font-weight:500;font-family:'DM Mono',monospace}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 24px;border-radius:6px;font-weight:700;font-size:.87rem;transition:.2s;border:none;cursor:pointer;font-family:'Outfit',sans-serif;letter-spacing:.01em}
+.btn-p{background:var(--p);color:#fff;border:1px solid var(--pl)}
+.btn-p:hover{background:var(--pl);box-shadow:0 6px 28px var(--glow);transform:translateY(-1px)}
+.btn-o{background:transparent;color:var(--t2);border:1px solid var(--b2)}
+.btn-o:hover{background:var(--s2);border-color:var(--b3);color:var(--t1)}
+.hero-socials{display:flex;gap:8px;justify-content:center}
+.hero-socials a{width:36px;height:36px;border:1px solid var(--b2);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.9rem;transition:.2s}
+.hero-socials a:hover{border-color:var(--p);color:var(--pl);background:rgba(155,0,232,.08)}
 
-/* ── SECTION SHARED ── */
-.sec{padding:80px 0}
-.sec.alt{background:linear-gradient(180deg,transparent 0%,rgba(179,0,255,.025) 50%,transparent 100%)}
-.sec-label{display:inline-block;background:rgba(179,0,255,.1);border:1px solid rgba(179,0,255,.2);color:var(--primary);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:60px;margin-bottom:14px}
-.sec-title{font-size:clamp(1.7rem,3vw,2.8rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
-.sec-title span{color:var(--primary)}
-.sec-sub{color:var(--muted);font-size:.97rem;max-width:560px;line-height:1.7}
-.sec-head{text-align:center;margin-bottom:52px}
-.sec-head .sec-sub{margin:0 auto}
 
-/* ── TRUST BAR (below hero) ── */
-.trust-bar{padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(17,17,24,.5)}
-.trust-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:.85rem;font-weight:500}
-.trust-item i{color:var(--primary);font-size:1rem}
+/* ══════════════════════════════════════════
+   DIVIDER
+══════════════════════════════════════════ */
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--b1) 20%,var(--b1) 80%,transparent);margin:0}
 
-/* ── GAMES ── */
-.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:24px}
-.gc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
-.gc:hover{border-color:var(--primary);box-shadow:0 12px 40px rgba(179,0,255,.15);transform:translateY(-4px)}
-.gimg{width:100%;height:200px;background-size:cover;background-position:center;background-color:#111118;position:relative}
-.gimg-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,15,.9) 0%,transparent 50%)}
-.gcont{padding:22px;flex:1;display:flex;flex-direction:column}
-.gtitle{font-size:1.4rem;font-weight:700;margin-bottom:7px}
-.gdesc{color:var(--muted);font-size:.88rem;line-height:1.65;margin-bottom:18px;flex:1}
-.gmet{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:rgba(0,0,0,.3);border-radius:var(--rsm);padding:12px;margin-bottom:16px;border:1px solid var(--border)}
-.met{text-align:center}
-.mv{font-size:1.3rem;font-weight:700;color:var(--primary);display:block;font-variant-numeric:tabular-nums;font-family:'Space Grotesk',sans-serif}
-.ml2{font-size:.66rem;text-transform:uppercase;color:var(--muted);letter-spacing:.6px;margin-top:2px;display:block}
-.glink{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--primary);color:var(--primary);padding:9px 20px;border-radius:60px;font-weight:600;transition:.2s;font-size:.85rem;align-self:flex-start}
-.glink:hover{background:var(--primary);color:#fff}
+/* ══════════════════════════════════════════
+   SECTION BASE
+══════════════════════════════════════════ */
+.sec{padding:64px 0}
+.sec-label{display:inline-flex;align-items:center;gap:6px;color:var(--p);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;font-family:'DM Mono',monospace}
+.sec-label::before{content:'//'}
+.sec-title{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:10px}
+.sec-title span{color:var(--pl)}
+.sec-sub{color:var(--t2);font-size:.93rem;max-width:520px;line-height:1.7}
+.sec-head{margin-bottom:40px}
 
-/* ── WHY US ── */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.why-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:28px 22px;transition:.2s;position:relative;overflow:hidden}
-.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--primary),transparent);opacity:0;transition:.3s}
-.why-card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
-.why-card:hover::before{opacity:1}
-.why-icon{width:48px;height:48px;background:rgba(179,0,255,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--primary);margin-bottom:16px}
-.why-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.why-card p{color:var(--muted);font-size:.85rem;line-height:1.65}
+/* ══════════════════════════════════════════
+   WHY US — horizontal strip
+══════════════════════════════════════════ */
+.why-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b1);border:1px solid var(--b1);border-radius:12px;overflow:hidden}
+.why-item{background:var(--s1);padding:28px 24px;transition:.25s;position:relative}
+.why-item::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:var(--p);transform:scaleX(0);transform-origin:left;transition:.3s ease}
+.why-item:hover{background:var(--s2)}
+.why-item:hover::after{transform:scaleX(1)}
+.wi-num{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--t3);letter-spacing:.08em;margin-bottom:16px}
+.wi-icon{width:40px;height:40px;background:rgba(155,0,232,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:14px}
+.wi-title{font-size:1rem;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
+.wi-text{color:var(--t2);font-size:.82rem;line-height:1.65}
 
-/* ── SELL ── */
-.sell-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.sell-text .sec-label{margin-bottom:12px}
-.sell-text .sec-title{margin-bottom:16px;text-align:left}
-.sell-text .sec-sub{margin-bottom:28px;text-align:left}
-.sell-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
-.sell-step{display:flex;align-items:flex-start;gap:16px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--rmd);transition:.2s}
-.sell-step:hover{border-color:var(--border2)}
-.step-num{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--pd));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;flex-shrink:0}
-.step-info h4{font-size:.95rem;font-weight:600;margin-bottom:3px}
-.step-info p{font-size:.83rem;color:var(--muted);line-height:1.5}
-.sell-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.sell-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rmd);padding:22px 18px;text-align:center;transition:.2s}
-.sell-card:hover{border-color:var(--primary);box-shadow:0 6px 24px var(--glow2)}
-.sell-card .ico{width:52px;height:52px;background:rgba(179,0,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--primary);margin:0 auto 12px;transition:.2s}
-.sell-card:hover .ico{background:rgba(179,0,255,.18)}
-.sell-card h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
-.sell-card p{color:var(--muted);font-size:.8rem;line-height:1.55}
+/* ══════════════════════════════════════════
+   GAMES
+══════════════════════════════════════════ */
+.games-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.gc{background:var(--s1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;position:relative}
+.gc:hover{border-color:var(--p);transform:translateY(-3px);box-shadow:0 16px 48px rgba(155,0,232,.12)}
+.gimg{width:100%;height:180px;background-size:cover;background-position:center;background-color:var(--s2);position:relative;flex-shrink:0}
+.gimg-ov{position:absolute;inset:0;background:linear-gradient(to top,var(--s1) 0%,transparent 55%)}
+.gcont{padding:18px;flex:1;display:flex;flex-direction:column}
+.gtag{display:inline-block;background:rgba(155,0,232,.1);border:1px solid rgba(155,0,232,.2);color:var(--p);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:2px 8px;border-radius:3px;margin-bottom:8px;font-family:'DM Mono',monospace}
+.gtitle{font-size:1.1rem;font-weight:800;margin-bottom:6px;letter-spacing:-.02em}
+.gdesc{color:var(--t2);font-size:.82rem;line-height:1.6;margin-bottom:14px;flex:1}
+.gmet{display:grid;grid-template-columns:repeat(3,1fr);background:var(--bg);border:1px solid var(--b1);border-radius:6px;overflow:hidden;margin-bottom:14px}
+.met{padding:10px 8px;text-align:center;border-right:1px solid var(--b1)}
+.met:last-child{border-right:none}
+.mv{font-size:1.1rem;font-weight:800;color:var(--pl);display:block;font-variant-numeric:tabular-nums;line-height:1;margin-bottom:2px}
+.ml2{font-size:.6rem;text-transform:uppercase;color:var(--t3);letter-spacing:.06em;font-family:'DM Mono',monospace}
+.glink{display:inline-flex;align-items:center;gap:6px;color:var(--p);font-size:.8rem;font-weight:600;border:1px solid rgba(155,0,232,.25);padding:7px 14px;border-radius:5px;transition:.2s;align-self:flex-start}
+.glink:hover{background:var(--p);color:#fff;border-color:var(--p)}
 
-/* ── PAST WORK ── */
-.pw-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
-.pw-tab{background:transparent;border:1px solid var(--border);color:var(--muted);padding:8px 18px;border-radius:60px;font-weight:600;cursor:pointer;transition:.2s;font-size:.84rem;font-family:'Inter',sans-serif}
-.pw-tab:hover{border-color:var(--primary);color:var(--primary)}
-.pw-tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
-.pw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.pw-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:24px;text-align:center;transition:.2s}
-.pw-item:hover{border-color:var(--border2);transform:translateY(-2px)}
-.pw-icon{font-size:2.2rem;color:var(--primary);margin-bottom:12px}
-.pw-item h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
-.pw-item p{color:var(--muted);font-size:.86rem;margin-bottom:14px}
-.pw-cta{display:inline-block;border:1.5px solid var(--primary);color:var(--primary);padding:6px 16px;border-radius:60px;font-weight:600;font-size:.82rem;transition:.2s;cursor:pointer}
-.pw-cta:hover{background:var(--primary);color:#fff}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:20px}
-.gth{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--rsm);border:1.5px solid var(--border);cursor:pointer;transition:.2s}
-.gth:hover{border-color:var(--primary);transform:scale(1.03)}
-.cs{background:rgba(179,0,255,.04);border:1.5px dashed rgba(179,0,255,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;border-radius:var(--rlg)}
-.cs i{font-size:2rem;color:var(--primary);margin-bottom:10px;opacity:.4}
-.cs h4{font-size:.95rem;margin-bottom:5px}
-.cs p{color:var(--muted);font-size:.82rem}
-.vc{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--rmd);margin-bottom:12px}
-.vc iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+/* ══════════════════════════════════════════
+   SELL — two column
+══════════════════════════════════════════ */
+.sell-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.sell-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.sell-step{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--s1);border:1px solid var(--b1);border-radius:8px;transition:.2s}
+.sell-step:hover{border-color:var(--b2)}
+.step-n{width:30px;height:30px;background:var(--p);border-radius:5px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;font-family:'DM Mono',monospace}
+.step-info h4{font-size:.9rem;font-weight:700;margin-bottom:2px}
+.step-info p{font-size:.8rem;color:var(--t2);line-height:1.5}
+.sell-features{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sf{background:var(--s1);border:1px solid var(--b1);border-radius:8px;padding:18px 16px;transition:.2s}
+.sf:hover{border-color:var(--b2);background:var(--s2)}
+.sf .ico{width:36px;height:36px;background:rgba(155,0,232,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--p);margin-bottom:10px}
+.sf h3{font-size:.88rem;font-weight:700;margin-bottom:4px}
+.sf p{color:var(--t2);font-size:.77rem;line-height:1.55}
 
-/* ── PARTNERS ── */
-.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.partner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:28px 20px;text-align:center;transition:.2s}
-.partner-card:hover{border-color:var(--primary);transform:translateY(-3px);box-shadow:0 8px 28px var(--glow2)}
-.partner-card .ico{width:52px;height:52px;background:rgba(179,0,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;color:var(--primary);margin:0 auto 14px;transition:.2s}
-.partner-card:hover .ico{background:rgba(179,0,255,.18)}
-.partner-card h3{font-size:1rem;font-weight:700;margin-bottom:7px}
-.partner-card p{color:var(--muted);font-size:.82rem;line-height:1.6}
+/* ══════════════════════════════════════════
+   PARTNERS
+══════════════════════════════════════════ */
+.partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pc{background:var(--s1);border:1px solid var(--b1);border-radius:8px;padding:24px 18px;text-align:center;transition:.25s}
+.pc:hover{border-color:var(--p);transform:translateY(-2px);box-shadow:0 8px 28px var(--glowsm)}
+.pc .ico{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin:0 auto 12px;transition:.2s}
+.pc:hover .ico{background:rgba(155,0,232,.2)}
+.pc h3{font-size:.9rem;font-weight:700;margin-bottom:6px}
+.pc p{color:var(--t2);font-size:.78rem;line-height:1.6}
 
-/* ── CTA SECTIONS ── */
-.cta-box{max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:44px 40px;text-align:center;position:relative;overflow:hidden}
-.cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--primary),transparent)}
-.cta-box h3{font-size:1.9rem;font-weight:800;margin-bottom:10px}
-.cta-box h3 span{color:var(--primary)}
-.cta-box>p{color:var(--muted);font-size:.92rem;margin-bottom:4px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0}
-.badge{background:rgba(255,255,255,.04);border:1px solid var(--border2);padding:5px 13px;border-radius:60px;color:var(--muted);font-size:.8rem;font-weight:500}
-.badge i{color:var(--primary);margin-right:4px}
-.cta-btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--primary),var(--pd));color:#fff;padding:13px 36px;border-radius:60px;font-weight:600;font-size:.93rem;transition:.2s;cursor:pointer;box-shadow:0 4px 20px rgba(179,0,255,.3)}
-.cta-btn:hover{box-shadow:0 8px 32px rgba(179,0,255,.5);transform:translateY(-2px)}
+/* ══════════════════════════════════════════
+   CAREERS + INVEST — side by side
+══════════════════════════════════════════ */
+.ci-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ci-box{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:32px 28px;position:relative;overflow:hidden}
+.ci-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent)}
+.ci-box h3{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;margin-bottom:8px}
+.ci-box h3 span{color:var(--pl)}
+.ci-box>p{color:var(--t2);font-size:.86rem;margin-bottom:18px;line-height:1.65}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.badge{background:rgba(255,255,255,.03);border:1px solid var(--b2);padding:4px 10px;border-radius:4px;color:var(--t3);font-size:.75rem;font-weight:500;transition:.2s}
+.badge:hover{border-color:var(--p);color:var(--pl)}
+.badge i{color:var(--p);margin-right:4px;font-size:.7rem}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--p);color:#fff;padding:10px 24px;border-radius:6px;font-weight:700;font-size:.86rem;transition:.2s;cursor:pointer;border:1px solid var(--pl)}
+.cta-btn:hover{background:var(--pl);box-shadow:0 6px 24px var(--glow);transform:translateY(-1px)}
 
-/* ── CONTACT ── */
-.contact-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:start}
-.contact-info h3{font-size:1.5rem;font-weight:800;margin-bottom:10px}
-.contact-info p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:24px}
-.contact-detail{display:flex;align-items:center;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--rmd);margin-bottom:10px}
-.contact-detail i{color:var(--primary);width:20px;text-align:center}
-.contact-detail span{font-size:.88rem;color:var(--muted)}
-.contact-detail strong{font-size:.88rem;display:block}
-.fc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:32px}
-.ftabs{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap}
-.ftab{background:transparent;border:1px solid var(--border);color:var(--muted);font-size:.83rem;font-weight:600;padding:7px 16px;border-radius:60px;cursor:pointer;transition:.2s;font-family:'Inter',sans-serif}
-.ftab.active{background:var(--primary);border-color:var(--primary);color:#fff}
-.ftab:hover:not(.active){color:var(--primary);border-color:var(--primary)}
+/* ══════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════ */
+.contact-layout{display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:start}
+.ci-info{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.ci-info h3{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+.ci-info p{color:var(--t2);font-size:.82rem;line-height:1.65;margin-bottom:8px}
+.cd{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--bg);border:1px solid var(--b1);border-radius:6px}
+.cd i{color:var(--p);width:14px;text-align:center;font-size:.8rem}
+.cd .dl{font-size:.77rem;color:var(--t3);display:block;margin-bottom:1px;font-family:'DM Mono',monospace}
+.cd strong{font-size:.82rem;display:block}
+.fc{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px}
+.ftabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid var(--b1);padding-bottom:16px;flex-wrap:wrap}
+.ftab{background:transparent;border:1px solid var(--b1);color:var(--t3);font-size:.78rem;font-weight:600;padding:6px 14px;border-radius:5px;cursor:pointer;transition:.2s;font-family:'Outfit',sans-serif;letter-spacing:.01em}
+.ftab.active{background:var(--p);border-color:var(--p);color:#fff}
+.ftab:hover:not(.active){color:var(--pl);border-color:var(--p)}
 .fp{display:none}.fp.active{display:block}
-.ftitle{font-size:1.4rem;font-weight:700;margin-bottom:4px}
-.fsub{color:var(--muted);font-size:.85rem;margin-bottom:22px}
-.fg{margin-bottom:15px}
-.fl2{display:block;margin-bottom:6px;font-weight:500;font-size:.83rem;color:var(--muted)}
-.fi{width:100%;padding:11px 14px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--rsm);color:var(--text);font-size:.9rem;transition:.2s;font-family:'Inter',sans-serif}
-.fi:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(179,0,255,.12);background:rgba(179,0,255,.04)}
-.fi::placeholder{color:var(--muted2)}
-select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23b300ff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;cursor:pointer}
-select.fi option{background:#111118;color:#fff}
-textarea.fi{min-height:108px;resize:vertical}
-.fsub-btn{width:100%;padding:12px;border-radius:60px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--primary),var(--pd));color:#fff;font-size:.9rem;font-weight:700;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;gap:9px;transition:.2s;box-shadow:0 4px 16px rgba(179,0,255,.3)}
-.fsub-btn:hover{box-shadow:0 6px 24px rgba(179,0,255,.5);transform:translateY(-1px)}
-.fsub-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.f-ok{display:none;margin-top:14px;padding:16px;text-align:center;background:rgba(0,200,100,.07);border:1px solid rgba(0,200,100,.2);border-radius:var(--rsm)}
-.f-ok i{font-size:1.6rem;color:#00c864;display:block;margin-bottom:6px}
-.f-ok h4{margin-bottom:3px;font-size:.95rem}
-.f-ok p{color:var(--muted);font-size:.8rem}
-.f-err{display:none;margin-top:10px;padding:10px;text-align:center;background:rgba(255,60,90,.07);border:1px solid rgba(255,60,90,.2);border-radius:var(--rsm);color:#ff5c8a;font-size:.82rem}
-.pnote{text-align:center;margin-top:16px;color:var(--muted);font-size:.78rem}
-.pnote a{color:var(--primary);cursor:pointer}
+.ftitle{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:3px}
+.fsub{color:var(--t2);font-size:.82rem;margin-bottom:18px}
+.fg{margin-bottom:12px}
+.fl2{display:block;margin-bottom:5px;font-weight:500;font-size:.78rem;color:var(--t3);font-family:'DM Mono',monospace;letter-spacing:.03em}
+.fi{width:100%;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--b1);border-radius:5px;color:var(--t1);font-size:.86rem;transition:.2s;font-family:'Outfit',sans-serif}
+.fi:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 2px rgba(155,0,232,.1);background:rgba(155,0,232,.03)}
+.fi::placeholder{color:var(--b3)}
+select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='%239b00e8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:32px;cursor:pointer}
+select.fi option{background:#0e0e12;color:#f2f2f8}
+textarea.fi{min-height:96px;resize:vertical}
+.fsub-btn{width:100%;padding:11px;border-radius:6px;border:none;cursor:pointer;background:var(--p);color:#fff;font-size:.87rem;font-weight:700;font-family:'Outfit',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;border:1px solid var(--pl)}
+.fsub-btn:hover{background:var(--pl);box-shadow:0 4px 20px var(--glow);transform:translateY(-1px)}
+.fsub-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.f-ok{display:none;margin-top:12px;padding:14px;text-align:center;background:rgba(0,200,100,.06);border:1px solid rgba(0,200,100,.18);border-radius:6px}
+.f-ok i{font-size:1.4rem;color:#00c864;display:block;margin-bottom:5px}
+.f-ok h4{margin-bottom:2px;font-size:.9rem}
+.f-ok p{color:var(--t2);font-size:.77rem}
+.f-err{display:none;margin-top:8px;padding:9px;text-align:center;background:rgba(255,50,80,.06);border:1px solid rgba(255,50,80,.18);border-radius:5px;color:#ff5070;font-size:.78rem}
+.pnote{text-align:center;margin-top:12px;color:var(--t3);font-size:.74rem}
+.pnote a{color:var(--p);cursor:pointer}
+.pnote a:hover{color:var(--pl)}
 
-/* ── LIGHTBOX ── */
+/* ══════════════════════════════════════════
+   SCROLL TOP
+══════════════════════════════════════════ */
+#scrollTop{position:fixed;bottom:20px;right:20px;width:38px;height:38px;background:var(--p);border:none;border-radius:6px;color:#fff;font-size:.8rem;cursor:pointer;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px var(--glow);opacity:0;transform:translateY(10px);transition:opacity .25s,transform .25s;pointer-events:none}
+#scrollTop.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#scrollTop:hover{background:var(--pl);transform:translateY(-2px)!important}
+
+/* ══════════════════════════════════════════
+   PRIVACY
+══════════════════════════════════════════ */
+.prv-wrap{padding:40px 0 64px}
+.prv-box{max-width:800px;margin:0 auto;background:var(--s1);border:1px solid var(--b1);border-radius:12px;padding:48px}
+.prv-box h1{font-size:2rem;color:var(--pl);text-align:center;margin-bottom:6px;font-weight:900;letter-spacing:-.04em}
+.prv-date{text-align:center;color:var(--t3);margin-bottom:32px;font-size:.8rem;font-family:'DM Mono',monospace}
+.ps{margin-bottom:24px}
+.ps h2{font-size:1.2rem;margin-bottom:10px;color:var(--pl);font-weight:700}
+.ps h3{font-size:.9rem;margin:12px 0 6px;font-weight:600}
+.ps p,.ps li{color:var(--t2);line-height:1.75;font-size:.86rem}
+.ps ul{margin-left:18px;margin-bottom:8px}
+.ps li{margin-bottom:4px}
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-top:24px;color:var(--p);font-weight:600;cursor:pointer;font-size:.84rem;transition:.2s}
+.back-link:hover{color:var(--pl)}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+.foot{background:var(--bg);padding:40px 0 20px;border-top:1px solid var(--b1)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px;margin-bottom:32px}
+.foot-brand img{height:30px;border-radius:6px;margin-bottom:10px}
+.foot-brand p{color:var(--t3);font-size:.79rem;line-height:1.65;max-width:190px;margin-bottom:14px}
+.foot-soc{display:flex;gap:6px}
+.foot-soc a{width:30px;height:30px;border:1px solid var(--b2);border-radius:5px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.8rem;transition:.2s}
+.foot-soc a:hover{border-color:var(--p);color:var(--pl)}
+.foot-col h5{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:12px;font-family:'DM Mono',monospace}
+.foot-col a{display:block;color:var(--t3);font-size:.8rem;margin-bottom:8px;cursor:pointer;transition:.15s}
+.foot-col a:hover{color:var(--t1)}
+.foot-btm{border-top:1px solid var(--b1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.foot-btm p{color:var(--b3);font-size:.72rem;font-family:'DM Mono',monospace}
+
+/* ══════════════════════════════════════════
+   LIGHTBOX
+══════════════════════════════════════════ */
 .lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:2000;justify-content:center;align-items:center;flex-direction:column}
 .lb.active{display:flex}
-.lb-img{max-width:90%;max-height:82vh;border-radius:var(--rmd);border:1.5px solid var(--primary)}
-.lb-x{position:absolute;top:18px;right:22px;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;transition:.2s}
-.lb-x:hover{color:var(--primary)}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(179,0,255,.18);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
-.lb-nav:hover{background:var(--primary)}
-.lb-p{left:18px}.lb-n{right:18px}
-.lb-c{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(0,0,0,.7);padding:5px 16px;border-radius:60px;border:1px solid var(--primary);font-size:.79rem}
+.lb-img{max-width:90%;max-height:82vh;border-radius:8px;border:1px solid var(--p)}
+.lb-x{position:absolute;top:16px;right:20px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none;transition:.2s}
+.lb-x:hover{color:var(--pl)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(155,0,232,.2);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1rem;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{background:var(--p)}
+.lb-p{left:16px}.lb-n{right:16px}
+.lb-c{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(0,0,0,.7);padding:4px 14px;border-radius:4px;border:1px solid var(--p);font-size:.75rem;font-family:'DM Mono',monospace}
 
-/* ── SCROLL TOP ── */
-#scrollTop{position:fixed;bottom:22px;right:22px;width:40px;height:40px;background:linear-gradient(135deg,var(--primary),var(--pd));border:none;border-radius:50%;color:#fff;font-size:.85rem;cursor:pointer;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px var(--glow);opacity:0;transform:translateY(14px);transition:opacity .25s,transform .25s;pointer-events:none}
-#scrollTop.show{opacity:1;transform:translateY(0);pointer-events:auto}
-#scrollTop:hover{transform:translateY(-3px)!important}
-
-/* ── PRIVACY ── */
-.prv-wrap{padding:44px 0 72px}
-.prv-box{max-width:840px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:52px}
-.prv-box h1{font-size:2.2rem;color:var(--primary);text-align:center;margin-bottom:8px}
-.prv-date{text-align:center;color:var(--muted);margin-bottom:36px;font-style:italic;font-size:.88rem}
-.ps{margin-bottom:26px}
-.ps h2{font-size:1.35rem;margin-bottom:11px;color:var(--primary)}
-.ps h3{font-size:.95rem;margin:13px 0 7px;font-weight:600}
-.ps p{color:var(--muted);margin-bottom:9px;line-height:1.78;font-size:.88rem}
-.ps ul{color:var(--muted);margin-left:18px;margin-bottom:9px}
-.ps li{margin-bottom:5px;font-size:.88rem}
-.back{display:inline-flex;align-items:center;gap:6px;margin-top:28px;color:var(--primary);font-weight:600;cursor:pointer;font-size:.87rem;transition:.2s}
-.back:hover{color:#fff}
-
-/* ── FOOTER ── */
-.foot{background:#050509;padding:48px 0 24px;border-top:1px solid var(--border)}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
-.foot-brand img{height:34px;border-radius:8px;margin-bottom:12px}
-.foot-brand p{color:var(--muted);font-size:.82rem;line-height:1.65;max-width:200px;margin-bottom:16px}
-.foot-soc{display:flex;gap:8px}
-.foot-soc a{width:34px;height:34px;border:1px solid var(--border2);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;transition:.2s}
-.foot-soc a:hover{border-color:var(--primary);color:var(--primary)}
-.foot-col h5{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
-.foot-col a{display:block;color:var(--muted);font-size:.84rem;margin-bottom:9px;cursor:pointer;transition:.15s}
-.foot-col a:hover{color:var(--text)}
-.foot-btm{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.foot-btm p{color:var(--muted2);font-size:.76rem}
-
-/* ── MOBILE ── */
-@media(max-width:960px){
-  .nav-links{display:none;position:absolute;top:var(--nh);left:0;right:0;background:rgba(8,8,15,.98);border-bottom:1px solid var(--border);padding:14px 18px 20px;flex-direction:column;gap:2px;z-index:299}
-  .nav-links.open{display:flex}
-  .nav-links .nl,.nav-links .nav-pill{width:100%;padding:10px 14px;border-radius:10px;text-align:center}
-  .burger{display:flex}
-  .games-grid{grid-template-columns:1fr}
-  .sell-layout{grid-template-columns:1fr;gap:32px}
-  .contact-layout{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media(max-width:1024px){
+  .why-strip{grid-template-columns:1fr 1fr}
+  .partners-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:640px){
-  .hero{padding:32px 0 48px;min-height:auto}
-  .hero-h1{font-size:2rem}
-  .hero-sub{font-size:.9rem;margin-bottom:28px}
-  .stats-row{gap:8px;margin-bottom:28px}
-  .sc{padding:13px 16px;min-width:0;flex:1}
-  .sn{font-size:1.7rem}
-  .sl{font-size:.65rem}
-  .hero-btns{gap:8px;margin-bottom:22px}
-  .btn{padding:11px 20px;font-size:.84rem}
-  .hero-eyebrow{font-size:.75rem;margin-bottom:18px}
-  .sec{padding:52px 0}
-  .sec-head{margin-bottom:32px}
-  .sec-title{font-size:1.65rem}
-  .trust-inner{gap:20px}
-  .trust-item{font-size:.8rem}
-  .why-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .why-card{padding:20px 16px}
-  .why-icon{width:40px;height:40px;font-size:1.1rem;border-radius:10px;margin-bottom:12px}
-  .why-card h3{font-size:.95rem}
-  .sell-cards{grid-template-columns:1fr 1fr;gap:10px}
-  .sell-card{padding:18px 14px}
-  .gimg{height:170px}
-  .gcont{padding:18px}
-  .gtitle{font-size:1.2rem}
-  .gmet{padding:10px;gap:6px}
-  .mv{font-size:1.15rem}
-  .pw-tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:4px;scrollbar-width:none}
-  .pw-tabs::-webkit-scrollbar{display:none}
-  .pw-tab{white-space:nowrap;flex-shrink:0;padding:7px 14px;font-size:.8rem}
-  .partners-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .partner-card{padding:20px 14px}
-  .cta-box{padding:28px 18px}
-  .cta-box h3{font-size:1.6rem}
-  .badges{gap:6px;margin:16px 0}
-  .badge{font-size:.75rem;padding:4px 10px}
-  .fc{padding:20px 14px}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:var(--nh);left:0;right:0;background:rgba(6,6,8,.98);border-bottom:1px solid var(--b1);padding:12px 16px 18px;flex-direction:column;gap:2px;z-index:299}
+  .nav-links.open{display:flex}
+  .nav-links .nl,.nav-links .nav-cta{width:100%;padding:10px 12px;border-radius:6px;text-align:center}
+  .burger{display:flex}
+  .hero{min-height:auto;padding:36px 0 32px}
+  .hero-h1{font-size:2.4rem}
+  .sell-layout{grid-template-columns:1fr;gap:24px}
+  .ci-layout{grid-template-columns:1fr}
+  .contact-layout{grid-template-columns:1fr}
+  .games-grid{grid-template-columns:1fr}
+  .sell-features{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .why-strip{grid-template-columns:1fr}
+  .partners-grid{grid-template-columns:1fr 1fr}
+  .sell-features{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr;gap:18px}
+  .foot-btm{flex-direction:column;text-align:center}
+  .hero-btns{gap:8px}
+  .btn{padding:10px 18px;font-size:.83rem}
+  .sec{padding:44px 0}
   .ftabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
   .ftabs::-webkit-scrollbar{display:none}
-  .ftab{white-space:nowrap;flex-shrink:0;padding:6px 13px;font-size:.8rem}
-  .ftitle{font-size:1.25rem}
-  .prv-box{padding:22px 14px}
-  .foot-grid{grid-template-columns:1fr;gap:20px}
-  .foot{padding:32px 0 18px}
-  .foot-btm{flex-direction:column;text-align:center}
-  .sell-steps{gap:10px}
-  .sell-step{padding:12px}
-  .gal{grid-template-columns:repeat(2,1fr);gap:8px}
-}
-@media(max-width:420px){
-  .why-grid,.sell-cards,.partners-grid{grid-template-columns:1fr}
-  .stats-row{gap:6px}
+  .ftab{white-space:nowrap;flex-shrink:0}
 }
 
 /* ── ANTI-SCRAPE ── */
@@ -356,31 +341,33 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ══ NAV ══ -->
 <nav class="nav" id="navbar">
   <div class="wrap nav-inner">
     <div class="nav-brand" onclick="G.page('main',null)">
       <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess">
-      <div class="nav-brand-name">Go<span>Success</span></div>
+      <div class="nav-brand-name">Go<em>Success</em></div>
     </div>
     <div class="nav-links" id="nm">
       <span class="nl" onclick="G.page('main',null)">Home</span>
       <span class="nl" onclick="G.page('main','#games')">Games</span>
       <span class="nl" onclick="G.page('main','#sell')">Sell</span>
-      <span class="nl" onclick="G.page('main','#pastwork')">Work</span>
       <span class="nl" onclick="G.page('main','#partners')">Partners</span>
       <span class="nl" onclick="G.page('main','#careers')">Careers</span>
       <span class="nl" onclick="G.page('main','#invest')">Invest</span>
-      <span class="nav-pill" onclick="G.page('main','#contact');G.tab('sell')">Sell Game →</span>
+      <span class="nl" onclick="G.page('main','#contact')">Contact</span>
+      <span class="nav-cta" onclick="G.page('main','#contact');G.tab('sell')">Sell Your Game →</span>
     </div>
     <button class="burger" id="bg" aria-label="Menu"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
 
-<!-- ═══ MAIN PAGE ═══ -->
+<!-- ════════════════════════════════════════
+     MAIN PAGE
+════════════════════════════════════════ -->
 <div id="pg-main" class="page active">
 
-  <!-- HERO -->
+  <!-- ── HERO ── -->
   <section class="hero">
     <div class="mbg" aria-hidden="true">
       <div class="mrow"><div class="mt" id="m1"></div></div>
@@ -389,20 +376,20 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
     </div>
     <div class="wrap">
       <div class="hero-inner">
-        <div class="hero-eyebrow rv"><span class="ldot"></span> Live stats from Roblox</div>
-        <h1 class="hero-h1 rv">We grow Roblox games<span class="line2">that dominate.</span></h1>
-        <p class="hero-sub rv">GoSuccess acquires, develops, and scales Roblox games. We handle everything — you cash out or stay involved.</p>
+        <div class="hero-tag rv"><span class="ldot"></span>Live stats · Roblox API</div>
+        <h1 class="hero-h1 rv">We grow Roblox games<span class="g">that dominate.</span></h1>
+        <p class="hero-p rv">GoSuccess acquires, develops, and scales Roblox games. We handle everything — you cash out or stay involved.</p>
         <div class="stats-row">
           <div class="sc rv"><div class="sn" id="sV" data-raw="0">0</div><div class="sl">Total Visits</div></div>
-          <div class="sc rv" style="transition-delay:.07s"><div class="sn" id="sP" data-raw="0">0</div><div class="sl">Playing Now</div></div>
-          <div class="sc rv" style="transition-delay:.14s"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
+          <div class="sc rv dl1"><div class="sn" id="sP" data-raw="0">0</div><div class="sl">Playing Now</div></div>
+          <div class="sc rv dl2"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
         </div>
         <div class="hero-btns rv">
-          <span class="btn btn-p" onclick="G.page('main','#sell')"><i class="fas fa-hand-holding-usd"></i> Sell Your Game</span>
-          <span class="btn btn-g" onclick="G.page('main','#games')"><i class="fas fa-gamepad"></i> Our Portfolio</span>
-          <span class="btn btn-g" onclick="G.page('main','#careers')"><i class="fas fa-users"></i> Join the Team</span>
+          <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
+          <span class="btn btn-o" onclick="G.page('main','#games')"><i class="fas fa-gamepad"></i> Our Portfolio</span>
+          <span class="btn btn-o" onclick="G.page('main','#careers')"><i class="fas fa-users"></i> Join the Team</span>
         </div>
-        <div class="hero-soc rv">
+        <div class="hero-socials rv">
           <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
           <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
         </div>
@@ -410,94 +397,99 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="wrap trust-inner">
-      <div class="trust-item rv"><i class="fas fa-shield-alt"></i> Secure Game Transfers</div>
-      <div class="trust-item rv" style="transition-delay:.06s"><i class="fas fa-bolt"></i> Fast Acquisition Process</div>
-      <div class="trust-item rv" style="transition-delay:.12s"><i class="fas fa-chart-line"></i> 12M+ Visits Managed</div>
-      <div class="trust-item rv" style="transition-delay:.18s"><i class="fas fa-star"></i> Trusted by Developers</div>
-      <div class="trust-item rv" style="transition-delay:.24s"><i class="fab fa-discord"></i> Active Community</div>
-    </div>
-  </div>
+  <div class="divider"></div>
 
-  <!-- WHY GOSUCCESS -->
+  <!-- ── WHY US ── -->
   <section class="sec">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-label rv">Why Us</div>
-        <h2 class="sec-title rv">The <span>GoSuccess</span> difference</h2>
-        <p class="sec-sub rv">We're not a middleman. We're builders who buy, grow, and run Roblox games ourselves.</p>
+        <div class="sec-label rv">Why GoSuccess</div>
+        <h2 class="sec-title rv">Everything your game<br><span>needs to win.</span></h2>
       </div>
-      <div class="why-grid">
-        <div class="why-card rv fl"><div class="why-icon"><i class="fas fa-handshake"></i></div><h3>We Actually Buy</h3><p>Real acquisitions with real payment — not brokers, not promises. We own and operate every game we acquire.</p></div>
-        <div class="why-card rv" style="transition-delay:.07s"><div class="why-icon"><i class="fas fa-rocket"></i></div><h3>Growth Expertise</h3><p>From thumbnails to marketing to development — we know what moves the needle on Roblox in 2025.</p></div>
-        <div class="why-card rv" style="transition-delay:.14s"><div class="why-icon"><i class="fas fa-lock"></i></div><h3>Safe Transfers</h3><p>Structured deals with clear agreements. Your game, your terms — we make the process simple and secure.</p></div>
-        <div class="why-card rv fr" style="transition-delay:.21s"><div class="why-icon"><i class="fas fa-users"></i></div><h3>Full Team</h3><p>Scripters, designers, builders, GFX artists, marketers — every role covered in-house, no outsourcing.</p></div>
+      <div class="why-strip">
+        <div class="why-item rv">
+          <div class="wi-num">01</div>
+          <div class="wi-icon"><i class="fas fa-handshake"></i></div>
+          <div class="wi-title">We Actually Buy</div>
+          <p class="wi-text">Real acquisitions with real payment — not brokers, not promises. We own and operate every game we acquire.</p>
+        </div>
+        <div class="why-item rv dl1">
+          <div class="wi-num">02</div>
+          <div class="wi-icon"><i class="fas fa-rocket"></i></div>
+          <div class="wi-title">Growth Expertise</div>
+          <p class="wi-text">From thumbnails to marketing to live ops — we know exactly what moves the needle on Roblox.</p>
+        </div>
+        <div class="why-item rv dl2">
+          <div class="wi-num">03</div>
+          <div class="wi-icon"><i class="fas fa-lock"></i></div>
+          <div class="wi-title">Safe Transfers</div>
+          <p class="wi-text">Structured deals with clear agreements. Your game, your terms — simple and secure.</p>
+        </div>
+        <div class="why-item rv dl3">
+          <div class="wi-num">04</div>
+          <div class="wi-icon"><i class="fas fa-users"></i></div>
+          <div class="wi-title">Full In-House Team</div>
+          <p class="wi-text">GFX artists, marketers, live ops managers, and more — every role covered in-house, ready to go.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- GAMES -->
-  <section id="games" class="sec alt">
+  <div class="divider"></div>
+
+  <!-- ── GAMES ── -->
+  <section id="games" class="sec">
     <div class="wrap">
       <div class="sec-head">
         <div class="sec-label rv">Portfolio</div>
         <h2 class="sec-title rv">Our <span>Games</span></h2>
-        <p class="sec-sub rv">Every game in our portfolio — built, acquired, and scaled by the GoSuccess team.</p>
+        <p class="sec-sub rv">Live ops, monetisation, marketing, management — we handle the heavy lifting so your game performs at its peak.</p>
       </div>
       <div class="games-grid" id="gc"></div>
     </div>
   </section>
 
-  <!-- SELL -->
+  <div class="divider"></div>
+
+  <!-- ── SELL ── -->
   <section id="sell" class="sec">
     <div class="wrap">
       <div class="sell-layout">
-        <div class="sell-text">
+        <div>
           <div class="sec-label rv">Acquisition</div>
           <h2 class="sec-title rv">Sell your <span>Game</span></h2>
-          <p class="sec-sub rv">Ready to exit? We make competitive offers on Roblox games of all sizes — from small projects to major titles.</p>
+          <p class="sec-sub rv" style="margin-bottom:24px">Ready to exit? We make competitive offers on Roblox games of all sizes — from small projects to major titles.</p>
           <div class="sell-steps rv">
-            <div class="sell-step"><div class="step-num">1</div><div class="step-info"><h4>Submit your game</h4><p>Fill out the form with your game link and basic stats.</p></div></div>
-            <div class="sell-step"><div class="step-num">2</div><div class="step-info"><h4>We review & offer</h4><p>Our team evaluates within 48 hours and sends a fair offer.</p></div></div>
-            <div class="sell-step"><div class="step-num">3</div><div class="step-info"><h4>Get paid & move on</h4><p>Secure transfer, payment processed — you focus on what's next.</p></div></div>
+            <div class="sell-step">
+              <div class="step-n">01</div>
+              <div class="step-info"><h4>Submit your game</h4><p>Fill out the form with your game link and basic stats.</p></div>
+            </div>
+            <div class="sell-step">
+              <div class="step-n">02</div>
+              <div class="step-info"><h4>We review &amp; offer</h4><p>Our team evaluates within 48 hours and sends a fair offer.</p></div>
+            </div>
+            <div class="sell-step">
+              <div class="step-n">03</div>
+              <div class="step-info"><h4>Get paid &amp; move on</h4><p>Secure transfer, payment processed — you focus on what's next.</p></div>
+            </div>
           </div>
           <div class="rv">
             <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Get an Offer</span>
           </div>
         </div>
-        <div class="sell-cards rv">
-          <div class="sell-card"><div class="ico"><i class="fas fa-coins"></i></div><h3>Upfront Pay</h3><p>Full purchase price paid immediately on deal close.</p></div>
-          <div class="sell-card"><div class="ico"><i class="fas fa-percent"></i></div><h3>Rev Share</h3><p>Keep earning a % of revenue after the acquisition.</p></div>
-          <div class="sell-card"><div class="ico"><i class="fas fa-chart-line"></i></div><h3>We Grow It</h3><p>We take over all growth, marketing, and development.</p></div>
-          <div class="sell-card"><div class="ico"><i class="fas fa-file-contract"></i></div><h3>Clear Terms</h3><p>Simple, transparent agreements. No hidden clauses.</p></div>
+        <div class="sell-features rv dl1">
+          <div class="sf"><div class="ico"><i class="fas fa-coins"></i></div><h3>Competitive Pay</h3><p>Fair, market-rate offers based on your game's real potential.</p></div>
+          <div class="sf"><div class="ico"><i class="fas fa-percent"></i></div><h3>Rev Share</h3><p>Keep earning a % of revenue after the acquisition.</p></div>
+          <div class="sf"><div class="ico"><i class="fas fa-chart-line"></i></div><h3>We Grow It</h3><p>We take over all growth, marketing, and development.</p></div>
+          <div class="sf"><div class="ico"><i class="fas fa-file-contract"></i></div><h3>Clear Terms</h3><p>Simple, transparent agreements. No hidden clauses.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PAST WORK -->
-  <section id="pastwork" class="sec alt">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="sec-label rv">Portfolio</div>
-        <h2 class="sec-title rv">Past <span>Work</span></h2>
-        <p class="sec-sub rv">Work delivered by the GoSuccess team across every discipline.</p>
-      </div>
-      <div class="pw-tabs rv" id="pwt">
-        <button class="pw-tab active" data-c="scripting">Scripting</button>
-        <button class="pw-tab" data-c="ui">UI</button>
-        <button class="pw-tab" data-c="vfx">VFX</button>
-        <button class="pw-tab" data-c="gfx">GFX</button>
-        <button class="pw-tab" data-c="builder">Builder</button>
-        <button class="pw-tab" data-c="animator">Animator</button>
-      </div>
-      <div id="pwc"></div>
-    </div>
-  </section>
+  <div class="divider"></div>
 
-  <!-- PARTNERS -->
+  <!-- ── PARTNERS ── -->
   <section id="partners" class="sec">
     <div class="wrap">
       <div class="sec-head">
@@ -506,81 +498,81 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <p class="sec-sub rv">We work with studios, creators, and brands to build bigger things together.</p>
       </div>
       <div class="partners-grid">
-        <div class="partner-card rv fl"><div class="ico"><i class="fas fa-gamepad"></i></div><h3>Game Studios</h3><p>Co-develop, cross-promote, or merge your studio with GoSuccess.</p></div>
-        <div class="partner-card rv" style="transition-delay:.07s"><div class="ico"><i class="fas fa-bullhorn"></i></div><h3>Content Creators</h3><p>Collaborate on sponsored events or promote your content in our games.</p></div>
-        <div class="partner-card rv" style="transition-delay:.14s"><div class="ico"><i class="fas fa-tools"></i></div><h3>Dev Teams</h3><p>White-label your services through GoSuccess and access our network.</p></div>
-        <div class="partner-card rv fr" style="transition-delay:.21s"><div class="ico"><i class="fas fa-tag"></i></div><h3>Brand Deals</h3><p>In-game assets, sponsored events, or co-branded passes.</p></div>
+        <div class="pc rv"><div class="ico"><i class="fas fa-gamepad"></i></div><h3>Game Studios</h3><p>Co-develop, cross-promote, or merge your studio with GoSuccess.</p></div>
+        <div class="pc rv dl1"><div class="ico"><i class="fas fa-bullhorn"></i></div><h3>Content Creators</h3><p>Collaborate on sponsored events or feature your content in our games.</p></div>
+        <div class="pc rv dl2"><div class="ico"><i class="fas fa-tools"></i></div><h3>Dev Teams</h3><p>White-label your services through GoSuccess and access our network.</p></div>
+        <div class="pc rv dl3"><div class="ico"><i class="fas fa-tag"></i></div><h3>Brand Deals</h3><p>In-game assets, sponsored events, or co-branded passes.</p></div>
       </div>
-      <div style="text-align:center;margin-top:32px" class="rv">
+      <div style="text-align:center;margin-top:24px" class="rv">
         <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('partner')"><i class="fas fa-paper-plane"></i> Become a Partner</span>
       </div>
     </div>
   </section>
 
-  <!-- CAREERS -->
-  <section id="careers" class="sec alt">
+  <div class="divider"></div>
+
+  <!-- ── CAREERS + INVEST side by side ── -->
+  <section id="careers" class="sec">
     <div class="wrap">
-      <div class="cta-box rv">
-        <h3>Join the <span>Team</span></h3>
-        <p>We're always looking for talented people to help scale Roblox games.</p>
-        <div class="badges">
-          <span class="badge"><i class="fas fa-code"></i>Developers</span>
-          <span class="badge"><i class="fas fa-paint-brush"></i>Designers</span>
-          <span class="badge"><i class="fas fa-magic"></i>VFX Artists</span>
-          <span class="badge"><i class="fas fa-cube"></i>GFX Artists</span>
-          <span class="badge"><i class="fas fa-cubes"></i>Builders</span>
-          <span class="badge"><i class="fas fa-film"></i>Animators</span>
-          <span class="badge"><i class="fas fa-chart-line"></i>Marketers</span>
-          <span class="badge"><i class="fas fa-camera"></i>Content Creators</span>
-          <span class="badge"><i class="fas fa-tasks"></i>Managers</span>
-          <span class="badge"><i class="fas fa-user-tie"></i>Executives</span>
-          <span class="badge"><i class="fas fa-plus"></i>Other</span>
+      <div class="ci-layout">
+        <div class="ci-box rv">
+          <h3>Join the <span>Team</span></h3>
+          <p>We're always looking for talented people to help scale Roblox games. All roles welcome.</p>
+          <div class="badges">
+            <span class="badge"><i class="fas fa-code"></i>Developers</span>
+            <span class="badge"><i class="fas fa-paint-brush"></i>Designers</span>
+            <span class="badge"><i class="fas fa-magic"></i>VFX Artists</span>
+            <span class="badge"><i class="fas fa-cube"></i>GFX Artists</span>
+            <span class="badge"><i class="fas fa-cubes"></i>Builders</span>
+            <span class="badge"><i class="fas fa-film"></i>Animators</span>
+            <span class="badge"><i class="fas fa-chart-line"></i>Marketers</span>
+            <span class="badge"><i class="fas fa-camera"></i>Creators</span>
+            <span class="badge"><i class="fas fa-tasks"></i>Managers</span>
+            <span class="badge"><i class="fas fa-user-tie"></i>Executives</span>
+            <span class="badge"><i class="fas fa-plus"></i>Other</span>
+          </div>
+          <span class="cta-btn" onclick="G.page('main','#contact');G.tab('careers')"><i class="fas fa-paper-plane"></i> Apply Now</span>
         </div>
-        <span class="cta-btn" onclick="G.page('main','#contact');G.tab('careers')"><i class="fas fa-paper-plane"></i> Apply Now</span>
+        <div id="invest" class="ci-box rv dl1">
+          <h3>Invest in <span>GoSuccess</span></h3>
+          <p>Fuel the next generation of Roblox games. Choose where your investment goes.</p>
+          <div class="badges">
+            <span class="badge"><i class="fas fa-building"></i>Company Growth</span>
+            <span class="badge"><i class="fas fa-bullhorn"></i>Marketing</span>
+            <span class="badge"><i class="fas fa-laptop-code"></i>Developers</span>
+            <span class="badge"><i class="fas fa-cubes"></i>Builders</span>
+            <span class="badge"><i class="fas fa-camera"></i>Creators</span>
+            <span class="badge"><i class="fas fa-plus"></i>Other</span>
+          </div>
+          <span class="cta-btn" onclick="G.page('main','#contact');G.tab('invest')"><i class="fas fa-chart-line"></i> Become an Investor</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- INVEST -->
-  <section id="invest" class="sec">
-    <div class="wrap">
-      <div class="cta-box rv">
-        <h3>Invest in <span>GoSuccess</span></h3>
-        <p>Fuel the next generation of Roblox games. Choose where your investment goes.</p>
-        <div class="badges">
-          <span class="badge"><i class="fas fa-building"></i>Company Growth</span>
-          <span class="badge"><i class="fas fa-bullhorn"></i>Marketing</span>
-          <span class="badge"><i class="fas fa-laptop-code"></i>Developers</span>
-          <span class="badge"><i class="fas fa-cubes"></i>Builders</span>
-          <span class="badge"><i class="fas fa-camera"></i>Content Creators</span>
-          <span class="badge"><i class="fas fa-plus"></i>Other</span>
-        </div>
-        <span class="cta-btn" onclick="G.page('main','#contact');G.tab('invest')"><i class="fas fa-chart-line"></i> Become an Investor</span>
-      </div>
-    </div>
-  </section>
+  <div class="divider"></div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="sec alt">
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="sec">
     <div class="wrap">
       <div class="sec-head">
         <div class="sec-label rv">Contact</div>
         <h2 class="sec-title rv">Get in <span>Touch</span></h2>
       </div>
       <div class="contact-layout">
-        <div class="contact-info rv fl">
+        <div class="ci-info rv">
           <h3>Let's talk</h3>
-          <p>Whether you want to sell your game, partner up, join the team, or invest — we reply fast. Fill in the form or reach us directly.</p>
-          <div class="contact-detail"><i class="fas fa-envelope"></i><div><span>Email</span><strong>go.success.studios@gmail.com</strong></div></div>
-          <div class="contact-detail"><i class="fab fa-discord"></i><div><span>Discord</span><strong>rlyoung0</strong></div></div>
-          <div class="contact-detail"><i class="fab fa-twitter"></i><div><span>Twitter / X</span><strong>@Rlyoung0</strong></div></div>
+          <p>Whether you want to sell your game, partner up, join the team, or invest — we reply fast.</p>
+          <div class="cd"><i class="fas fa-envelope"></i><div><span class="dl">Email</span><strong>go.success.studios@gmail.com</strong></div></div>
+          <div class="cd"><i class="fab fa-discord"></i><div><span class="dl">Discord</span><strong>rlyoung0</strong></div></div>
+          <div class="cd"><i class="fab fa-twitter"></i><div><span class="dl">Twitter / X</span><strong>@Rlyoung0</strong></div></div>
         </div>
-        <div class="fc rv">
+        <div class="fc rv dl1">
           <div class="ftabs">
             <button class="ftab active" id="ft-careers" onclick="G.tab('careers')">Careers</button>
-            <button class="ftab" id="ft-sell"    onclick="G.tab('sell')">Sell Game</button>
+            <button class="ftab" id="ft-sell" onclick="G.tab('sell')">Sell Game</button>
             <button class="ftab" id="ft-partner" onclick="G.tab('partner')">Partner</button>
-            <button class="ftab" id="ft-invest"  onclick="G.tab('invest')">Invest</button>
+            <button class="ftab" id="ft-invest" onclick="G.tab('invest')">Invest</button>
           </div>
 
           <!-- CAREERS -->
@@ -593,14 +585,14 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Your name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Role applying for *</label>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">ROLE *</label>
                 <select class="fi" name="role" required><option value="" disabled selected>Select a role</option><option>Developer</option><option>UI Designer</option><option>VFX Artist</option><option>GFX Artist</option><option>Builder</option><option>Animator</option><option>Marketer</option><option>Content Creator</option><option>Manager</option><option>Executive</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Portfolio / experience *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
+              <div class="fg"><label class="fl2">PORTFOLIO / EXPERIENCE *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
-              <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as fast as we can 🚀</p></div>
+              <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-careers" class="f-err"></div>
             </form>
             <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
@@ -616,13 +608,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Your name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Game link *</label><input class="fi" name="game_link" type="url" required placeholder="https://roblox.com/games/..."></div>
-              <div class="fg"><label class="fl2">Monthly visits / revenue (optional)</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
-              <div class="fg"><label class="fl2">Additional info</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">GAME LINK *</label><input class="fi" name="game_link" type="url" required placeholder="https://roblox.com/games/..."></div>
+              <div class="fg"><label class="fl2">MONTHLY VISITS / REVENUE</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
+              <div class="fg"><label class="fl2">ADDITIONAL INFO</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-hand-holding-usd"></i> Request Offer</button>
-              <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as fast as we can 🚀</p></div>
+              <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-sell" class="f-err"></div>
             </form>
             <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
@@ -638,15 +630,15 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Your name / studio *</label><input class="fi" name="name" type="text" required placeholder="Name or studio"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Partnership type *</label>
+              <div class="fg"><label class="fl2">NAME / STUDIO *</label><input class="fi" name="name" type="text" required placeholder="Name or studio"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">PARTNERSHIP TYPE *</label>
                 <select class="fi" name="type" required><option value="" disabled selected>Select type</option><option>Game Studio</option><option>Content Creator</option><option>Dev Team</option><option>Brand Deal</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Links (Roblox, YouTube, etc.)</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
-              <div class="fg"><label class="fl2">Proposal *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
+              <div class="fg"><label class="fl2">LINKS</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
+              <div class="fg"><label class="fl2">PROPOSAL *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-handshake"></i> Send Request</button>
-              <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as fast as we can 🚀</p></div>
+              <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-partner" class="f-err"></div>
             </form>
             <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
@@ -662,15 +654,15 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Your name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Investment focus *</label>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">INVESTMENT FOCUS *</label>
                 <select class="fi" name="focus" required><option value="" disabled selected>Select an area</option><option>Company Growth</option><option>Marketing</option><option>Developers</option><option>Builders</option><option>Content Creators</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Proposed amount (optional)</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 – $50,000"></div>
-              <div class="fg"><label class="fl2">Message</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
+              <div class="fg"><label class="fl2">PROPOSED AMOUNT</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 – $50,000"></div>
+              <div class="fg"><label class="fl2">MESSAGE</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-chart-line"></i> Submit Interest</button>
-              <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as fast as we can 🚀</p></div>
+              <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-invest" class="f-err"></div>
             </form>
             <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
@@ -679,9 +671,12 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       </div>
     </div>
   </section>
-</div>
 
-<!-- ═══ PRIVACY PAGE ═══ -->
+</div><!-- /pg-main -->
+
+<!-- ════════════════════════════════════════
+     PRIVACY PAGE
+════════════════════════════════════════ -->
 <div id="pg-privacy" class="page">
   <div class="prv-wrap">
     <div class="wrap">
@@ -693,11 +688,11 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div class="ps"><h2>3. How We Use Your Information</h2><ul><li>To respond to inquiries and provide support</li><li>To evaluate game acquisition opportunities</li><li>To process job applications</li><li>To analyse website usage and improve services</li></ul></div>
         <div class="ps"><h2>4. Sharing Your Information</h2><p>We do not sell, trade, or rent your personal information. We may share with service providers or when required by law.</p></div>
         <div class="ps"><h2>5. Data Security</h2><p>We implement appropriate technical and organisational security measures. No Internet transmission is 100% secure.</p></div>
-        <div class="ps"><h2>6. Your Rights</h2><p>You may access, correct, or delete your data. Contact us at <a href="mailto:go.success.studios@gmail.com" style="color:var(--primary)">go.success.studios@gmail.com</a>.</p></div>
+        <div class="ps"><h2>6. Your Rights</h2><p>You may access, correct, or delete your data. Contact us at <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a>.</p></div>
         <div class="ps"><h2>7. Children's Privacy</h2><p>Our services are not directed to individuals under 13.</p></div>
         <div class="ps"><h2>8. Changes</h2><p>We may update this policy from time to time. Changes are effective when posted.</p></div>
-        <div class="ps"><h2>9. Contact</h2><p>Email: <a href="mailto:go.success.studios@gmail.com" style="color:var(--primary)">go.success.studios@gmail.com</a> · Discord/Roblox: rlyoung0</p></div>
-        <a class="back" onclick="G.showPage('main')"><i class="fas fa-arrow-left"></i> Back to Main Page</a>
+        <div class="ps"><h2>9. Contact</h2><p>Email: <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a> · Discord/Roblox: rlyoung0</p></div>
+        <a class="back-link" onclick="G.showPage('main')"><i class="fas fa-arrow-left"></i> Back to Main</a>
       </div>
     </div>
   </div>
@@ -715,7 +710,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 <!-- SCROLL TOP -->
 <button id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
 
-<!-- FOOTER -->
+<!-- ══ FOOTER ══ -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -731,7 +726,6 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <h5>Company</h5>
         <a onclick="G.page('main',null)">Home</a>
         <a onclick="G.page('main','#games')">Our Games</a>
-        <a onclick="G.page('main','#pastwork')">Past Work</a>
         <a onclick="G.showPage('privacy')">Privacy Policy</a>
       </div>
       <div class="foot-col">
@@ -744,13 +738,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <h5>Join Us</h5>
         <a onclick="G.page('main','#careers')">Careers</a>
         <a onclick="G.page('main','#contact');G.tab('careers')">Apply Now</a>
-        <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer">Discord Server</a>
+        <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer">Discord</a>
         <a href="mailto:go.success.studios@gmail.com">Email Us</a>
       </div>
     </div>
     <div class="foot-btm">
       <p>© 2025 GoSuccess · All rights reserved</p>
-      <p>Built &amp; owned by <span style="color:var(--primary)">Rlyoung0</span></p>
+      <p>Built &amp; owned by <span style="color:var(--pl)">Rlyoung0</span></p>
     </div>
   </div>
 </footer>
@@ -768,9 +762,9 @@ document.addEventListener('keydown',e=>{
 
 // ── NAV SCROLL ──
 window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>10);
+  document.getElementById('navbar').classList.toggle('solid',window.scrollY>10);
   const btn=document.getElementById('scrollTop');
-  if(btn)btn.classList.toggle('show',window.scrollY>500);
+  if(btn)btn.classList.toggle('show',window.scrollY>400);
 },{passive:true});
 
 // ── IMAGES ──
@@ -782,25 +776,12 @@ const GFX=[
   'https://pbs.twimg.com/media/G9LVdM_XkAE9IAN?format=jpg&name=large',
   'https://pbs.twimg.com/media/G9GbwuvWwAAFHW9?format=jpg&name=medium'
 ];
-const UI=[
-  'https://pbs.twimg.com/media/HA-C-1absAEGME1?format=jpg&name=900x900',
-  'https://pbs.twimg.com/media/HA-DX4ta4AAYBZs?format=jpg&name=small',
-  'https://pbs.twimg.com/media/HA-DX4FXsAABSxx?format=png&name=900x900',
-  'https://pbs.twimg.com/media/HA-DX4pbsAgFPDy?format=png&name=small'
-];
-const BLD=[
-  'https://pbs.twimg.com/media/HA-CTQta0AA7TUd?format=jpg&name=large',
-  'https://pbs.twimg.com/media/HA-CTQ7aYAAzOIh?format=jpg&name=large',
-  'https://pbs.twimg.com/media/HA-CTQYXkAAuWF1?format=jpg&name=large',
-  'https://pbs.twimg.com/media/HA-CVYZX0AAHmP2?format=jpg&name=large'
-];
 const THUMBS=[
   'https://tr.rbxcdn.com/180DAY-f9c6b43e81a5df5c4837af925208e5a3/768/432/Image/Webp/noFilter',
   'https://tr.rbxcdn.com/180DAY-4628d8153026cbce570c02fcac54456a/768/432/Image/Webp/noFilter',
   'https://tr.rbxcdn.com/180DAY-b015ade2b0ac444306a1bcd3441f26c1/768/432/Image/Webp/noFilter',
   'https://tr.rbxcdn.com/180DAY-cf0423d75b22cea2534c3b19cb85d517/768/432/Image/Webp/noFilter'
 ];
-window._G=GFX;window._U=UI;window._B=BLD;
 
 // ── MARQUEE ──
 function buildMarquee(){
@@ -821,14 +802,14 @@ function buildMarquee(){
 
 // ── GAMES ──
 const GAMES=[
-  {placeId:8287908355,name:'Train VS Vehicle Master!',url:'https://www.roblox.com/games/8287908355',thumb:THUMBS[0],desc:'Epic battles between trains and vehicles — 10M+ visits and growing.',fb:{v:10400000,p:25,f:4581}},
-  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community 🇧🇦🇷🇸🇭🇷 — daily streaks & rewards.',fb:{v:1800000,p:47,f:5599}},
-  {placeId:117685246722846,name:'Escape Tsunami for Glitchy Noobs',url:'https://www.roblox.com/games/117685246722846',thumb:THUMBS[2],desc:'Survive the tsunami while dodging glitches — fast-paced chaos with friends!',fb:{v:3155,p:2,f:4}},
-  {placeId:128641742072134,name:'Money Grind Simulator',url:'https://www.roblox.com/games/128641742072134',thumb:THUMBS[3],desc:'Grind, upgrade, and build your fortune. The ultimate simulator experience.',fb:{v:230,p:0,f:190}}
+  {placeId:8287908355,name:'Train VS Vehicle Master!',url:'https://www.roblox.com/games/8287908355',thumb:THUMBS[0],desc:'Epic battles between trains and vehicles — 10M+ visits and growing.',tag:'Top Game',fb:{v:10400000,p:25,f:4581}},
+  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community 🇧🇦🇷🇸🇭🇷 — daily streaks & rewards.',tag:'Community',fb:{v:1800000,p:47,f:5599}},
+  {placeId:117685246722846,name:'Escape Tsunami for Glitchy Noobs',url:'https://www.roblox.com/games/117685246722846',thumb:THUMBS[2],desc:'Survive the tsunami while dodging glitches — fast-paced chaos with friends!',tag:'New',fb:{v:3155,p:2,f:4}},
+  {placeId:128641742072134,name:'Money Grind Simulator',url:'https://www.roblox.com/games/128641742072134',thumb:THUMBS[3],desc:'Grind, upgrade, and build your fortune. The ultimate simulator experience.',tag:'New',fb:{v:230,p:0,f:190}}
 ];
 
 // ── TWEEN ──
-const DUR=3600,ease=t=>1-Math.pow(1-t,3);
+const DUR=3400,ease=t=>1-Math.pow(1-t,3);
 const TW={
   q:[],r:null,
   fmt(n){if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return Math.round(n)+''},
@@ -845,7 +826,7 @@ const TW={
     for(let i=this.q.length-1;i>=0;i--){
       const x=this.q[i],p=Math.min((now-x.t0)/DUR,1);
       x.el.textContent=this.fmt(x.s+(x.e-x.s)*ease(p));
-      if(p<1){a=true;}else{x.el.textContent=this.fmt(x.e);this.q.splice(i,1);}
+      if(p<1){a=true}else{x.el.textContent=this.fmt(x.e);this.q.splice(i,1)}
     }
     this.r=a?requestAnimationFrame(this._f.bind(this)):null;
   }
@@ -884,7 +865,7 @@ async function fetchStats(g){
     ]);
     const gd=det?.data?.[0];
     return{v:(gd?.visits>0)?gd.visits:g.fb.v,p:(gd?.playing>=0)?gd.playing:g.fb.p,f:(fav?.favoritesCount>=0)?fav.favoritesCount:g.fb.f};
-  }catch(_){return g.fb;}
+  }catch(_){return g.fb}
 }
 
 // ── BUILD GAME CARDS ──
@@ -894,23 +875,25 @@ function buildCards(){
   [...GAMES].sort((a,b)=>b.fb.v-a.fb.v).forEach(g=>{
     const c=document.createElement('article');
     c.className='gc rv';
-    c.innerHTML=`<div class="gimg" style="background-image:url('${g.thumb}')"><div class="gimg-overlay"></div></div>
-    <div class="gcont">
-      <h3 class="gtitle">${g.name}</h3>
-      <p class="gdesc">${g.desc}</p>
-      <div class="gmet">
-        <div class="met"><span class="mv" id="v${g.placeId}" data-raw="0">0</span><span class="ml2">Visits</span></div>
-        <div class="met"><span class="mv" id="p${g.placeId}" data-raw="0">0</span><span class="ml2">Active</span></div>
-        <div class="met"><span class="mv" id="f${g.placeId}" data-raw="0">0</span><span class="ml2">Favorites</span></div>
-      </div>
-      <a href="${g.url}" target="_blank" rel="noopener noreferrer" class="glink"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
-    </div>`;
+    c.innerHTML=`
+      <div class="gimg" style="background-image:url('${g.thumb}')"><div class="gimg-ov"></div></div>
+      <div class="gcont">
+        <span class="gtag">${g.tag}</span>
+        <h3 class="gtitle">${g.name}</h3>
+        <p class="gdesc">${g.desc}</p>
+        <div class="gmet">
+          <div class="met"><span class="mv" id="v${g.placeId}" data-raw="0">0</span><span class="ml2">Visits</span></div>
+          <div class="met"><span class="mv" id="p${g.placeId}" data-raw="0">0</span><span class="ml2">Active</span></div>
+          <div class="met"><span class="mv" id="f${g.placeId}" data-raw="0">0</span><span class="ml2">Favorites</span></div>
+        </div>
+        <a href="${g.url}" target="_blank" rel="noopener noreferrer" class="glink"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
+      </div>`;
     gc.appendChild(c);
   });
   setTimeout(observe,60);
 }
 
-// ── LOAD STATS — fetch first, 1.5s min wait, then one clean tween ──
+// ── LOAD STATS ──
 async function loadStats(){
   if(!document.getElementById('pg-main').classList.contains('active'))return;
   buildCards();
@@ -930,27 +913,6 @@ async function loadStats(){
   TW.add(document.getElementById('sV'),tV);
   TW.add(document.getElementById('sP'),tP);
   TW.add(document.getElementById('sF'),tF);
-}
-
-// ── PAST WORK ──
-function gal(imgs,ref){return`<div class="gal">${imgs.map((s,i)=>`<img src="${s}" class="gth" loading="lazy" onclick="window._lb(${ref},${i})" alt="">`).join('')}</div>`}
-const PW={
-  scripting:`<div class="pw-grid"><div class="pw-item"><div class="vc"><iframe src="https://www.youtube.com/embed/y4RqsNAM9Ew" title="Teleporter" allowfullscreen loading="lazy"></iframe></div><h3>Teleporter System</h3><p>Place two portals, active for 10 seconds.</p></div><div class="pw-item"><div class="vc"><iframe src="https://www.youtube.com/embed/NCkYRHlH_FQ" title="Dialogue" allowfullscreen loading="lazy"></iframe></div><h3>Dialogue System</h3><p>Advanced NPC dialogue for Driftweavers RNG.</p></div><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>More scripts soon</h4><p>Combat, simulators & more</p></div></div>`,
-  ui:gal(UI,'_U')+`<div class="pw-grid"><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>More UI work soon</h4></div></div>`,
-  vfx:`<div class="pw-grid"><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>VFX coming soon</h4></div><div class="pw-item"><div class="pw-icon"><i class="fas fa-clock"></i></div><h3>Be the first!</h3><p>Nothing here yet — apply and showcase your VFX.</p><span class="pw-cta" onclick="G.page('main','#contact');G.tab('careers')">Apply to join</span></div></div>`,
-  gfx:gal(GFX,'_G')+`<div class="pw-grid"><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>More GFX soon</h4></div></div>`,
-  builder:gal(BLD,'_B')+`<div class="pw-grid"><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>More builds soon</h4></div></div>`,
-  animator:`<div class="pw-grid"><div class="pw-item cs"><i class="fas fa-hourglass-half"></i><h4>Animations soon</h4></div><div class="pw-item"><div class="pw-icon"><i class="fas fa-film"></i></div><h3>Be the first!</h3><p>Nothing here yet — apply and showcase your animations.</p><span class="pw-cta" onclick="G.page('main','#contact');G.tab('careers')">Apply to join</span></div></div>`
-};
-function initPW(){
-  const cont=document.getElementById('pwc');
-  document.querySelectorAll('#pwt .pw-tab').forEach(btn=>{
-    btn.addEventListener('click',function(){
-      document.querySelectorAll('#pwt .pw-tab').forEach(b=>b.classList.remove('active'));
-      this.classList.add('active');cont.innerHTML=PW[this.dataset.c];observe();
-    });
-  });
-  cont.innerHTML=PW.scripting;
 }
 
 // ── LIGHTBOX ──
@@ -998,7 +960,6 @@ const G=window.G={
     e.preventDefault();
     const form=e.target,btn=form.querySelector('.fsub-btn');
     const ok=document.getElementById(okId),err=document.getElementById(errId);
-    // Honeypot
     const hp=form.querySelector('input[name="website"]');
     if(hp&&hp.value)return;
     ok.style.display='none';err.style.display='none';
@@ -1020,16 +981,16 @@ const G=window.G={
 function observe(){
   const io=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}});
-  },{threshold:0.06});
+  },{threshold:0.05});
   document.querySelectorAll('.rv:not(.on)').forEach(el=>io.observe(el));
 }
 
-// ── REFRESH every 30s ──
+// ── REFRESH 30s ──
 setInterval(()=>{if(document.getElementById('pg-main').classList.contains('active'))loadStats()},30000);
 
 // ── BOOT ──
 document.addEventListener('DOMContentLoaded',()=>{
-  buildMarquee();initPW();initLb();loadStats();observe();
+  buildMarquee();initLb();loadStats();observe();
 });
 })();
 </script>
