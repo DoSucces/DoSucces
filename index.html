@@ -114,7 +114,6 @@ img{max-width:100%;display:block}
 .hero-socials a{width:36px;height:36px;border:1px solid var(--b2);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.9rem;transition:.2s}
 .hero-socials a:hover{border-color:var(--p);color:var(--pl);background:rgba(155,0,232,.08)}
 
-
 /* ══════════════════════════════════════════
    DIVIDER
 ══════════════════════════════════════════ */
@@ -132,7 +131,7 @@ img{max-width:100%;display:block}
 .sec-head{margin-bottom:40px}
 
 /* ══════════════════════════════════════════
-   WHY US — horizontal strip
+   WHY US
 ══════════════════════════════════════════ */
 .why-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b1);border:1px solid var(--b1);border-radius:12px;overflow:hidden}
 .why-item{background:var(--s1);padding:28px 24px;transition:.25s;position:relative}
@@ -143,6 +142,19 @@ img{max-width:100%;display:block}
 .wi-icon{width:40px;height:40px;background:rgba(155,0,232,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:14px}
 .wi-title{font-size:1rem;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
 .wi-text{color:var(--t2);font-size:.82rem;line-height:1.65}
+
+/* ══════════════════════════════════════════
+   COLLABORATE — what we do
+══════════════════════════════════════════ */
+.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cb{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px 22px;transition:.25s;position:relative;overflow:hidden}
+.cb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:.3s}
+.cb:hover{border-color:var(--p);background:var(--s2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glowsm)}
+.cb:hover::before{opacity:1}
+.cb-icon{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:16px;transition:.2s}
+.cb:hover .cb-icon{background:rgba(155,0,232,.2)}
+.cb h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.cb p{color:var(--t2);font-size:.82rem;line-height:1.65}
 
 /* ══════════════════════════════════════════
    GAMES
@@ -165,7 +177,7 @@ img{max-width:100%;display:block}
 .glink:hover{background:var(--p);color:#fff;border-color:var(--p)}
 
 /* ══════════════════════════════════════════
-   SELL — two column
+   SELL
 ══════════════════════════════════════════ */
 .sell-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .sell-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
@@ -184,7 +196,7 @@ img{max-width:100%;display:block}
 /* ══════════════════════════════════════════
    PARTNERS
 ══════════════════════════════════════════ */
-.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .pc{background:var(--s1);border:1px solid var(--b1);border-radius:8px;padding:24px 18px;text-align:center;transition:.25s}
 .pc:hover{border-color:var(--p);transform:translateY(-2px);box-shadow:0 8px 28px var(--glowsm)}
 .pc .ico{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin:0 auto 12px;transition:.2s}
@@ -193,7 +205,7 @@ img{max-width:100%;display:block}
 .pc p{color:var(--t2);font-size:.78rem;line-height:1.6}
 
 /* ══════════════════════════════════════════
-   CAREERS + INVEST — side by side
+   CAREERS + INVEST
 ══════════════════════════════════════════ */
 .ci-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .ci-box{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:32px 28px;position:relative;overflow:hidden}
@@ -305,6 +317,7 @@ textarea.fi{min-height:96px;resize:vertical}
 @media(max-width:1024px){
   .why-strip{grid-template-columns:1fr 1fr}
   .partners-grid{grid-template-columns:1fr 1fr}
+  .collab-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
@@ -319,6 +332,7 @@ textarea.fi{min-height:96px;resize:vertical}
   .contact-layout{grid-template-columns:1fr}
   .games-grid{grid-template-columns:1fr}
   .sell-features{grid-template-columns:1fr 1fr}
+  .collab-grid{grid-template-columns:1fr}
 }
 @media(max-width:520px){
   .why-strip{grid-template-columns:1fr}
@@ -334,6 +348,20 @@ textarea.fi{min-height:96px;resize:vertical}
   .ftab{white-space:nowrap;flex-shrink:0}
 }
 
+
+/* ══════════════════════════════════════════
+   COLLABORATE — what we do
+══════════════════════════════════════════ */
+.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cb{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px 22px;transition:.25s;position:relative;overflow:hidden}
+.cb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:.3s}
+.cb:hover{border-color:var(--p);background:var(--s2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glowsm)}
+.cb:hover::before{opacity:1}
+.cb-icon{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:16px;transition:.2s}
+.cb:hover .cb-icon{background:rgba(155,0,232,.2)}
+.cb h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.cb p{color:var(--t2);font-size:.82rem;line-height:1.65}
+
 /* ── ANTI-SCRAPE ── */
 .wrap,.page{-webkit-user-select:none;-moz-user-select:none;user-select:none}
 input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select:text}
@@ -344,7 +372,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 <!-- ══ NAV ══ -->
 <nav class="nav" id="navbar">
   <div class="wrap nav-inner">
-    <div class="nav-brand" onclick="navigate('/')">
+    <div class="nav-brand" onclick="G.home()">
       <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess">
       <div class="nav-brand-name">Go<em>Success</em></div>
     </div>
@@ -356,7 +384,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       <a class="nl" href="/#careers">Careers</a>
       <a class="nl" href="/#invest">Invest</a>
       <a class="nl" href="/#contact">Contact</a>
-      <a class="nav-cta" href="/#contact">Sell Your Game →</a>
+      <a class="nav-cta" href="/#contact">Sell Your Game &rarr;</a>
     </div>
     <button class="burger" id="bg" aria-label="Menu"><i class="fas fa-bars"></i></button>
   </div>
@@ -385,9 +413,9 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
           <div class="sc rv dl2"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
         </div>
         <div class="hero-btns rv">
-          <span class="btn btn-p" onclick="G.scroll('#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
+          <span class="btn btn-p" onclick="G.scrollTab('#contact','sell')"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
           <span class="btn btn-o" onclick="G.games()"><i class="fas fa-gamepad"></i> Our Portfolio</span>
-          <span class="btn btn-o" onclick="G.scroll('#careers')"><i class="fas fa-users"></i> Join the Team</span>
+          <span class="btn btn-o" onclick="G.ss('#careers')"><i class="fas fa-users"></i> Join the Team</span>
         </div>
         <div class="hero-socials rv">
           <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
@@ -411,7 +439,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
           <div class="wi-num">01</div>
           <div class="wi-icon"><i class="fas fa-handshake"></i></div>
           <div class="wi-title">We Actually Buy</div>
-          <p class="wi-text">Real acquisitions with real payment  no brokers, no promises. We own and operate every game we acquire.</p>
+          <p class="wi-text">Real acquisitions with real payment — no brokers, no promises. We own and operate every game we acquire.</p>
         </div>
         <div class="why-item rv dl1">
           <div class="wi-num">02</div>
@@ -437,6 +465,96 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 
   <div class="divider"></div>
 
+  <!-- ── COLLABORATE ── -->
+  <section id="collaborate" class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label rv">What We Do</div>
+        <h2 class="sec-title rv">We handle <span>everything.</span></h2>
+        <p class="sec-sub rv">From day one after acquisition, our team takes over every aspect of running and growing your game.</p>
+      </div>
+      <div class="collab-grid">
+        <div class="cb rv">
+          <div class="cb-icon"><i class="fas fa-coins"></i></div>
+          <h3>Monetisation</h3>
+          <p>We design, balance, and optimise passes, gamepasses, and in-game shops to maximise revenue without ruining the player experience.</p>
+        </div>
+        <div class="cb rv dl1">
+          <div class="cb-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Live Ops</h3>
+          <p>Seasonal events, limited-time offers, and daily engagement loops — we keep players coming back every single day.</p>
+        </div>
+        <div class="cb rv dl2">
+          <div class="cb-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Marketing</h3>
+          <p>Thumbnail A/B testing, social media campaigns, influencer outreach, and Roblox ad management to push your game to the top.</p>
+        </div>
+        <div class="cb rv dl3">
+          <div class="cb-icon"><i class="fas fa-code"></i></div>
+          <h3>Development</h3>
+          <p>Bug fixes, new features, performance optimisation — our dev team keeps your game running smoothly and players happy.</p>
+        </div>
+        <div class="cb rv dl4">
+          <div class="cb-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>GFX & Design</h3>
+          <p>Eye-catching thumbnails, icons, UIs, and promotional art made by our in-house GFX artists to make your game stand out.</p>
+        </div>
+        <div class="cb rv dl1">
+          <div class="cb-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Growth Strategy</h3>
+          <p>We analyse your game's data, identify growth opportunities, and execute a full strategy to get your game big on Roblox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ── COLLABORATE ── -->
+  <section id="collaborate" class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label rv">What We Do</div>
+        <h2 class="sec-title rv">We handle <span>everything.</span></h2>
+        <p class="sec-sub rv">From day one after acquisition, our team takes over every aspect of running and growing your game.</p>
+      </div>
+      <div class="collab-grid">
+        <div class="cb rv">
+          <div class="cb-icon"><i class="fas fa-coins"></i></div>
+          <h3>Monetisation</h3>
+          <p>We design, balance, and optimise passes, gamepasses, and in-game shops to maximise revenue without ruining the player experience.</p>
+        </div>
+        <div class="cb rv dl1">
+          <div class="cb-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Live Ops</h3>
+          <p>Seasonal events, limited-time offers, and daily engagement loops — we keep players coming back every single day.</p>
+        </div>
+        <div class="cb rv dl2">
+          <div class="cb-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Marketing</h3>
+          <p>Thumbnail A/B testing, social media campaigns, influencer outreach, and Roblox ad management to push your game to the top.</p>
+        </div>
+        <div class="cb rv dl3">
+          <div class="cb-icon"><i class="fas fa-code"></i></div>
+          <h3>Development</h3>
+          <p>Bug fixes, new features, performance optimisation — our dev team keeps your game running smoothly and players happy.</p>
+        </div>
+        <div class="cb rv dl4">
+          <div class="cb-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>GFX & Design</h3>
+          <p>Eye-catching thumbnails, icons, UIs, and promotional art made by our in-house GFX artists to make your game stand out.</p>
+        </div>
+        <div class="cb rv dl1">
+          <div class="cb-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Growth Strategy</h3>
+          <p>We analyse your game's data, identify growth opportunities, and execute a full strategy to get your game big on Roblox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
   <!-- ── GAMES ── -->
   <section id="games" class="sec">
     <div class="wrap">
@@ -447,7 +565,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       </div>
       <div class="games-grid" id="gc"></div>
       <div style="text-align:center;margin-top:28px" class="rv">
-        <a href="/games" class="btn btn-o"><i class="fas fa-gamepad"></i> See All Games →</a>
+        <a href="/games" class="btn btn-o"><i class="fas fa-gamepad"></i> See All Games &rarr;</a>
       </div>
     </div>
   </section>
@@ -477,7 +595,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             </div>
           </div>
           <div class="rv">
-            <span class="btn btn-p" onclick="G.scroll('#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Get an Offer</span>
+            <span class="btn btn-p" onclick="G.scrollTab('#contact','sell')"><i class="fas fa-arrow-right"></i> Get an Offer</span>
           </div>
         </div>
         <div class="sell-features rv dl1">
@@ -500,21 +618,21 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <h2 class="sec-title rv">Partner with <span>Us</span></h2>
         <p class="sec-sub rv">We work with studios, creators, and brands to build bigger things together.</p>
       </div>
-      <div class="partner-grid">
+      <div class="partners-grid">
         <div class="pc rv"><div class="ico"><i class="fas fa-gamepad"></i></div><h3>Game Studios</h3><p>Co-develop, cross-promote, or merge your studio with GoSuccess.</p></div>
         <div class="pc rv dl1"><div class="ico"><i class="fas fa-bullhorn"></i></div><h3>Content Creators</h3><p>Collaborate on sponsored events or feature your content in our games.</p></div>
         <div class="pc rv dl2"><div class="ico"><i class="fas fa-tools"></i></div><h3>Dev Teams</h3><p>White-label your services through GoSuccess and access our network.</p></div>
         <div class="pc rv dl3"><div class="ico"><i class="fas fa-tag"></i></div><h3>Brand Deals</h3><p>In-game assets, sponsored events, or co-branded passes.</p></div>
       </div>
       <div style="text-align:center;margin-top:24px" class="rv">
-        <span class="btn btn-p" onclick="G.scroll('#contact');G.tab('partner')"><i class="fas fa-paper-plane"></i> Become a Partner</span>
+        <span class="btn btn-p" onclick="G.scrollTab('#contact','partner')"><i class="fas fa-paper-plane"></i> Become a Partner</span>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ── CAREERS + INVEST side by side ── -->
+  <!-- ── CAREERS + INVEST ── -->
   <section id="careers" class="sec">
     <div class="wrap">
       <div class="ci-layout">
@@ -534,7 +652,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <span class="badge"><i class="fas fa-user-tie"></i>Executives</span>
             <span class="badge"><i class="fas fa-plus"></i>Other</span>
           </div>
-          <span class="cta-btn" onclick="G.scroll('#contact');G.tab('careers')"><i class="fas fa-paper-plane"></i> Apply Now</span>
+          <span class="cta-btn" onclick="G.scrollTab('#contact','careers')"><i class="fas fa-paper-plane"></i> Apply Now</span>
         </div>
         <div id="invest" class="ci-box rv dl1">
           <h3>Invest in <span>GoSuccess</span></h3>
@@ -547,7 +665,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <span class="badge"><i class="fas fa-camera"></i>Creators</span>
             <span class="badge"><i class="fas fa-plus"></i>Other</span>
           </div>
-          <span class="cta-btn" onclick="G.scroll('#contact');G.tab('invest')"><i class="fas fa-chart-line"></i> Become an Investor</span>
+          <span class="cta-btn" onclick="G.scrollTab('#contact','invest')"><i class="fas fa-chart-line"></i> Become an Investor</span>
         </div>
       </div>
     </div>
@@ -584,7 +702,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <p class="fsub">Tell us about yourself and your skills.</p>
             <form onsubmit="G.send(event,'ok-careers','er-careers')">
               <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
-              <input type="hidden" name="subject" value="Careers – GoSuccess">
+              <input type="hidden" name="subject" value="Careers - GoSuccess">
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
@@ -595,10 +713,10 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               </div>
               <div class="fg"><label class="fl2">PORTFOLIO / EXPERIENCE *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
-              <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-careers" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.privacy()">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- SELL -->
@@ -607,7 +725,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <p class="fsub">Get a competitive offer on your Roblox game.</p>
             <form onsubmit="G.send(event,'ok-sell','er-sell')">
               <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
-              <input type="hidden" name="subject" value="Game Sale – GoSuccess">
+              <input type="hidden" name="subject" value="Game Sale - GoSuccess">
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
@@ -617,10 +735,10 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div class="fg"><label class="fl2">MONTHLY VISITS / REVENUE</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
               <div class="fg"><label class="fl2">ADDITIONAL INFO</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-hand-holding-usd"></i> Request Offer</button>
-              <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-sell" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.privacy()">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- PARTNER -->
@@ -629,7 +747,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <p class="fsub">Tell us about your studio, channel, or brand.</p>
             <form onsubmit="G.send(event,'ok-partner','er-partner')">
               <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
-              <input type="hidden" name="subject" value="Partnership – GoSuccess">
+              <input type="hidden" name="subject" value="Partnership - GoSuccess">
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
@@ -641,10 +759,10 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div class="fg"><label class="fl2">LINKS</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
               <div class="fg"><label class="fl2">PROPOSAL *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-handshake"></i> Send Request</button>
-              <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-partner" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.privacy()">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- INVEST -->
@@ -653,7 +771,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <p class="fsub">Choose where you want your investment to go.</p>
             <form onsubmit="G.send(event,'ok-invest','er-invest')">
               <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
-              <input type="hidden" name="subject" value="Investment – GoSuccess">
+              <input type="hidden" name="subject" value="Investment - GoSuccess">
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
@@ -662,13 +780,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div class="fg"><label class="fl2">INVESTMENT FOCUS *</label>
                 <select class="fi" name="focus" required><option value="" disabled selected>Select an area</option><option>Company Growth</option><option>Marketing</option><option>Developers</option><option>Builders</option><option>Content Creators</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">PROPOSED AMOUNT</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 – $50,000"></div>
+              <div class="fg"><label class="fl2">PROPOSED AMOUNT</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 - $50,000"></div>
               <div class="fg"><label class="fl2">MESSAGE</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-chart-line"></i> Submit Interest</button>
-              <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-invest" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.privacy()">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
         </div>
       </div>
@@ -676,7 +794,6 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   </section>
 
 </div><!-- /pg-main -->
-
 
 <!-- ════════════════════════════════════════
      GAMES PAGE  /games
@@ -712,7 +829,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div class="ps"><h2>6. Your Rights</h2><p>You may access, correct, or delete your data. Contact us at <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a>.</p></div>
         <div class="ps"><h2>7. Children's Privacy</h2><p>Our services are not directed to individuals under 13.</p></div>
         <div class="ps"><h2>8. Changes</h2><p>We may update this policy from time to time. Changes are effective when posted.</p></div>
-        <div class="ps"><h2>9. Contact</h2><p>Email: <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a> · Discord/Roblox: rlyoung0</p></div>
+        <div class="ps"><h2>9. Contact</h2><p>Email: <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a> &middot; Discord/Roblox: rlyoung0</p></div>
         <a class="back-link" href="/"><i class="fas fa-arrow-left"></i> Back to Home</a>
       </div>
     </div>
@@ -747,26 +864,26 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <h5>Company</h5>
         <a onclick="G.home()">Home</a>
         <a onclick="G.games()">Our Games</a>
-        <a onclick="G.scroll('#partners')">Partners</a>
-        <a onclick="G.privacy()">Privacy Policy</a>
+        <a onclick="G.ss('#partners')">Partners</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
       <div class="foot-col">
         <h5>Services</h5>
-        <a onclick="G.scroll('#sell')">Sell Your Game</a>
-        <a onclick="G.scroll('#partners')">Partnerships</a>
-        <a onclick="G.scroll('#invest')">Invest</a>
-        <a onclick="G.scroll('#contact')">Contact</a>
+        <a onclick="G.ss('#sell')">Sell Your Game</a>
+        <a onclick="G.ss('#partners')">Partnerships</a>
+        <a onclick="G.ss('#invest')">Invest</a>
+        <a onclick="G.ss('#contact')">Contact</a>
       </div>
       <div class="foot-col">
         <h5>Join Us</h5>
-        <a onclick="G.scroll('#careers')">Careers</a>
-        <a onclick="G.scroll('#contact');G.tab('careers')">Apply Now</a>
+        <a onclick="G.ss('#careers')">Careers</a>
+        <a onclick="G.scrollTab('#contact','careers')">Apply Now</a>
         <a href="https://discord.gg/UxPTysSvNz" target="_blank" rel="noopener noreferrer">Discord</a>
         <a href="mailto:go.success.studios@gmail.com">Email Us</a>
       </div>
     </div>
     <div class="foot-btm">
-      <p>© 2025 GoSuccess · All rights reserved</p>
+      <p>&copy; 2025 GoSuccess &middot; All rights reserved</p>
       <p>Built &amp; owned by <span style="color:var(--pl)">Rlyoung0</span></p>
     </div>
   </div>
@@ -826,7 +943,7 @@ function buildMarquee(){
 // ── GAMES ──
 const GAMES=[
   {placeId:8287908355,name:'Train VS Vehicle Master!',url:'https://www.roblox.com/games/8287908355',thumb:THUMBS[0],desc:'Epic battles between trains and vehicles — 10M+ visits and growing.',tag:'Top Game',fb:{v:10400000,p:25,f:4581}},
-  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community 🇧🇦🇷🇸🇭🇷 — daily streaks & rewards.',tag:'Community',fb:{v:1800000,p:47,f:5599}},
+  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community \uD83C\uDDE7\uD83C\uDDE6\uD83C\uDDF7\uD83C\uDDF8\uD83C\uDDED\uD83C\uDDF7 — daily streaks & rewards.',tag:'Community',fb:{v:1800000,p:47,f:5599}},
   {placeId:117685246722846,name:'Escape Tsunami for Glitchy Noobs',url:'https://www.roblox.com/games/117685246722846',thumb:THUMBS[2],desc:'Survive the tsunami while dodging glitches — fast-paced chaos with friends!',tag:'New',fb:{v:3155,p:2,f:4}},
   {placeId:128641742072134,name:'Money Grind Simulator',url:'https://www.roblox.com/games/128641742072134',thumb:THUMBS[3],desc:'Grind, upgrade, and build your fortune. The ultimate simulator experience.',tag:'New',fb:{v:230,p:0,f:190}}
 ];
@@ -895,27 +1012,27 @@ async function fetchStats(g){
 function buildCards(){
   ['gc','gc2'].forEach(gid=>{
     const gc=document.getElementById(gid);if(!gc)return;
-  gc.innerHTML='';
-  [...GAMES].sort((a,b)=>b.fb.v-a.fb.v).forEach(g=>{
-    const c=document.createElement('article');
-    c.className='gc rv';
-    c.innerHTML=`
-      <div class="gimg" style="background-image:url('${g.thumb}')"><div class="gimg-ov"></div></div>
-      <div class="gcont">
-        <span class="gtag">${g.tag}</span>
-        <h3 class="gtitle">${g.name}</h3>
-        <p class="gdesc">${g.desc}</p>
-        <div class="gmet">
-          <div class="met"><span class="mv" id="v${g.placeId}" data-raw="0">0</span><span class="ml2">Visits</span></div>
-          <div class="met"><span class="mv" id="p${g.placeId}" data-raw="0">0</span><span class="ml2">Active</span></div>
-          <div class="met"><span class="mv" id="f${g.placeId}" data-raw="0">0</span><span class="ml2">Favorites</span></div>
-        </div>
-        <a href="${g.url}" target="_blank" rel="noopener noreferrer" class="glink"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
-      </div>`;
-    gc.appendChild(c);
-  });
+    gc.innerHTML='';
+    [...GAMES].sort((a,b)=>b.fb.v-a.fb.v).forEach(g=>{
+      const c=document.createElement('article');
+      c.className='gc rv';
+      c.innerHTML=`
+        <div class="gimg" style="background-image:url('${g.thumb}')"><div class="gimg-ov"></div></div>
+        <div class="gcont">
+          <span class="gtag">${g.tag}</span>
+          <h3 class="gtitle">${g.name}</h3>
+          <p class="gdesc">${g.desc}</p>
+          <div class="gmet">
+            <div class="met"><span class="mv" id="v${g.placeId}" data-raw="0">0</span><span class="ml2">Visits</span></div>
+            <div class="met"><span class="mv" id="p${g.placeId}" data-raw="0">0</span><span class="ml2">Active</span></div>
+            <div class="met"><span class="mv" id="f${g.placeId}" data-raw="0">0</span><span class="ml2">Favorites</span></div>
+          </div>
+          <a href="${g.url}" target="_blank" rel="noopener noreferrer" class="glink"><i class="fas fa-external-link-alt"></i> Play on Roblox</a>
+        </div>`;
+      gc.appendChild(c);
+    });
     setTimeout(observe,60);
-  }); // gc/gc2
+  });
 }
 
 // ── LOAD STATS ──
@@ -977,7 +1094,6 @@ function handleRoute(){
   const path=location.pathname.replace(/\/$/,'')||'/';
   if(path==='/games'){ showPage('games'); return; }
   if(path==='/privacy'){ showPage('privacy'); return; }
-  // default: show main, handle hash anchor
   showPage('main');
   if(location.hash){
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
@@ -988,14 +1104,13 @@ function handleRoute(){
 }
 
 function navigate(href){
-  // strip ?tab params — no longer used
   history.pushState({}, '', href);
   handleRoute();
 }
 
 window.addEventListener('popstate', handleRoute);
 
-// intercept internal links
+// intercept internal <a> clicks
 document.addEventListener('click',e=>{
   const a=e.target.closest('a[href]');
   if(!a) return;
@@ -1006,26 +1121,39 @@ document.addEventListener('click',e=>{
   document.getElementById('nm').classList.remove('open');
 });
 
-
-
 // ── NAV BURGER ──
-const _cm=()=>document.getElementById('nm').classList.remove('open');
 document.getElementById('bg').addEventListener('click',()=>document.getElementById('nm').classList.toggle('open'));
 
 const G=window.G={
-  // legacy helpers still used by inline onclick buttons on contact section
+  // Switch contact form tab WITHOUT scrolling
   tab(id){
     document.querySelectorAll('#pg-main .ftab,#pg-main .fp').forEach(e=>e.classList.remove('active'));
     document.getElementById('ft-'+id)?.classList.add('active');
     document.getElementById('fp-'+id)?.classList.add('active');
   },
+  // Smooth scroll to a section from wherever you are — NO jump to top
   ss(sel){
+    // If on a different page first go home, then scroll after paint
+    if(_currentPage!=='main'){
+      showPage('main');
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        const el=document.querySelector(sel);
+        if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
+      }));
+      return;
+    }
     const el=document.querySelector(sel);
     if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
   },
+  // Scroll to section AND open a specific form tab — smooth, no jump to top
+  scrollTab(sel,tabId){
+    G.ss(sel);
+    // Small delay so tab switches after scroll starts
+    setTimeout(()=>G.tab(tabId),50);
+  },
   home(){ navigate('/'); },
   games(){ navigate('/games'); },
-  scroll(hash){ navigate('/'+hash); },
+  privacy(){ navigate('/privacy'); },
   async send(e,okId,errId){
     e.preventDefault();
     const form=e.target,btn=form.querySelector('.fsub-btn');
@@ -1066,3 +1194,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 </script>
 
 </body>
+</html>
