@@ -349,18 +349,7 @@ textarea.fi{min-height:96px;resize:vertical}
 }
 
 
-/* ══════════════════════════════════════════
-   COLLABORATE — what we do
-══════════════════════════════════════════ */
-.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.cb{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px 22px;transition:.25s;position:relative;overflow:hidden}
-.cb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:.3s}
-.cb:hover{border-color:var(--p);background:var(--s2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glowsm)}
-.cb:hover::before{opacity:1}
-.cb-icon{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:16px;transition:.2s}
-.cb:hover .cb-icon{background:rgba(155,0,232,.2)}
-.cb h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
-.cb p{color:var(--t2);font-size:.82rem;line-height:1.65}
+
 
 /* ── ANTI-SCRAPE ── */
 .wrap,.page{-webkit-user-select:none;-moz-user-select:none;user-select:none}
