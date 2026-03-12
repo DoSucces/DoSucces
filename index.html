@@ -211,8 +211,8 @@ img{max-width:100%;display:block}
 /* ══════════════════════════════════════════
    CONTACT
 ══════════════════════════════════════════ */
-.contact-layout{display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:start}
-.ci-info{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.contact-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
+.ci-info{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px;position:sticky;top:calc(var(--nh) + 16px)}
 .ci-info h3{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
 .ci-info p{color:var(--t2);font-size:.82rem;line-height:1.65;margin-bottom:8px}
 .cd{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--bg);border:1px solid var(--b1);border-radius:6px}
@@ -344,19 +344,19 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 <!-- ══ NAV ══ -->
 <nav class="nav" id="navbar">
   <div class="wrap nav-inner">
-    <div class="nav-brand" onclick="G.page('main',null)">
+    <div class="nav-brand" href="/">
       <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess">
       <div class="nav-brand-name">Go<em>Success</em></div>
     </div>
     <div class="nav-links" id="nm">
-      <span class="nl" onclick="G.page('main',null)">Home</span>
-      <span class="nl" onclick="G.page('main','#games')">Games</span>
-      <span class="nl" onclick="G.page('main','#sell')">Sell</span>
-      <span class="nl" onclick="G.page('main','#partners')">Partners</span>
-      <span class="nl" onclick="G.page('main','#careers')">Careers</span>
-      <span class="nl" onclick="G.page('main','#invest')">Invest</span>
-      <span class="nl" onclick="G.page('main','#contact')">Contact</span>
-      <span class="nav-cta" onclick="G.page('main','#contact');G.tab('sell')">Sell Your Game →</span>
+      <a class="nl" href="/">Home</a>
+      <a class="nl" href="/games">Games</a>
+      <a class="nl" href="/#sell">Sell</a>
+      <a class="nl" href="/#partners">Partners</a>
+      <a class="nl" href="/#careers">Careers</a>
+      <a class="nl" href="/#invest">Invest</a>
+      <a class="nl" href="/contact">Contact</a>
+      <a class="nav-cta" href="/contact?tab=sell">Sell Your Game →</a>
     </div>
     <button class="burger" id="bg" aria-label="Menu"><i class="fas fa-bars"></i></button>
   </div>
@@ -385,9 +385,9 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
           <div class="sc rv dl2"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
         </div>
         <div class="hero-btns rv">
-          <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
-          <span class="btn btn-o" onclick="G.page('main','#games')"><i class="fas fa-gamepad"></i> Our Portfolio</span>
-          <span class="btn btn-o" onclick="G.page('main','#careers')"><i class="fas fa-users"></i> Join the Team</span>
+          <span class="btn btn-p" href="/contact?tab=sell"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
+          <span class="btn btn-o" href="/games"><i class="fas fa-gamepad"></i> Our Portfolio</span>
+          <span class="btn btn-o" href="/#careers"><i class="fas fa-users"></i> Join the Team</span>
         </div>
         <div class="hero-socials rv">
           <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
@@ -404,7 +404,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
     <div class="wrap">
       <div class="sec-head">
         <div class="sec-label rv">Why GoSuccess</div>
-        <h2 class="sec-title rv">Everything your game<br><span>needs to Succeed</span></h2>
+        <h2 class="sec-title rv">Everything your game<br><span>needs to succeed.</span></h2>
       </div>
       <div class="why-strip">
         <div class="why-item rv">
@@ -474,7 +474,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             </div>
           </div>
           <div class="rv">
-            <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('sell')"><i class="fas fa-arrow-right"></i> Get an Offer</span>
+            <span class="btn btn-p" href="/contact?tab=sell"><i class="fas fa-arrow-right"></i> Get an Offer</span>
           </div>
         </div>
         <div class="sell-features rv dl1">
@@ -504,7 +504,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div class="pc rv dl3"><div class="ico"><i class="fas fa-tag"></i></div><h3>Brand Deals</h3><p>In-game assets, sponsored events, or co-branded passes.</p></div>
       </div>
       <div style="text-align:center;margin-top:24px" class="rv">
-        <span class="btn btn-p" onclick="G.page('main','#contact');G.tab('partner')"><i class="fas fa-paper-plane"></i> Become a Partner</span>
+        <span class="btn btn-p" href="/contact?tab=partner"><i class="fas fa-paper-plane"></i> Become a Partner</span>
       </div>
     </div>
   </section>
@@ -531,7 +531,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <span class="badge"><i class="fas fa-user-tie"></i>Executives</span>
             <span class="badge"><i class="fas fa-plus"></i>Other</span>
           </div>
-          <span class="cta-btn" onclick="G.page('main','#contact');G.tab('careers')"><i class="fas fa-paper-plane"></i> Apply Now</span>
+          <span class="cta-btn" href="/contact?tab=careers"><i class="fas fa-paper-plane"></i> Apply Now</span>
         </div>
         <div id="invest" class="ci-box rv dl1">
           <h3>Invest in <span>GoSuccess</span></h3>
@@ -544,7 +544,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <span class="badge"><i class="fas fa-camera"></i>Creators</span>
             <span class="badge"><i class="fas fa-plus"></i>Other</span>
           </div>
-          <span class="cta-btn" onclick="G.page('main','#contact');G.tab('invest')"><i class="fas fa-chart-line"></i> Become an Investor</span>
+          <span class="cta-btn" href="/contact?tab=invest"><i class="fas fa-chart-line"></i> Become an Investor</span>
         </div>
       </div>
     </div>
@@ -553,7 +553,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   <div class="divider"></div>
 
   <!-- ── CONTACT ── -->
-  <section id="contact" class="sec">
+  <section id="contact" class="sec" style="background:linear-gradient(180deg,rgba(155,0,232,.03) 0%,transparent 100%)">
     <div class="wrap">
       <div class="sec-head">
         <div class="sec-label rv">Contact</div>
@@ -595,7 +595,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-careers" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- SELL -->
@@ -617,7 +617,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-sell" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- PARTNER -->
@@ -641,7 +641,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-partner" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
 
           <!-- INVEST -->
@@ -665,7 +665,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
               <div id="er-invest" class="f-err"></div>
             </form>
-            <p class="pnote">By submitting you agree to our <a onclick="G.showPage('privacy')">privacy policy</a>.</p>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
         </div>
       </div>
@@ -673,6 +673,23 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   </section>
 
 </div><!-- /pg-main -->
+
+
+<!-- ════════════════════════════════════════
+     GAMES PAGE  /games
+════════════════════════════════════════ -->
+<div id="pg-games" class="page">
+  <section class="sec" style="padding-top:48px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label rv">Portfolio</div>
+        <h2 class="sec-title rv">Our <span>Games</span></h2>
+        <p class="sec-sub rv">Every game built, acquired, and scaled by the GoSuccess team. Live stats updated in real time.</p>
+      </div>
+      <div class="games-grid" id="gc2"></div>
+    </div>
+  </section>
+</div>
 
 <!-- ════════════════════════════════════════
      PRIVACY PAGE
@@ -692,7 +709,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div class="ps"><h2>7. Children's Privacy</h2><p>Our services are not directed to individuals under 13.</p></div>
         <div class="ps"><h2>8. Changes</h2><p>We may update this policy from time to time. Changes are effective when posted.</p></div>
         <div class="ps"><h2>9. Contact</h2><p>Email: <a href="mailto:go.success.studios@gmail.com" style="color:var(--pl)">go.success.studios@gmail.com</a> · Discord/Roblox: rlyoung0</p></div>
-        <a class="back-link" onclick="G.showPage('main')"><i class="fas fa-arrow-left"></i> Back to Main</a>
+        <a class="back-link" href="/"><i class="fas fa-arrow-left"></i> Back to Main</a>
       </div>
     </div>
   </div>
@@ -715,7 +732,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" onclick="G.showPage('main')" style="cursor:pointer">
+        <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" href="/" style="cursor:pointer">
         <p>We buy, grow and scale Roblox games. Trusted by developers since 2024.</p>
         <div class="foot-soc">
           <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
@@ -724,20 +741,22 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       </div>
       <div class="foot-col">
         <h5>Company</h5>
-        <a onclick="G.page('main',null)">Home</a>
-        <a onclick="G.page('main','#games')">Our Games</a>
-        <a onclick="G.showPage('privacy')">Privacy Policy</a>
+        <a href="/">Home</a>
+        <a href="/games">Our Games</a>
+        <a href="/#partners">Partners</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
       <div class="foot-col">
         <h5>Services</h5>
-        <a onclick="G.page('main','#sell')">Sell Your Game</a>
-        <a onclick="G.page('main','#partners')">Partnerships</a>
-        <a onclick="G.page('main','#invest')">Invest</a>
+        <a href="/#sell">Sell Your Game</a>
+        <a href="/#partners">Partnerships</a>
+        <a href="/#invest">Invest</a>
+        <a href="/contact">Contact</a>
       </div>
       <div class="foot-col">
         <h5>Join Us</h5>
-        <a onclick="G.page('main','#careers')">Careers</a>
-        <a onclick="G.page('main','#contact');G.tab('careers')">Apply Now</a>
+        <a href="/#careers">Careers</a>
+        <a href="/contact?tab=careers">Apply Now</a>
         <a href="https://discord.gg/DdMfTjUJnX" target="_blank" rel="noopener noreferrer">Discord</a>
         <a href="mailto:go.success.studios@gmail.com">Email Us</a>
       </div>
@@ -870,7 +889,8 @@ async function fetchStats(g){
 
 // ── BUILD GAME CARDS ──
 function buildCards(){
-  const gc=document.getElementById('gc');if(!gc)return;
+  ['gc','gc2'].forEach(gid=>{
+  const gc=document.getElementById(gid);if(!gc)return;
   gc.innerHTML='';
   [...GAMES].sort((a,b)=>b.fb.v-a.fb.v).forEach(g=>{
     const c=document.createElement('article');
@@ -891,11 +911,14 @@ function buildCards(){
     gc.appendChild(c);
   });
   setTimeout(observe,60);
+  }); // end forEach gc/gc2
 }
 
 // ── LOAD STATS ──
 async function loadStats(){
-  if(!document.getElementById('pg-main').classList.contains('active'))return;
+  const mainActive=document.getElementById('pg-main')?.classList.contains('active');
+  const gamesActive=document.getElementById('pg-games')?.classList.contains('active');
+  if(!mainActive&&!gamesActive)return;
   buildCards();
   const results=await Promise.all(GAMES.map(g=>
     Promise.all([
@@ -933,29 +956,74 @@ function initLb(){
   });
 }
 
-// ── NAV & PAGE ──
+// ── ROUTING ──
+const ROUTES={
+  '/':       ()=>showPage('main'),
+  '/games':  ()=>showPage('games'),
+  '/contact':()=>showPage('contact'),
+  '/privacy':()=>showPage('privacy'),
+};
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById('pg-'+id);
+  if(el)el.classList.add('active');
+  if(id==='main'||id==='games')loadStats();
+  window.scrollTo({top:0});
+  setTimeout(observe,60);
+}
+
+function handleRoute(){
+  const path=location.pathname.replace(/\/$/,'');
+  const fn=ROUTES[path]||ROUTES['/'];
+  fn();
+  // handle ?tab= param on /contact
+  if(path==='/contact'){
+    const tab=new URLSearchParams(location.search).get('tab');
+    if(tab){setTimeout(()=>G.tab2(tab),50);}
+  }
+  // handle hash anchors on home
+  if((path==='/'||path==='')&&location.hash){
+    setTimeout(()=>G.ss(location.hash),100);
+  }
+}
+
+function navigate(path,tab){
+  history.pushState({},'',tab?path+'?tab='+tab:path);
+  handleRoute();
+}
+
+window.addEventListener('popstate',handleRoute);
+
+// intercept all internal <a> clicks
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href]');
+  if(!a)return;
+  const href=a.getAttribute('href');
+  if(!href||href.startsWith('http')||href.startsWith('mailto')||href.startsWith('//'))return;
+  e.preventDefault();
+  const [path,query]=href.split('?');
+  const tab=query?new URLSearchParams(query).get('tab'):null;
+  navigate(path,tab);
+  document.getElementById('nm').classList.remove('open');
+});
+
+// ── NAV BURGER ──
 const _cm=()=>document.getElementById('nm').classList.remove('open');
 document.getElementById('bg').addEventListener('click',()=>document.getElementById('nm').classList.toggle('open'));
-document.addEventListener('click',e=>{if(!e.target.closest('.nav'))_cm()});
 
 const G=window.G={
-  showPage(id){
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-    document.getElementById('pg-'+id).classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-    if(id==='main')loadStats();
-    _cm();
-  },
-  ss(sel){const el=document.querySelector(sel);if(el)setTimeout(()=>window.scrollTo({top:el.offsetTop-72,behavior:'smooth'}),60)},
-  page(pg,anchor){
-    if(!document.getElementById('pg-'+pg).classList.contains('active'))G.showPage(pg);
-    if(anchor)G.ss(anchor);_cm();
-  },
   tab(id){
     document.querySelectorAll('.ftab,.fp').forEach(e=>e.classList.remove('active'));
     document.getElementById('ft-'+id)?.classList.add('active');
     document.getElementById('fp-'+id)?.classList.add('active');
   },
+  tab2(id){
+    document.querySelectorAll('#pg-contact .ftab,#pg-contact .fp').forEach(e=>e.classList.remove('active'));
+    document.getElementById('ft2-'+id)?.classList.add('active');
+    document.getElementById('fp2-'+id)?.classList.add('active');
+  },
+  ss(sel){const el=document.querySelector(sel);if(el)setTimeout(()=>window.scrollTo({top:el.offsetTop-80,behavior:'smooth'}),60)},
   async send(e,okId,errId){
     e.preventDefault();
     const form=e.target,btn=form.querySelector('.fsub-btn');
@@ -986,13 +1054,134 @@ function observe(){
 }
 
 // ── REFRESH 30s ──
-setInterval(()=>{if(document.getElementById('pg-main').classList.contains('active'))loadStats()},30000);
+setInterval(()=>{const m=document.getElementById('pg-main')?.classList.contains('active');const g2=document.getElementById('pg-games')?.classList.contains('active');if(m||g2)loadStats()},30000);
 
 // ── BOOT ──
 document.addEventListener('DOMContentLoaded',()=>{
-  buildMarquee();initLb();loadStats();observe();
+  buildMarquee();initLb();handleRoute();observe();
 });
 })();
 </script>
+
+<!-- ════════════════════════════════════════
+     CONTACT PAGE  /contact
+════════════════════════════════════════ -->
+<div id="pg-contact" class="page">
+  <section class="sec" style="padding-top:48px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label rv">Contact</div>
+        <h2 class="sec-title rv">Get in <span>Touch</span></h2>
+      </div>
+      <div class="contact-layout">
+        <div class="ci-info rv">
+          <h3>Let's talk</h3>
+          <p>Whether you want to sell your game, partner up, join the team, or invest — we reply fast.</p>
+          <div class="cd"><i class="fas fa-envelope"></i><div><span class="dl">Email</span><strong>go.success.studios@gmail.com</strong></div></div>
+          <div class="cd"><i class="fab fa-discord"></i><div><span class="dl">Discord</span><strong>rlyoung0</strong></div></div>
+          <div class="cd"><i class="fab fa-twitter"></i><div><span class="dl">Twitter / X</span><strong>@Rlyoung0</strong></div></div>
+        </div>
+        <div class="fc rv dl1">
+          <div class="ftabs">
+            <button class="ftab active" id="ft2-careers" onclick="G.tab2('careers')">Careers</button>
+            <button class="ftab" id="ft2-sell"    onclick="G.tab2('sell')">Sell Game</button>
+            <button class="ftab" id="ft2-partner" onclick="G.tab2('partner')">Partner</button>
+            <button class="ftab" id="ft2-invest"  onclick="G.tab2('invest')">Invest</button>
+          </div>
+          <!-- CAREERS -->
+          <div class="fp active" id="fp2-careers">
+            <h2 class="ftitle">Apply to join</h2>
+            <p class="fsub">Tell us about yourself and your skills.</p>
+            <form onsubmit="G.send(event,'ok2-careers','er2-careers')">
+              <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
+              <input type="hidden" name="subject" value="Careers – GoSuccess">
+              <input type="hidden" name="from_name" value="GoSuccess Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+              <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">ROLE *</label>
+                <select class="fi" name="role" required><option value="" disabled selected>Select a role</option><option>Developer</option><option>UI Designer</option><option>VFX Artist</option><option>GFX Artist</option><option>Builder</option><option>Animator</option><option>Marketer</option><option>Content Creator</option><option>Manager</option><option>Executive</option><option>Other</option></select>
+              </div>
+              <div class="fg"><label class="fl2">PORTFOLIO / EXPERIENCE *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
+              <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
+              <div id="ok2-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="er2-careers" class="f-err"></div>
+            </form>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
+          </div>
+          <!-- SELL -->
+          <div class="fp" id="fp2-sell">
+            <h2 class="ftitle">Sell your game</h2>
+            <p class="fsub">Get a competitive offer on your Roblox game.</p>
+            <form onsubmit="G.send(event,'ok2-sell','er2-sell')">
+              <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
+              <input type="hidden" name="subject" value="Game Sale – GoSuccess">
+              <input type="hidden" name="from_name" value="GoSuccess Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+              <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">GAME LINK *</label><input class="fi" name="game_link" type="url" required placeholder="https://roblox.com/games/..."></div>
+              <div class="fg"><label class="fl2">MONTHLY VISITS / REVENUE</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
+              <div class="fg"><label class="fl2">ADDITIONAL INFO</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
+              <button type="submit" class="fsub-btn"><i class="fas fa-hand-holding-usd"></i> Request Offer</button>
+              <div id="ok2-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="er2-sell" class="f-err"></div>
+            </form>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
+          </div>
+          <!-- PARTNER -->
+          <div class="fp" id="fp2-partner">
+            <h2 class="ftitle">Partner with us</h2>
+            <p class="fsub">Tell us about your studio, channel, or brand.</p>
+            <form onsubmit="G.send(event,'ok2-partner','er2-partner')">
+              <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
+              <input type="hidden" name="subject" value="Partnership – GoSuccess">
+              <input type="hidden" name="from_name" value="GoSuccess Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+              <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+              <div class="fg"><label class="fl2">NAME / STUDIO *</label><input class="fi" name="name" type="text" required placeholder="Name or studio"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">PARTNERSHIP TYPE *</label>
+                <select class="fi" name="type" required><option value="" disabled selected>Select type</option><option>Game Studio</option><option>Content Creator</option><option>Dev Team</option><option>Brand Deal</option><option>Other</option></select>
+              </div>
+              <div class="fg"><label class="fl2">LINKS</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
+              <div class="fg"><label class="fl2">PROPOSAL *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
+              <button type="submit" class="fsub-btn"><i class="fas fa-handshake"></i> Send Request</button>
+              <div id="ok2-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="er2-partner" class="f-err"></div>
+            </form>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
+          </div>
+          <!-- INVEST -->
+          <div class="fp" id="fp2-invest">
+            <h2 class="ftitle">Invest in GoSuccess</h2>
+            <p class="fsub">Choose where you want your investment to go.</p>
+            <form onsubmit="G.send(event,'ok2-invest','er2-invest')">
+              <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
+              <input type="hidden" name="subject" value="Investment – GoSuccess">
+              <input type="hidden" name="from_name" value="GoSuccess Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+              <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">INVESTMENT FOCUS *</label>
+                <select class="fi" name="focus" required><option value="" disabled selected>Select an area</option><option>Company Growth</option><option>Marketing</option><option>Developers</option><option>Builders</option><option>Content Creators</option><option>Other</option></select>
+              </div>
+              <div class="fg"><label class="fl2">PROPOSED AMOUNT</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 – $50,000"></div>
+              <div class="fg"><label class="fl2">MESSAGE</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
+              <button type="submit" class="fsub-btn"><i class="fas fa-chart-line"></i> Submit Interest</button>
+              <div id="ok2-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible 🚀</p></div>
+              <div id="er2-invest" class="f-err"></div>
+            </form>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 </body>
 </html>
