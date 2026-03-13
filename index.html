@@ -349,7 +349,18 @@ textarea.fi{min-height:96px;resize:vertical}
 }
 
 
-
+/* ══════════════════════════════════════════
+   COLLABORATE — what we do
+══════════════════════════════════════════ */
+.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cb{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px 22px;transition:.25s;position:relative;overflow:hidden}
+.cb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:.3s}
+.cb:hover{border-color:var(--p);background:var(--s2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glowsm)}
+.cb:hover::before{opacity:1}
+.cb-icon{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:16px;transition:.2s}
+.cb:hover .cb-icon{background:rgba(155,0,232,.2)}
+.cb h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.cb p{color:var(--t2);font-size:.82rem;line-height:1.65}
 
 /* ── ANTI-SCRAPE ── */
 .wrap,.page{-webkit-user-select:none;-moz-user-select:none;user-select:none}
@@ -499,8 +510,6 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 
   <div class="divider"></div>
 
-
-  
   <!-- ── GAMES ── -->
   <section id="games" class="sec">
     <div class="wrap">
@@ -640,6 +649,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             <button class="ftab" id="ft-sell" onclick="G.tab('sell')">Sell Game</button>
             <button class="ftab" id="ft-partner" onclick="G.tab('partner')">Partner</button>
             <button class="ftab" id="ft-invest" onclick="G.tab('invest')">Invest</button>
+            <button class="ftab" id="ft-other" onclick="G.tab('other')">Other</button>
           </div>
 
           <!-- CAREERS -->
@@ -734,6 +744,27 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
             </form>
             <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
           </div>
+
+          <!-- OTHER -->
+          <div class="fp" id="fp-other">
+            <h2 class="ftitle">Get in touch</h2>
+            <p class="fsub">Have something else in mind? We'd love to hear it.</p>
+            <form onsubmit="G.send(event,'ok-other','er-other')">
+              <input type="hidden" name="access_key" value="4d371b0f-d198-4a36-b13f-6295b42d1d43">
+              <input type="hidden" name="subject" value="Other Enquiry - GoSuccess">
+              <input type="hidden" name="from_name" value="GoSuccess Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+              <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">SUBJECT *</label><input class="fi" name="subject_custom" type="text" required placeholder="What's this about?"></div>
+              <div class="fg"><label class="fl2">MESSAGE *</label><textarea class="fi" name="message" required placeholder="Tell us what's on your mind..."></textarea></div>
+              <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+              <div id="ok-other" class="f-ok"><i class="fas fa-check-circle"></i><h4>Message sent!</h4><p>We'll get back to you as soon as possible!</p></div>
+              <div id="er-other" class="f-err"></div>
+            </form>
+            <p class="pnote">By submitting you agree to our <a href="/privacy">privacy policy</a>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -810,7 +841,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <h5>Company</h5>
         <a onclick="G.home()">Home</a>
         <a onclick="G.games()">Our Games</a>
-        <a onclick="G.ss('#partners')">Partners</a>
+        <a onclick="G.ss('#collaborate')">What We Do</a>
         <a href="/privacy">Privacy Policy</a>
       </div>
       <div class="foot-col">
@@ -888,8 +919,8 @@ function buildMarquee(){
 
 // ── GAMES ──
 const GAMES=[
-  {placeId:8287908355,name:'Train VS Vehicle Master!',url:'https://www.roblox.com/games/8287908355',thumb:THUMBS[0],desc:'Epic battles between trains and vehicles — 10M+ visits and growing.',tag:'Top Game',fb:{v:10400000,p:25,f:4581}},
-  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community \uD83C\uDDE7\uD83C\uDDE6\uD83C\uDDF7\uD83C\uDDF8\uD83C\uDDED\uD83C\uDDF7 — daily streaks & rewards.',tag:'Community',fb:{v:1800000,p:47,f:5599}},
+  {placeId:8287908355,name:'Train VS Vehicle Master!',url:'https://www.roblox.com/games/8287908355',thumb:THUMBS[0],desc:'Epic battles between trains and vehicles — 10M+ visits and growing.',tag:'Top Game',fb:{v:10400000,p:18,f:4581}},
+  {placeId:17247995332,name:'Balkan Donate',url:'https://www.roblox.com/games/17247995332',thumb:THUMBS[1],desc:'Donation game for the Balkan community \uD83C\uDDE7\uD83C\uDDE6\uD83C\uDDF7\uD83C\uDDF8\uD83C\uDDED\uD83C\uDDF7 — daily streaks & rewards.',tag:'Community',fb:{v:1800000,p:9,f:5599}},
   {placeId:117685246722846,name:'Escape Tsunami for Glitchy Noobs',url:'https://www.roblox.com/games/117685246722846',thumb:THUMBS[2],desc:'Survive the tsunami while dodging glitches — fast-paced chaos with friends!',tag:'New',fb:{v:3155,p:2,f:4}},
   {placeId:128641742072134,name:'Money Grind Simulator',url:'https://www.roblox.com/games/128641742072134',thumb:THUMBS[3],desc:'Grind, upgrade, and build your fortune. The ultimate simulator experience.',tag:'New',fb:{v:230,p:0,f:190}}
 ];
@@ -1025,12 +1056,12 @@ function initLb(){
 
 // ── ROUTING ──
 let _currentPage='main';
-function showPage(id){
+function showPage(id,skipScrollReset){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const el=document.getElementById('pg-'+id);
   if(!el)return;
   el.classList.add('active');
-  window.scrollTo({top:0,behavior:'instant'});
+  if(!skipScrollReset) window.scrollTo({top:0,behavior:'instant'});
   _currentPage=id;
   if(id==='main'||id==='games') loadStats();
   setTimeout(observe,60);
@@ -1079,15 +1110,17 @@ const G=window.G={
   },
   // Smooth scroll to a section from wherever you are — NO jump to top
   ss(sel){
-    // If on a different page first go home, then scroll after paint
+    // If on a different page, switch to main WITHOUT resetting scroll, then jump to target
     if(_currentPage!=='main'){
-      showPage('main');
+      showPage('main',true);
+      // Wait for page to paint then scroll directly to target
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
         const el=document.querySelector(sel);
         if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
       }));
       return;
     }
+    // Already on main — scroll directly from current position
     const el=document.querySelector(sel);
     if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
   },
