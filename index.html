@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -227,15 +227,7 @@ img{max-width:100%;display:block}
 .ci-info{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px}
 .ci-info h3{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
 .ci-info p{color:var(--t2);font-size:.82rem;line-height:1.65;margin-bottom:8px}
-
-.cd{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--bg);border:1px solid var(--b1);border-radius:6px;text-decoration:none;color:inherit;transition:.2s;cursor:pointer}
-.cd:hover{border-color:var(--p);background:rgba(155,0,232,.04)}
-.cd>div{flex:1}
-.cd i{color:var(--p);width:14px;text-align:center;font-size:.8rem}
-.cd .dl{font-size:.77rem;color:var(--t3);display:block;margin-bottom:1px;font-family:'DM Mono',monospace}
-.cd strong{font-size:.82rem;display:block}
-.cd-btn{background:rgba(155,0,232,.1);border:1px solid rgba(155,0,232,.2);color:var(--p);font-size:.65rem;font-weight:700;padding:3px 9px;border-radius:3px;white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.04em;text-transform:uppercase;transition:.2s}
-.cd:hover .cd-btn{background:var(--p);border-color:var(--p);color:#fff}
+.cd{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--bg);border:1px solid var(--b1);border-radius:6px}
 .cd i{color:var(--p);width:14px;text-align:center;font-size:.8rem}
 .cd .dl{font-size:.77rem;color:var(--t3);display:block;margin-bottom:1px;font-family:'DM Mono',monospace}
 .cd strong{font-size:.82rem;display:block}
@@ -329,8 +321,6 @@ textarea.fi{min-height:96px;resize:vertical}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .ci-info{order:2}
-  .fc{order:1}
   .nav-links{display:none;position:absolute;top:var(--nh);left:0;right:0;background:rgba(6,6,8,.98);border-bottom:1px solid var(--b1);padding:12px 16px 18px;flex-direction:column;gap:2px;z-index:299}
   .nav-links.open{display:flex}
   .nav-links .nl,.nav-links .nav-cta{width:100%;padding:10px 12px;border-radius:6px;text-align:center}
@@ -358,6 +348,20 @@ textarea.fi{min-height:96px;resize:vertical}
   .ftab{white-space:nowrap;flex-shrink:0}
 }
 
+
+/* ══════════════════════════════════════════
+   COLLABORATE — what we do
+══════════════════════════════════════════ */
+.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cb{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:24px 22px;transition:.25s;position:relative;overflow:hidden}
+.cb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),transparent);opacity:0;transition:.3s}
+.cb:hover{border-color:var(--p);background:var(--s2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glowsm)}
+.cb:hover::before{opacity:1}
+.cb-icon{width:44px;height:44px;background:rgba(155,0,232,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--p);margin-bottom:16px;transition:.2s}
+.cb:hover .cb-icon{background:rgba(155,0,232,.2)}
+.cb h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.cb p{color:var(--t2);font-size:.82rem;line-height:1.65}
+
 /* ── ANTI-SCRAPE ── */
 .wrap,.page{-webkit-user-select:none;-moz-user-select:none;user-select:none}
 input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select:text}
@@ -373,14 +377,14 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       <div class="nav-brand-name">Go<em>Success</em></div>
     </div>
     <div class="nav-links" id="nm">
-      <a class="nl" onclick="G.home()">Home</a>
-      <a class="nl" onclick="G.ss('#games')">Games</a>
-      <a class="nl" onclick="G.ss('#sell')">Sell</a>
-      <a class="nl" onclick="G.ss('#partners')">Partners</a>
-      <a class="nl" onclick="G.ss('#careers')">Careers</a>
-      <a class="nl" onclick="G.ss('#invest')">Invest</a>
-      <a class="nl" onclick="G.ss('#contact')">Contact</a>
-      <a class="nav-cta" onclick="G.scrollTab('#contact','sell')">Sell Your Game &rarr;</a>
+      <a class="nl" href="/">Home</a>
+      <a class="nl" href="/#games">Games</a>
+      <a class="nl" href="/#sell">Sell</a>
+      <a class="nl" href="/#partners">Partners</a>
+      <a class="nl" href="/#careers">Careers</a>
+      <a class="nl" href="/#invest">Invest</a>
+      <a class="nl" href="/#contact">Contact</a>
+      <a class="nav-cta" href="/#contact">Sell Your Game &rarr;</a>
     </div>
     <button class="burger" id="bg" aria-label="Menu"><i class="fas fa-bars"></i></button>
   </div>
@@ -400,13 +404,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
     </div>
     <div class="wrap">
       <div class="hero-inner">
-        <div class="hero-eyebrow rv"><span class="hero-eyebrow-line"></span><span class="ldot"></span>Live stats &mdash; real time</div>
-        <h1 class="hero-h1 rv">We grow<br>Roblox games<span class="accent">that dominate.</span></h1>
+        <div class="hero-tag rv"><span class="ldot"></span>Live stats</div>
+        <h1 class="hero-h1 rv">We grow Roblox games<span class="g">that dominate.</span></h1>
         <p class="hero-p rv">GoSuccess acquires, develops, and scales Roblox games. We handle everything, You Earn!</p>
-        <div class="stats-row rv">
-          <div class="sc"><div class="sn" id="sV" data-raw="0">0</div><div class="sl">Total Visits</div></div>
-          <div class="sc"><div class="sn" id="sP" data-raw="0">0</div><div class="sl">Playing Now</div></div>
-          <div class="sc"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
+        <div class="stats-row">
+          <div class="sc rv"><div class="sn" id="sV" data-raw="0">0</div><div class="sl">Total Visits</div></div>
+          <div class="sc rv dl1"><div class="sn" id="sP" data-raw="0">0</div><div class="sl">Playing Now</div></div>
+          <div class="sc rv dl2"><div class="sn" id="sF" data-raw="0">0</div><div class="sl">Favorites</div></div>
         </div>
         <div class="hero-btns rv">
           <span class="btn btn-p" onclick="G.scrollTab('#contact','sell')"><i class="fas fa-arrow-right"></i> Sell Your Game</span>
@@ -471,37 +475,31 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       </div>
       <div class="collab-grid">
         <div class="cb rv">
-          <div class="cb-num">01</div>
           <div class="cb-icon"><i class="fas fa-coins"></i></div>
           <h3>Monetisation</h3>
           <p>We design, balance, and optimise passes, gamepasses, and in-game shops to maximise revenue without ruining the player experience.</p>
         </div>
         <div class="cb rv dl1">
-          <div class="cb-num">02</div>
           <div class="cb-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Live Ops</h3>
           <p>Seasonal events, limited-time offers, and daily engagement loops — we keep players coming back every single day.</p>
         </div>
         <div class="cb rv dl2">
-          <div class="cb-num">03</div>
           <div class="cb-icon"><i class="fas fa-bullhorn"></i></div>
           <h3>Marketing</h3>
           <p>Thumbnail A/B testing, social media campaigns, influencer outreach, and Roblox ad management to push your game to the top.</p>
         </div>
         <div class="cb rv dl3">
-          <div class="cb-num">04</div>
           <div class="cb-icon"><i class="fas fa-code"></i></div>
           <h3>Development</h3>
           <p>Bug fixes, new features, performance optimisation — our dev team keeps your game running smoothly and players happy.</p>
         </div>
         <div class="cb rv dl4">
-          <div class="cb-num">05</div>
           <div class="cb-icon"><i class="fas fa-paint-brush"></i></div>
-          <h3>GFX &amp; Design</h3>
+          <h3>GFX & Design</h3>
           <p>Eye-catching thumbnails, icons, UIs, and promotional art made by our in-house GFX artists to make your game stand out.</p>
         </div>
         <div class="cb rv dl1">
-          <div class="cb-num">06</div>
           <div class="cb-icon"><i class="fas fa-trophy"></i></div>
           <h3>Growth Strategy</h3>
           <p>We analyse your game's data, identify growth opportunities, and execute a full strategy to get your game big on Roblox.</p>
@@ -536,7 +534,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div>
           <div class="sec-label rv">Acquisition</div>
           <h2 class="sec-title rv">Sell your <span>Game</span></h2>
-          <p class="sec-sub rv" style="margin-bottom:28px">Ready to exit? We make competitive offers on Roblox games of all sizes — from small projects to major titles.</p>
+          <p class="sec-sub rv" style="margin-bottom:24px">Ready to exit? We make competitive offers on Roblox games of all sizes — from small projects to major titles.</p>
           <div class="sell-steps rv">
             <div class="sell-step">
               <div class="step-n">01</div>
@@ -581,7 +579,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
         <div class="pc rv dl2"><div class="ico"><i class="fas fa-tools"></i></div><h3>Dev Teams</h3><p>White-label your services through GoSuccess and access our network.</p></div>
         <div class="pc rv dl3"><div class="ico"><i class="fas fa-tag"></i></div><h3>Brand Deals</h3><p>In-game assets, sponsored events, or co-branded passes.</p></div>
       </div>
-      <div style="text-align:center;margin-top:28px" class="rv">
+      <div style="text-align:center;margin-top:24px" class="rv">
         <span class="btn btn-p" onclick="G.scrollTab('#contact','partner')"><i class="fas fa-paper-plane"></i> Become a Partner</span>
       </div>
     </div>
@@ -631,7 +629,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   <div class="divider"></div>
 
   <!-- ── CONTACT ── -->
-  <section id="contact" class="sec" style="background:linear-gradient(180deg,rgba(155,0,232,.025) 0%,transparent 100%)">
+  <section id="contact" class="sec" style="background:linear-gradient(180deg,rgba(155,0,232,.03) 0%,transparent 100%)">
     <div class="wrap">
       <div class="sec-head">
         <div class="sec-label rv">Contact</div>
@@ -639,11 +637,11 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
       </div>
       <div class="contact-layout">
         <div class="ci-info rv">
-          <h3>Want to contact us <span style="color:var(--pl)">directly?</span></h3>
-          <p>Whether you want to sell your game, partner up, join the team, invest or have something else in mind — we reply fast.</p>
-          <a class="cd" href="mailto:go.success.studios@gmail.com"><i class="fas fa-envelope"></i><div><span class="dl">Email</span><strong>go.success.studios@gmail.com</strong></div><span class="cd-btn">Email Us</span></a>
-          <a class="cd" href="https://discord.com/users/1360998908666450174" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i><div><span class="dl">Discord</span><strong>rlyoung0</strong></div><span class="cd-btn">Message</span></a>
-          <a class="cd" href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><div><span class="dl">Twitter / X</span><strong>@Rlyoung0</strong></div><span class="cd-btn">Message</span></a>
+          <h3>Let's talk</h3>
+          <p>Whether you want to sell your game, partner up, join the team, or invest — we reply fast.</p>
+          <div class="cd"><i class="fas fa-envelope"></i><div><span class="dl">Email</span><strong>go.success.studios@gmail.com</strong></div></div>
+          <div class="cd"><i class="fab fa-discord"></i><div><span class="dl">Discord</span><strong>rlyoung0</strong></div></div>
+          <div class="cd"><i class="fab fa-twitter"></i><div><span class="dl">Twitter / X</span><strong>@Rlyoung0</strong></div></div>
         </div>
         <div class="fc rv dl1">
           <div class="ftabs">
@@ -664,12 +662,12 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Role *</label>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">ROLE *</label>
                 <select class="fi" name="role" required><option value="" disabled selected>Select a role</option><option>Developer</option><option>UI Designer</option><option>VFX Artist</option><option>GFX Artist</option><option>Builder</option><option>Animator</option><option>Marketer</option><option>Content Creator</option><option>Manager</option><option>Executive</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Portfolio / Experience *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
+              <div class="fg"><label class="fl2">PORTFOLIO / EXPERIENCE *</label><textarea class="fi" name="message" required placeholder="Links to your work, past games, etc."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
               <div id="ok-careers" class="f-ok"><i class="fas fa-check-circle"></i><h4>Submitted!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-careers" class="f-err"></div>
@@ -687,11 +685,11 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Game Link *</label><input class="fi" name="game_link" type="url" required placeholder="https://roblox.com/games/..."></div>
-              <div class="fg"><label class="fl2">Monthly Visits / Revenue</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
-              <div class="fg"><label class="fl2">Additional Info</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">GAME LINK *</label><input class="fi" name="game_link" type="url" required placeholder="https://roblox.com/games/..."></div>
+              <div class="fg"><label class="fl2">MONTHLY VISITS / REVENUE</label><input class="fi" name="metrics" type="text" placeholder="e.g. 50K visits/mo"></div>
+              <div class="fg"><label class="fl2">ADDITIONAL INFO</label><textarea class="fi" name="message" placeholder="Game status, team size, monetisation..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-hand-holding-usd"></i> Request Offer</button>
               <div id="ok-sell" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request received!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-sell" class="f-err"></div>
@@ -709,13 +707,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Name / Studio *</label><input class="fi" name="name" type="text" required placeholder="Name or studio"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Partnership Type *</label>
+              <div class="fg"><label class="fl2">NAME / STUDIO *</label><input class="fi" name="name" type="text" required placeholder="Name or studio"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">PARTNERSHIP TYPE *</label>
                 <select class="fi" name="type" required><option value="" disabled selected>Select type</option><option>Game Studio</option><option>Content Creator</option><option>Dev Team</option><option>Brand Deal</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Links</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
-              <div class="fg"><label class="fl2">Proposal *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
+              <div class="fg"><label class="fl2">LINKS</label><input class="fi" name="links" type="text" placeholder="https://..."></div>
+              <div class="fg"><label class="fl2">PROPOSAL *</label><textarea class="fi" name="message" required placeholder="What are you proposing?"></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-handshake"></i> Send Request</button>
               <div id="ok-partner" class="f-ok"><i class="fas fa-check-circle"></i><h4>Request sent!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-partner" class="f-err"></div>
@@ -733,13 +731,13 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Investment Focus *</label>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">INVESTMENT FOCUS *</label>
                 <select class="fi" name="focus" required><option value="" disabled selected>Select an area</option><option>Company Growth</option><option>Marketing</option><option>Developers</option><option>Builders</option><option>Content Creators</option><option>Other</option></select>
               </div>
-              <div class="fg"><label class="fl2">Proposed Amount</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 - $50,000"></div>
-              <div class="fg"><label class="fl2">Message</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
+              <div class="fg"><label class="fl2">PROPOSED AMOUNT</label><input class="fi" name="amount" type="text" placeholder="e.g. $5,000 - $50,000"></div>
+              <div class="fg"><label class="fl2">MESSAGE</label><textarea class="fi" name="message" placeholder="Tell us about your interest..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-chart-line"></i> Submit Interest</button>
               <div id="ok-invest" class="f-ok"><i class="fas fa-check-circle"></i><h4>Interest received!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-invest" class="f-err"></div>
@@ -757,10 +755,10 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
               <input type="hidden" name="from_name" value="GoSuccess Website">
               <input type="checkbox" name="botcheck" style="display:none">
               <input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-              <div class="fg"><label class="fl2">Name *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
-              <div class="fg"><label class="fl2">Email *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
-              <div class="fg"><label class="fl2">Subject *</label><input class="fi" name="subject_custom" type="text" required placeholder="What's this about?"></div>
-              <div class="fg"><label class="fl2">Message *</label><textarea class="fi" name="message" required placeholder="Tell us what's on your mind..."></textarea></div>
+              <div class="fg"><label class="fl2">NAME *</label><input class="fi" name="name" type="text" required placeholder="Your name"></div>
+              <div class="fg"><label class="fl2">EMAIL *</label><input class="fi" name="email" type="email" required placeholder="you@email.com"></div>
+              <div class="fg"><label class="fl2">SUBJECT *</label><input class="fi" name="subject_custom" type="text" required placeholder="What's this about?"></div>
+              <div class="fg"><label class="fl2">MESSAGE *</label><textarea class="fi" name="message" required placeholder="Tell us what's on your mind..."></textarea></div>
               <button type="submit" class="fsub-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
               <div id="ok-other" class="f-ok"><i class="fas fa-check-circle"></i><h4>Message sent!</h4><p>We'll get back to you as soon as possible!</p></div>
               <div id="er-other" class="f-err"></div>
@@ -775,7 +773,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
 </div><!-- /pg-main -->
 
 <!-- ════════════════════════════════════════
-     GAMES PAGE
+     GAMES PAGE  /games
 ════════════════════════════════════════ -->
 <div id="pg-games" class="page">
   <section class="sec" style="padding-top:40px">
@@ -833,8 +831,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="https://pbs.twimg.com/media/HBPYYWjXoAAOB6X?format=jpg&name=medium" alt="GoSuccess" onclick="G.home()" style="cursor:pointer">
-        <div class="foot-brand-name">Go<em>Success</em></div>
-        <p>We buy, grow and scale Roblox games. Trusted by developers since 2025.</p>
+        <p>We buy, grow and scale Roblox games. Trusted by developers since 2024.</p>
         <div class="foot-soc">
           <a href="https://x.com/Rlyoung0" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
           <a href="https://discord.gg/UxPTysSvNz" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
@@ -869,7 +866,7 @@ input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
 'use strict';
 
@@ -1074,18 +1071,12 @@ function handleRoute(){
   const path=location.pathname.replace(/\/$/,'')||'/';
   if(path==='/games'){ showPage('games'); return; }
   if(path==='/privacy'){ showPage('privacy'); return; }
-  const hasHash=!!location.hash;
-  const alreadyOnMain=_currentPage==='main';
-  // If we have a hash anchor, skip the scroll-to-top so we go directly to target
-  showPage('main', hasHash);
-  if(hasHash){
-    const doScroll=()=>{
+  showPage('main');
+  if(location.hash){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
       const t=document.querySelector(location.hash);
-      if(t) window.scrollTo({top:t.offsetTop-80,behavior:alreadyOnMain?'smooth':'instant'});
-    };
-    // If already on main page, scroll immediately; otherwise wait for page to paint
-    if(alreadyOnMain){ doScroll(); }
-    else { requestAnimationFrame(()=>requestAnimationFrame(doScroll)); }
+      if(t) window.scrollTo({top:t.offsetTop-80,behavior:'smooth'});
+    }));
   }
 }
 
@@ -1117,21 +1108,26 @@ const G=window.G={
     document.getElementById('ft-'+id)?.classList.add('active');
     document.getElementById('fp-'+id)?.classList.add('active');
   },
+  // Smooth scroll to a section from wherever you are — NO jump to top
   ss(sel){
-    document.getElementById('nm').classList.remove('open');
+    // If on a different page, switch to main WITHOUT resetting scroll, then jump to target
     if(_currentPage!=='main'){
       showPage('main',true);
+      // Wait for page to paint then scroll directly to target
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
         const el=document.querySelector(sel);
         if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
       }));
       return;
     }
+    // Already on main — scroll directly from current position
     const el=document.querySelector(sel);
     if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
   },
+  // Scroll to section AND open a specific form tab — smooth, no jump to top
   scrollTab(sel,tabId){
     G.ss(sel);
+    // Small delay so tab switches after scroll starts
     setTimeout(()=>G.tab(tabId),50);
   },
   home(){ navigate('/'); },
@@ -1153,4 +1149,28 @@ const G=window.G={
     }catch{
       err.style.display='block';
       err.textContent='Something went wrong. Email: go.success.studios@gmail.com';
-      btn.disabled=false;btn.innerHTML='<i class="fas fa
+      btn.disabled=false;btn.innerHTML='<i class="fas fa-paper-plane"></i> Try Again';
+    }
+  }
+};
+
+// ── SCROLL REVEAL ──
+function observe(){
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}});
+  },{threshold:0.05});
+  document.querySelectorAll('.rv:not(.on)').forEach(el=>io.observe(el));
+}
+
+// ── REFRESH 30s ──
+setInterval(()=>{ if(['main','games'].includes(_currentPage)) loadStats(); },30000);
+
+// ── BOOT ──
+document.addEventListener('DOMContentLoaded',()=>{
+  buildMarquee();initLb();handleRoute();observe();
+});
+})();
+</script>
+
+</body>
+</html>
